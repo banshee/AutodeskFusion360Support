@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Defines that a SAT export is to be done and specifies the various options. 
  */
 @JSName("adsk.fusion.SATExportOptions")
-trait SATExportOptions extends ExportOptions {
+class SATExportOptions extends ExportOptions {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -27,4 +27,9 @@ trait SATExportOptions extends ExportOptions {
 object SATExportOptions extends js.Object {
 
 }
-// no utilities
+
+  object SATExportOptionsUtilities {
+    // no toSeq
+
+  }
+       

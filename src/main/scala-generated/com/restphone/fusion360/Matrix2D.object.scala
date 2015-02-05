@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 2D matrix. This object is a wrapper over 2D matrix data and is used as way to pass matrix data in and out of the API and as a convenience when operating on matrix data. 
  */
 @JSName("adsk.core.Matrix2D")
-trait Matrix2D extends Base {
+class Matrix2D extends Base {
   /**
   * Returns the contents of the matrix as a 9 element array.
   */
@@ -171,4 +171,21 @@ object Matrix2D extends js.Object {
   */
   def transformBy(matrix: Matrix2D): Boolean = js.native
 }
-// no utilities
+
+  object Matrix2DUtilities {
+    // no toSeq
+/**
+* Gets the matrix data as the components that define a coordinate system.
+*
+* Out parameters are returned in a tuple.
+*/
+def getAsCoordinateSystemWithResults(activeObject: Matrix2D): (Unit, Point2D, Vector2D, Vector2D) = {
+
+val origin = js.Dynamic.literal(value = 0)
+val xAxis = js.Dynamic.literal(value = 0)
+val yAxis = js.Dynamic.literal(value = 0)
+val result = activeObject.getAsCoordinateSystem(origin.asInstanceOf[Point2D], xAxis.asInstanceOf[Vector2D], yAxis.asInstanceOf[Vector2D])
+(result, origin.value.asInstanceOf[Point2D], xAxis.value.asInstanceOf[Vector2D], yAxis.value.asInstanceOf[Vector2D])
+}
+  }
+       

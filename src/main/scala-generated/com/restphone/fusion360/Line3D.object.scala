@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D line. A transient line is not displayed or saved in a document. Transient 3D lines are used as a wrapper to work with raw 3D line information. 
  */
 @JSName("adsk.core.Line3D")
-trait Line3D extends Curve3D {
+class Line3D extends Curve3D {
   /**
   * Creates an equivalent InfiniteLine3D.
   */
@@ -119,4 +119,20 @@ object Line3D extends js.Object {
   */
   var startPoint: Point3D = js.native
 }
-// no utilities
+
+  object Line3DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the line segment.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Line3D): (Boolean, Point3D, Point3D) = {
+
+val startPoint = js.Dynamic.literal(value = 0)
+val endPoint = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(startPoint.asInstanceOf[Point3D], endPoint.asInstanceOf[Point3D])
+(result, startPoint.value.asInstanceOf[Point3D], endPoint.value.asInstanceOf[Point3D])
+}
+  }
+       

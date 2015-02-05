@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a non-parametric construction plane. All constructions planes will return this type of definition regardless of method used to initially create them. 
  */
 @JSName("adsk.fusion.ConstructionPlaneByPlaneDefinition")
-trait ConstructionPlaneByPlaneDefinition extends ConstructionPlaneDefinition {
+class ConstructionPlaneByPlaneDefinition extends ConstructionPlaneDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -34,4 +34,9 @@ object ConstructionPlaneByPlaneDefinition extends js.Object {
   */
   var plane: Plane = js.native
 }
-// no utilities
+
+  object ConstructionPlaneByPlaneDefinitionUtilities {
+    // no toSeq
+
+  }
+       

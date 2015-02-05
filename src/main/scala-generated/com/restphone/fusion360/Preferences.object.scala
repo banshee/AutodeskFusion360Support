@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The Preferences object provides access to the various preference related objects for getting and setting the various preference values. 
  */
 @JSName("adsk.core.Preferences")
-trait Preferences extends Base {
+class Preferences extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -115,4 +115,9 @@ object Preferences extends js.Object {
   */
   val unitAndValuePreferences: UnitAndValuePreferences = js.native
 }
-// no utilities
+
+  object PreferencesUtilities {
+    // no toSeq
+
+  }
+       

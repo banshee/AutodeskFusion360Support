@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A list of geometric constraints. 
  */
 @JSName("adsk.fusion.GeometricConstraintList")
-trait GeometricConstraintList extends Base {
+class GeometricConstraintList extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object GeometricConstraintList extends js.Object {
 }
 
   object GeometricConstraintListUtilities {
+    
     def toSeq(xs: GeometricConstraintList): IndexedSeq[GeometricConstraint] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

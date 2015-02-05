@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The NetworkPreferences object provides access to network related preferences. 
  */
 @JSName("adsk.core.NetworkPreferences")
-trait NetworkPreferences extends Base {
+class NetworkPreferences extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -67,4 +67,9 @@ object NetworkPreferences extends js.Object {
   */
   var proxyPort: Integer = js.native
 }
-// no utilities
+
+  object NetworkPreferencesUtilities {
+    // no toSeq
+
+  }
+       

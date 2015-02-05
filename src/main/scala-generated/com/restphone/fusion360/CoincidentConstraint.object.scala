@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A coincident constraint in a sketch. 
  */
 @JSName("adsk.fusion.CoincidentConstraint")
-trait CoincidentConstraint extends GeometricConstraint {
+class CoincidentConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object CoincidentConstraint extends js.Object {
   */
   val point: SketchPoint = js.native
 }
-// no utilities
+
+  object CoincidentConstraintUtilities {
+    // no toSeq
+
+  }
+       

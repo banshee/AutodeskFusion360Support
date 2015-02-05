@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A material or appearance property that is a Boolean value. 
  */
 @JSName("adsk.core.BooleanProperty")
-trait BooleanProperty extends Property {
+class BooleanProperty extends Property {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -37,4 +37,9 @@ object BooleanProperty extends js.Object {
   */
   var value: Boolean = js.native
 }
-// no utilities
+
+  object BooleanPropertyUtilities {
+    // no toSeq
+
+  }
+       

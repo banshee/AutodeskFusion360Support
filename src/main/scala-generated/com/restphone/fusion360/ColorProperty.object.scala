@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A color property associated with an appearance. 
  */
 @JSName("adsk.core.ColorProperty")
-trait ColorProperty extends Property {
+class ColorProperty extends Property {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -69,4 +69,9 @@ object ColorProperty extends js.Object {
   */
   var values: Color = js.native
 }
-// no utilities
+
+  object ColorPropertyUtilities {
+    // no toSeq
+
+  }
+       

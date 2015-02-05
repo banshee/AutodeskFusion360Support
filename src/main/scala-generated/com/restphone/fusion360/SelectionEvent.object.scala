@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An event endpoint that supports the connection to client implemented SelectionEventHandlers. 
  */
 @JSName("adsk.core.SelectionEvent")
-trait SelectionEvent extends Event {
+class SelectionEvent extends Event {
   /**
   * Adds an event handler to this event endpoint.
   */
@@ -43,4 +43,9 @@ object SelectionEvent extends js.Object {
   */
   def remove(handler: SelectionEventHandler): Boolean = js.native
 }
-// no utilities
+
+  object SelectionEventUtilities {
+    // no toSeq
+
+  }
+       

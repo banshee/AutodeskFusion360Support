@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents a Snapshot in the timeline 
  */
 @JSName("adsk.fusion.Snapshot")
-trait Snapshot extends Base {
+class Snapshot extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -67,4 +67,9 @@ object Snapshot extends js.Object {
   */
   val timelineObject: TimelineObject = js.native
 }
-// no utilities
+
+  object SnapshotUtilities {
+    // no toSeq
+
+  }
+       

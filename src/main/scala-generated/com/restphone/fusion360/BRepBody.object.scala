@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a B-Rep (Boundary Representation) body. 
  */
 @JSName("adsk.fusion.BRepBody")
-trait BRepBody extends Base {
+class BRepBody extends Base {
   /**
   * Read-write property that gets and sets the current appearance of the body. Setting this property will result in applying an override appearance to the body and the AppearanceSourceType property will return OverrideAppearanceSource. Setting this property to null will remove any override.
   */
@@ -259,4 +259,9 @@ object BRepBody extends js.Object {
   */
   val volume: double = js.native
 }
-// no utilities
+
+  object BRepBodyUtilities {
+    // no toSeq
+
+  }
+       

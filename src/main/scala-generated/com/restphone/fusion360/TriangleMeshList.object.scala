@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to a set of triangle meshes. 
  */
 @JSName("adsk.fusion.TriangleMeshList")
-trait TriangleMeshList extends Base {
+class TriangleMeshList extends Base {
   /**
   * Returns the mesh with the tightest surface tolerance. This can return null in the case the list is empty, ie. Count is 0.
   */
@@ -69,9 +69,12 @@ object TriangleMeshList extends js.Object {
 }
 
   object TriangleMeshListUtilities {
+    
     def toSeq(xs: TriangleMeshList): IndexedSeq[TriangleMesh] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents an object in the timeline. 
  */
 @JSName("adsk.fusion.TimelineObject")
-trait TimelineObject extends Base {
+class TimelineObject extends Base {
   /**
   * Checks to see if this object can be reordered to the specified position. The default value of -1 indicates the end of the timeline. This method will fail if this is a timelineGroup object and the group is expanded.
   */
@@ -131,4 +131,9 @@ object TimelineObject extends js.Object {
   */
   def rollTo(rollBefore: Boolean): Boolean = js.native
 }
-// no utilities
+
+  object TimelineObjectUtilities {
+    // no toSeq
+
+  }
+       

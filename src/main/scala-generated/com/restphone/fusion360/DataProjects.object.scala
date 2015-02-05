@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection object that provides a list of all available projects. 
  */
 @JSName("adsk.core.DataProjects")
-trait DataProjects extends Base {
+class DataProjects extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object DataProjects extends js.Object {
 }
 
   object DataProjectsUtilities {
+    
     def toSeq(xs: DataProjects): IndexedSeq[DataProject] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

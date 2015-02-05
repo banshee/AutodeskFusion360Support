@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The top-level object that represents the Fusion application (all of Fusion). This provides access to the modeler and files. 
  */
 @JSName("adsk.core.Application")
-trait Application extends Base {
+class Application extends Base {
   /**
   * Returns the current active document or null if no document is open.
   */
@@ -179,4 +179,19 @@ object Application extends js.Object {
   */
   val vectorAngleTolerance: double = js.native
 }
-// no utilities
+
+  object ApplicationUtilities {
+    // no toSeq
+/**
+* Returns information about the last error that occurred.
+*
+* Out parameters are returned in a tuple.
+*/
+def getLastErrorWithResults(activeObject: Application): (Integer, string) = {
+
+val description = js.Dynamic.literal(value = 0)
+val result = activeObject.getLastError(description.asInstanceOf[String])
+(result, description.value.asInstanceOf[string])
+}
+  }
+       

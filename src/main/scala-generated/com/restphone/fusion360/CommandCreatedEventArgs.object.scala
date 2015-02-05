@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides data for the CommandCreated event. 
  */
 @JSName("adsk.core.CommandCreatedEventArgs")
-trait CommandCreatedEventArgs extends EventArgs {
+class CommandCreatedEventArgs extends EventArgs {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -34,4 +34,9 @@ object CommandCreatedEventArgs extends js.Object {
   */
   val command: Command = js.native
 }
-// no utilities
+
+  object CommandCreatedEventArgsUtilities {
+    // no toSeq
+
+  }
+       

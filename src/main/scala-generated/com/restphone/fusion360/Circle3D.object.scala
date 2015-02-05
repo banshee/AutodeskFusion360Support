@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D circle. A transient circle is not displayed or saved in a document. Transient 3D circles are used as a wrapper to work with raw 3D circle information. 
  */
 @JSName("adsk.core.Circle3D")
-trait Circle3D extends Curve3D {
+class Circle3D extends Curve3D {
   /**
   * Returns a NURBS curve that is geometrically identical to the circle.
   */
@@ -103,4 +103,21 @@ object Circle3D extends js.Object {
   */
   def set(center: Point3D, normal: Vector3D, radius: double): Boolean = js.native
 }
-// no utilities
+
+  object Circle3DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the circle.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Circle3D): (Boolean, Point3D, Vector3D, double) = {
+
+val center = js.Dynamic.literal(value = 0)
+val normal = js.Dynamic.literal(value = 0)
+val radius = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(center.asInstanceOf[Point3D], normal.asInstanceOf[Vector3D], radius.asInstanceOf[double])
+(result, center.value.asInstanceOf[Point3D], normal.value.asInstanceOf[Vector3D], radius.value.asInstanceOf[double])
+}
+  }
+       

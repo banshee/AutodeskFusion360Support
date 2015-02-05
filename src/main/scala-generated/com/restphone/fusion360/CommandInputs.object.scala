@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the set of inputs for a command. Command inputs are used to gather inputs from the user when a command is executed. The set of inputs used by a command are created and added to the command with the methods in this class. 
  */
 @JSName("adsk.core.CommandInputs")
-trait CommandInputs extends Base {
+class CommandInputs extends Base {
   /**
   * Adds a new boolean input to the command. The input can be shown as a check box or a button. If it's a button you will also want to
   */
@@ -213,9 +213,12 @@ object CommandInputs extends js.Object {
 }
 
   object CommandInputsUtilities {
+    
     def toSeq(xs: CommandInputs): IndexedSeq[CommandInput] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

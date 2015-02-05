@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing mirror feature in a design. 
  */
 @JSName("adsk.fusion.MirrorFeature")
-trait MirrorFeature extends Feature {
+class MirrorFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -89,4 +89,9 @@ object MirrorFeature extends js.Object {
   */
   val resultFeatures: ObjectCollection = js.native
 }
-// no utilities
+
+  object MirrorFeatureUtilities {
+    // no toSeq
+
+  }
+       

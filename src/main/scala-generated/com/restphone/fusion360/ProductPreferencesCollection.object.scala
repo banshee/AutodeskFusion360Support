@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection that provides access to product specific preference objects. 
  */
 @JSName("adsk.core.ProductPreferencesCollection")
-trait ProductPreferencesCollection extends Base {
+class ProductPreferencesCollection extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -69,9 +69,12 @@ object ProductPreferencesCollection extends js.Object {
 }
 
   object ProductPreferencesCollectionUtilities {
+    
     def toSeq(xs: ProductPreferencesCollection): IndexedSeq[ProductPreferences] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

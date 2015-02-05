@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A smooth constraint in a sketch. 
  */
 @JSName("adsk.fusion.SmoothConstraint")
-trait SmoothConstraint extends GeometricConstraint {
+class SmoothConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object SmoothConstraint extends js.Object {
   */
   val nativeObject: SmoothConstraint = js.native
 }
-// no utilities
+
+  object SmoothConstraintUtilities {
+    // no toSeq
+
+  }
+       

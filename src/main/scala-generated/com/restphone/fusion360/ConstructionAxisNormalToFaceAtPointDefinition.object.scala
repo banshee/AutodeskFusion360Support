@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction axis created using the SetByNormalToFaceAtPoint method 
  */
 @JSName("adsk.fusion.ConstructionAxisNormalToFaceAtPointDefinition")
-trait ConstructionAxisNormalToFaceAtPointDefinition extends ConstructionAxisDefinition {
+class ConstructionAxisNormalToFaceAtPointDefinition extends ConstructionAxisDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object ConstructionAxisNormalToFaceAtPointDefinition extends js.Object {
   */
   def redefine(face: Base, pointEntity: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionAxisNormalToFaceAtPointDefinitionUtilities {
+    // no toSeq
+
+  }
+       

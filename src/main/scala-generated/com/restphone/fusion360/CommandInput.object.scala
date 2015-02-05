@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for all command inputs. A CommandInput is used to gather an input value from the user when a command is executed. 
  */
 @JSName("adsk.core.CommandInput")
-trait CommandInput extends Base {
+class CommandInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -83,4 +83,9 @@ object CommandInput extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object CommandInputUtilities {
+    // no toSeq
+
+  }
+       

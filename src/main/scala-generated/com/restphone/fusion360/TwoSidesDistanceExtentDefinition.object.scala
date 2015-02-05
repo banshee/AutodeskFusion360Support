@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Defines the inputs for a TwoSidesDistanceExtentDefinition object. This defines a feature extent where the distance in each direction can be a different value. 
  */
 @JSName("adsk.fusion.TwoSidesDistanceExtentDefinition")
-trait TwoSidesDistanceExtentDefinition extends ExtentDefinition {
+class TwoSidesDistanceExtentDefinition extends ExtentDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -42,4 +42,9 @@ object TwoSidesDistanceExtentDefinition extends js.Object {
   */
   val distanceTwo: ModelParameter = js.native
 }
-// no utilities
+
+  object TwoSidesDistanceExtentDefinitionUtilities {
+    // no toSeq
+
+  }
+       

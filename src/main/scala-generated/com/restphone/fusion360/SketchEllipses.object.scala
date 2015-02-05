@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The collection of ellipses in a sketch. This provides access to the existing ellipses and supports the methods to create new ellipses. 
  */
 @JSName("adsk.fusion.SketchEllipses")
-trait SketchEllipses extends Base {
+class SketchEllipses extends Base {
   /**
   * Creates a sketch ellipse using the center point, a point defining the major axis and a third point anywhere along the ellipse. The created ellipse is parallel to the x-y plane of the sketch.
   */
@@ -69,9 +69,12 @@ object SketchEllipses extends js.Object {
 }
 
   object SketchEllipsesUtilities {
+    
     def toSeq(xs: SketchEllipses): IndexedSeq[SketchEllipse] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

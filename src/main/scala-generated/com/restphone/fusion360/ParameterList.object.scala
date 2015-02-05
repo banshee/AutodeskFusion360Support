@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient object used to pass a set of parameters. 
  */
 @JSName("adsk.fusion.ParameterList")
-trait ParameterList extends Base {
+class ParameterList extends Base {
   /**
   * Adds a parameter to the list. This does not create a new parameter, it adds an existing parameter to the list. Note that duplicates can exist in the list.
   */
@@ -133,9 +133,12 @@ object ParameterList extends js.Object {
 }
 
   object ParameterListUtilities {
+    
     def toSeq(xs: ParameterList): IndexedSeq[Parameter] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

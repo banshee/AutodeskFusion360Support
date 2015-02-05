@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a command input to get the choice in a dropdown list from the user. 
  */
 @JSName("adsk.core.DropDownCommandInput")
-trait DropDownCommandInput extends CommandInput {
+class DropDownCommandInput extends CommandInput {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -54,4 +54,9 @@ object DropDownCommandInput extends js.Object {
   */
   val selectedItem: ListItem = js.native
 }
-// no utilities
+
+  object DropDownCommandInputUtilities {
+    // no toSeq
+
+  }
+       

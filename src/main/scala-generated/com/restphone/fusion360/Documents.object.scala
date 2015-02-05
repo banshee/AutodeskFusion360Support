@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The Documents object provides access to all of the currently open documents and provides methods to create and open documents. 
  */
 @JSName("adsk.core.Documents")
-trait Documents extends Base {
+class Documents extends Base {
   /**
   * Creates and opens a new document of the specified type.
   */
@@ -85,9 +85,12 @@ object Documents extends js.Object {
 }
 
   object DocumentsUtilities {
+    
     def toSeq(xs: Documents): IndexedSeq[Document] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

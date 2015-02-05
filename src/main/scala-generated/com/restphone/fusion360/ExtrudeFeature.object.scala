@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing extrude feature in a design. 
  */
 @JSName("adsk.fusion.ExtrudeFeature")
-trait ExtrudeFeature extends Feature {
+class ExtrudeFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -153,4 +153,9 @@ object ExtrudeFeature extends js.Object {
   */
   val taperAngle: ModelParameter = js.native
 }
-// no utilities
+
+  object ExtrudeFeatureUtilities {
+    // no toSeq
+
+  }
+       

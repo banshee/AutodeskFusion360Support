@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a command input to get the value of a slider from the user, the value type is float. 
  */
 @JSName("adsk.core.RangeCommandFloatInput")
-trait RangeCommandFloatInput extends RangeCommandInput {
+class RangeCommandFloatInput extends RangeCommandInput {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -90,4 +90,9 @@ object RangeCommandFloatInput extends js.Object {
   */
   var valueTwo: double = js.native
 }
-// no utilities
+
+  object RangeCommandFloatInputUtilities {
+    // no toSeq
+
+  }
+       

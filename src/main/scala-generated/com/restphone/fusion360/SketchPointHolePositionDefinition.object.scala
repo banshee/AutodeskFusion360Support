@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides positioning information for a hole that is positioned by a sketch point. 
  */
 @JSName("adsk.fusion.SketchPointHolePositionDefinition")
-trait SketchPointHolePositionDefinition extends HolePositionDefinition {
+class SketchPointHolePositionDefinition extends HolePositionDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -33,4 +33,9 @@ object SketchPointHolePositionDefinition extends js.Object {
   */
   val sketchPoint: SketchPoint = js.native
 }
-// no utilities
+
+  object SketchPointHolePositionDefinitionUtilities {
+    // no toSeq
+
+  }
+       

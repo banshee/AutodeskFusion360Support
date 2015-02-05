@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A midpoint constraint in a sketch. 
  */
 @JSName("adsk.fusion.MidPointConstraint")
-trait MidPointConstraint extends GeometricConstraint {
+class MidPointConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object MidPointConstraint extends js.Object {
   */
   val point: SketchPoint = js.native
 }
-// no utilities
+
+  object MidPointConstraintUtilities {
+    // no toSeq
+
+  }
+       

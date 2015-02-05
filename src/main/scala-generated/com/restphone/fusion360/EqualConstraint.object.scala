@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An equal constraint in a sketch. 
  */
 @JSName("adsk.fusion.EqualConstraint")
-trait EqualConstraint extends GeometricConstraint {
+class EqualConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object EqualConstraint extends js.Object {
   */
   val nativeObject: EqualConstraint = js.native
 }
-// no utilities
+
+  object EqualConstraintUtilities {
+    // no toSeq
+
+  }
+       

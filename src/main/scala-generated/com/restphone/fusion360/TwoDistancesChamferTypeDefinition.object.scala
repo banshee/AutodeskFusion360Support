@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides information to create a chamfer that is defined by a two distances from the edge. 
  */
 @JSName("adsk.fusion.TwoDistancesChamferTypeDefinition")
-trait TwoDistancesChamferTypeDefinition extends ChamferTypeDefinition {
+class TwoDistancesChamferTypeDefinition extends ChamferTypeDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -42,4 +42,9 @@ object TwoDistancesChamferTypeDefinition extends js.Object {
   */
   val distanceTwo: ModelParameter = js.native
 }
-// no utilities
+
+  object TwoDistancesChamferTypeDefinitionUtilities {
+    // no toSeq
+
+  }
+       

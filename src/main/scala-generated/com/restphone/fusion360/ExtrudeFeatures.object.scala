@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing extrude features in a design and supports the ability to create new extrude features. 
  */
 @JSName("adsk.fusion.ExtrudeFeatures")
-trait ExtrudeFeatures extends Base {
+class ExtrudeFeatures extends Base {
   /**
   * Creates a new extrude feature based on the information defined by the provided ExtrudeFeatureInput object. To create a new extrusion use the CreateInput function to create a new input object and use the methods and properties on that object to define the required input for an extrusion. Once the information is defined on the input object you can pass it to the Add method to create the extrusion.
   */
@@ -77,9 +77,12 @@ object ExtrudeFeatures extends js.Object {
 }
 
   object ExtrudeFeaturesUtilities {
+    
     def toSeq(xs: ExtrudeFeatures): IndexedSeq[ExtrudeFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

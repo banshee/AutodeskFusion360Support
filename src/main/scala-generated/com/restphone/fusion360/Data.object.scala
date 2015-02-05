@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The Data class provides access to data files 
  */
 @JSName("adsk.core.Data")
-trait Data extends Base {
+class Data extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object Data extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object DataUtilities {
+    // no toSeq
+
+  }
+       

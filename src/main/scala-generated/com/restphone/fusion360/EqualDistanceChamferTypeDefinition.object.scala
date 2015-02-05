@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides information to create a chamfer that is defined by a single distance and has an equal offset from the edge. 
  */
 @JSName("adsk.fusion.EqualDistanceChamferTypeDefinition")
-trait EqualDistanceChamferTypeDefinition extends ChamferTypeDefinition {
+class EqualDistanceChamferTypeDefinition extends ChamferTypeDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -34,4 +34,9 @@ object EqualDistanceChamferTypeDefinition extends js.Object {
   */
   val distance: ModelParameter = js.native
 }
-// no utilities
+
+  object EqualDistanceChamferTypeDefinitionUtilities {
+    // no toSeq
+
+  }
+       

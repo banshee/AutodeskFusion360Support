@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A Base class to return the information (possibly parametric) used to define a ConstructionPoint. 
  */
 @JSName("adsk.fusion.ConstructionPointDefinition")
-trait ConstructionPointDefinition extends Base {
+class ConstructionPointDefinition extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object ConstructionPointDefinition extends js.Object {
   */
   val parentConstructionPoint: ConstructionPoint = js.native
 }
-// no utilities
+
+  object ConstructionPointDefinitionUtilities {
+    // no toSeq
+
+  }
+       

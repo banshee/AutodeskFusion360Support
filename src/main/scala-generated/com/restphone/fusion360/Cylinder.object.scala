@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient cylinder. A transient cylinder is not displayed or saved in a document. A transient cylinder is but is used as a wrapper to work with raw cylinder information. A transient cylinder has no boundaries and is infinite in length. 
  */
 @JSName("adsk.core.Cylinder")
-trait Cylinder extends Surface {
+class Cylinder extends Surface {
   /**
   * The center axis (along the length) of the cylinder that defines its normal direction.
   */
@@ -87,4 +87,21 @@ object Cylinder extends js.Object {
   */
   def set(origin: Point3D, axis: Vector3D, radius: double): Boolean = js.native
 }
-// no utilities
+
+  object CylinderUtilities {
+    // no toSeq
+/**
+* Gets the data that defines the cylinder.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Cylinder): (Boolean, Point3D, Vector3D, double) = {
+
+val origin = js.Dynamic.literal(value = 0)
+val axis = js.Dynamic.literal(value = 0)
+val radius = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(origin.asInstanceOf[Point3D], axis.asInstanceOf[Vector3D], radius.asInstanceOf[double])
+(result, origin.value.asInstanceOf[Point3D], axis.value.asInstanceOf[Vector3D], radius.value.asInstanceOf[double])
+}
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A Base class to return the information, possibly parametric, used to define the ConstructionPlane. 
  */
 @JSName("adsk.fusion.ConstructionPlaneDefinition")
-trait ConstructionPlaneDefinition extends Base {
+class ConstructionPlaneDefinition extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object ConstructionPlaneDefinition extends js.Object {
   */
   val parentConstructionPlane: ConstructionPlane = js.native
 }
-// no utilities
+
+  object ConstructionPlaneDefinitionUtilities {
+    // no toSeq
+
+  }
+       

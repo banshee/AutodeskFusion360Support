@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a non-parametric construction axis. In a non-parametric design all construction planes will return this type of definition regardless of how they were initially created. 
  */
 @JSName("adsk.fusion.ConstructionAxisByLineDefinition")
-trait ConstructionAxisByLineDefinition extends ConstructionAxisDefinition {
+class ConstructionAxisByLineDefinition extends ConstructionAxisDefinition {
   /**
   * Gets and sets the infinite line that defines the position and direction of the axis
   */
@@ -34,4 +34,9 @@ object ConstructionAxisByLineDefinition extends js.Object {
   */
   var axis: InfiniteLine3D = js.native
 }
-// no utilities
+
+  object ConstructionAxisByLineDefinitionUtilities {
+    // no toSeq
+
+  }
+       

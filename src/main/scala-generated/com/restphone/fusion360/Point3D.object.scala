@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D point. A transient point is not displayed or saved in a document. Transient 3D points are used as a wrapper to work with raw 3D point information. 
  */
 @JSName("adsk.core.Point3D")
-trait Point3D extends Base {
+class Point3D extends Base {
   /**
   * Get coordinate data of the point.
   */
@@ -187,4 +187,21 @@ object Point3D extends js.Object {
   */
   var z: double = js.native
 }
-// no utilities
+
+  object Point3DUtilities {
+    // no toSeq
+/**
+* Gets the data defining the point.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Point3D): (Boolean, double, double, double) = {
+
+val x = js.Dynamic.literal(value = 0)
+val y = js.Dynamic.literal(value = 0)
+val z = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(x.asInstanceOf[double], y.asInstanceOf[double], z.asInstanceOf[double])
+(result, x.value.asInstanceOf[double], y.value.asInstanceOf[double], z.value.asInstanceOf[double])
+}
+  }
+       

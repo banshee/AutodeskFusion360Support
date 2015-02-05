@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The collection of circles in a sketch. This provides access to the existing circles and supports the methods to create new circles. 
  */
 @JSName("adsk.fusion.SketchCircles")
-trait SketchCircles extends Base {
+class SketchCircles extends Base {
   /**
   * Creates a sketch circle that is always parallel to the x-y plane of the sketch and is centered at the specified point.
   */
@@ -101,9 +101,12 @@ object SketchCircles extends js.Object {
 }
 
   object SketchCirclesUtilities {
+    
     def toSeq(xs: SketchCircles): IndexedSeq[SketchCircle] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A concentric circle dimension in a sketch. 
  */
 @JSName("adsk.fusion.SketchConcentricCircleDimension")
-trait SketchConcentricCircleDimension extends SketchDimension {
+class SketchConcentricCircleDimension extends SketchDimension {
 
   /**
   * Returns the first concentric circle or arc.
@@ -66,4 +66,9 @@ object SketchConcentricCircleDimension extends js.Object {
   */
   val nativeObject: SketchConcentricCircleDimension = js.native
 }
-// no utilities
+
+  object SketchConcentricCircleDimensionUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a command input to get a unit based value from the user. 
  */
 @JSName("adsk.core.ValueCommandInput")
-trait ValueCommandInput extends CommandInput {
+class ValueCommandInput extends CommandInput {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -54,4 +54,9 @@ object ValueCommandInput extends js.Object {
   */
   var value: double = js.native
 }
-// no utilities
+
+  object ValueCommandInputUtilities {
+    // no toSeq
+
+  }
+       

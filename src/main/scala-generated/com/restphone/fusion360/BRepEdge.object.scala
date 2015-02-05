@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a one-dimensional topological element that can be used to bound a BRepFace A BRepEdge uses a single, connected and bounded subset of a curve for it geometry. 
  */
 @JSName("adsk.fusion.BRepEdge")
-trait BRepEdge extends Base {
+class BRepEdge extends Base {
   /**
   * Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this BRepEdge object is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly. but is already the native object.
   */
@@ -179,4 +179,9 @@ object BRepEdge extends js.Object {
   */
   val tolerance: double = js.native
 }
-// no utilities
+
+  object BRepEdgeUtilities {
+    // no toSeq
+
+  }
+       

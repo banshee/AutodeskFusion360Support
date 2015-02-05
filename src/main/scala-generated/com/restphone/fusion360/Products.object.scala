@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The Products object provides access to all of the currently installed products. 
  */
 @JSName("adsk.core.Products")
-trait Products extends Base {
+class Products extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object Products extends js.Object {
 }
 
   object ProductsUtilities {
+    
     def toSeq(xs: Products): IndexedSeq[Product] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

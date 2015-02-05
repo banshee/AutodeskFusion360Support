@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ConstructionPlaneOffsetDefinition defines a ConstructionPlane by... 
  */
 @JSName("adsk.fusion.ConstructionPlaneOffsetDefinition")
-trait ConstructionPlaneOffsetDefinition extends ConstructionPlaneDefinition {
+class ConstructionPlaneOffsetDefinition extends ConstructionPlaneDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object ConstructionPlaneOffsetDefinition extends js.Object {
   */
   def redefine(offset: ValueInput, planarEntity: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPlaneOffsetDefinitionUtilities {
+    // no toSeq
+
+  }
+       

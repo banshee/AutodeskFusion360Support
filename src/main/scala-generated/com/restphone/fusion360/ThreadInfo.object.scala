@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the thread data of a thread feature. If the ThreadInfo object is returned from a thread feature, setting this ThreadInfo will cause the thread feature to be edited. 
  */
 @JSName("adsk.fusion.ThreadInfo")
-trait ThreadInfo extends Base {
+class ThreadInfo extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -123,4 +123,9 @@ object ThreadInfo extends js.Object {
   */
   var threadType: String = js.native
 }
-// no utilities
+
+  object ThreadInfoUtilities {
+    // no toSeq
+
+  }
+       

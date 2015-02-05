@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction axis created using the SetByTwoPlanes method 
  */
 @JSName("adsk.fusion.ConstructionAxisTwoPlaneDefinition")
-trait ConstructionAxisTwoPlaneDefinition extends ConstructionAxisDefinition {
+class ConstructionAxisTwoPlaneDefinition extends ConstructionAxisDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object ConstructionAxisTwoPlaneDefinition extends js.Object {
   */
   def redefine(planarEntityOne: Base, planarEntityTwo: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionAxisTwoPlaneDefinitionUtilities {
+    // no toSeq
+
+  }
+       

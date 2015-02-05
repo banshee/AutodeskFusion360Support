@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a command input to get the value of a slider from the user. 
  */
 @JSName("adsk.core.RangeCommandInput")
-trait RangeCommandInput extends CommandInput {
+class RangeCommandInput extends CommandInput {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -78,4 +78,9 @@ object RangeCommandInput extends js.Object {
   */
   val unitType: String = js.native
 }
-// no utilities
+
+  object RangeCommandInputUtilities {
+    // no toSeq
+
+  }
+       

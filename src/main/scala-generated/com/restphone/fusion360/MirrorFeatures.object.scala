@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing mirror features in a component and supports the ability to create new mirror features. 
  */
 @JSName("adsk.fusion.MirrorFeatures")
-trait MirrorFeatures extends Base {
+class MirrorFeatures extends Base {
   /**
   * Creates a new mirror feature.
   */
@@ -77,9 +77,12 @@ object MirrorFeatures extends js.Object {
 }
 
   object MirrorFeaturesUtilities {
+    
     def toSeq(xs: MirrorFeatures): IndexedSeq[MirrorFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

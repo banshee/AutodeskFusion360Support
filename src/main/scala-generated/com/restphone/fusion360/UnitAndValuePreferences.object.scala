@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The UnitAndValuePreferences object provides access to unit and value precision related preferences. 
  */
 @JSName("adsk.core.UnitAndValuePreferences")
-trait UnitAndValuePreferences extends Base {
+class UnitAndValuePreferences extends Base {
   /**
   * Gets and sets the angular precision.
   */
@@ -155,4 +155,9 @@ object UnitAndValuePreferences extends js.Object {
   */
   var useScientficNotationBelow: Integer = js.native
 }
-// no utilities
+
+  object UnitAndValuePreferencesUtilities {
+    // no toSeq
+
+  }
+       

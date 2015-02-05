@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The TriangleMesh object represents all of the data defining a triangular mesh. 
  */
 @JSName("adsk.fusion.TriangleMesh")
-trait TriangleMesh extends Base {
+class TriangleMesh extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -163,4 +163,9 @@ object TriangleMesh extends js.Object {
   */
   val triangleCount: Integer = js.native
 }
-// no utilities
+
+  object TriangleMeshUtilities {
+    // no toSeq
+
+  }
+       

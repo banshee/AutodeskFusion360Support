@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents an entirely connected set of entities. A BRepBody consists of BRepLumps. 
  */
 @JSName("adsk.fusion.BRepLump")
-trait BRepLump extends Base {
+class BRepLump extends Base {
   /**
   * Returns the area in cm ^ 2.
   */
@@ -155,4 +155,9 @@ object BRepLump extends js.Object {
   */
   val volume: double = js.native
 }
-// no utilities
+
+  object BRepLumpUtilities {
+    // no toSeq
+
+  }
+       

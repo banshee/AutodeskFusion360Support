@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a single item in a check box list or a drop-down command input. 
  */
 @JSName("adsk.core.ListItem")
-trait ListItem extends Base {
+class ListItem extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -99,4 +99,9 @@ object ListItem extends js.Object {
   */
   val parentList: Base = js.native
 }
-// no utilities
+
+  object ListItemUtilities {
+    // no toSeq
+
+  }
+       

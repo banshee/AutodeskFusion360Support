@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An angular dimension in a sketch. 
  */
 @JSName("adsk.fusion.SketchAngularDimension")
-trait SketchAngularDimension extends SketchDimension {
+class SketchAngularDimension extends SketchDimension {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -66,4 +66,9 @@ object SketchAngularDimension extends js.Object {
   */
   val nativeObject: SketchAngularDimension = js.native
 }
-// no utilities
+
+  object SketchAngularDimensionUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A DocumentEvent represents a document related event. For example, DocumentOpening or DocumentOpened. 
  */
 @JSName("adsk.core.DocumentEvent")
-trait DocumentEvent extends Event {
+class DocumentEvent extends Event {
   /**
   * Add a handler to be notified when the file event occurs.
   */
@@ -43,4 +43,9 @@ object DocumentEvent extends js.Object {
   */
   def remove(handler: DocumentEventHandler): Boolean = js.native
 }
-// no utilities
+
+  object DocumentEventUtilities {
+    // no toSeq
+
+  }
+       

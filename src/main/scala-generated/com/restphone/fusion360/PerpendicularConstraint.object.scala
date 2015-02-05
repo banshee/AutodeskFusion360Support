@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A perpendicular constraint in a sketch. 
  */
 @JSName("adsk.fusion.PerpendicularConstraint")
-trait PerpendicularConstraint extends GeometricConstraint {
+class PerpendicularConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object PerpendicularConstraint extends js.Object {
   */
   val nativeObject: PerpendicularConstraint = js.native
 }
-// no utilities
+
+  object PerpendicularConstraintUtilities {
+    // no toSeq
+
+  }
+       

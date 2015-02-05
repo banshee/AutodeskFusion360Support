@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The collection of arcs in a sketch. This provides access to the existing arcs and supports the methods to create new arcs. 
  */
 @JSName("adsk.fusion.SketchArcs")
-trait SketchArcs extends Base {
+class SketchArcs extends Base {
   /**
   * Creates a sketch arc that is always parallel to the x-y plane of the sketch and is centered at the specified point.
   */
@@ -59,9 +59,7 @@ object SketchArcs extends js.Object {
   */
   def addByThreePoints(startPoint: Base, point: Point3D, endPoint: Base): SketchArc = js.native
   /**
-  * Creates a fillet between two sketch entities The side (quadrant) the fillet is
-   * created on is determined by the points specified.
-   * The point for each entity can be its startSketchPoint or endSketchPoint
+  * Creates a fillet between two sketch entities The side (quadrant) the fillet is created on is determined by the points specified. The point for each entity can be its startSketchPoint or endSketchPoint
   */
   def addFillet(firstEntity: SketchCurve, firstEntityPoint: Point3D, secondEnitity: SketchCurve, secondEntityPoint: Point3D, radius: double): SketchArc = js.native
   /**
@@ -87,9 +85,12 @@ object SketchArcs extends js.Object {
 }
 
   object SketchArcsUtilities {
+    
     def toSeq(xs: SketchArcs): IndexedSeq[SketchArc] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

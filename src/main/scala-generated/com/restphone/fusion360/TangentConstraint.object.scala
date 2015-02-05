@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A tangent constraint in a sketch. 
  */
 @JSName("adsk.fusion.TangentConstraint")
-trait TangentConstraint extends GeometricConstraint {
+class TangentConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object TangentConstraint extends js.Object {
   */
   val nativeObject: TangentConstraint = js.native
 }
-// no utilities
+
+  object TangentConstraintUtilities {
+    // no toSeq
+
+  }
+       

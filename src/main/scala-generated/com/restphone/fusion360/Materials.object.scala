@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection of materials within a library or document. 
  */
 @JSName("adsk.core.Materials")
-trait Materials extends Base {
+class Materials extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -77,9 +77,12 @@ object Materials extends js.Object {
 }
 
   object MaterialsUtilities {
+    
     def toSeq(xs: Materials): IndexedSeq[Material] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

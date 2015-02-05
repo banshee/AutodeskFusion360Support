@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An radial dimension in a sketch. 
  */
 @JSName("adsk.fusion.SketchRadialDimension")
-trait SketchRadialDimension extends SketchDimension {
+class SketchRadialDimension extends SketchDimension {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -58,4 +58,9 @@ object SketchRadialDimension extends js.Object {
   */
   val nativeObject: SketchRadialDimension = js.native
 }
-// no utilities
+
+  object SketchRadialDimensionUtilities {
+    // no toSeq
+
+  }
+       

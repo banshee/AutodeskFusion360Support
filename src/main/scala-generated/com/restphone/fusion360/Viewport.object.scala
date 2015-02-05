@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A viewport within Fusion. A viewport is the window where the model is displayed. 
  */
 @JSName("adsk.core.Viewport")
-trait Viewport extends Base {
+class Viewport extends Base {
   /**
   * Gets and sets the camera associated with the view. The camera returned is a copy of the current camera settings of the view. Editing the properties of the camera will have no affect on the viewport until the camera is assigned back to the viewport.
   */
@@ -99,4 +99,9 @@ object Viewport extends js.Object {
   */
   val width: Integer = js.native
 }
-// no utilities
+
+  object ViewportUtilities {
+    // no toSeq
+
+  }
+       

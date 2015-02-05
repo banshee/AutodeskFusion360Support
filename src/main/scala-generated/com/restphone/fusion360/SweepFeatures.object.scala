@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing sweep features in a component and supports the ability to create new sweep features. 
  */
 @JSName("adsk.fusion.SweepFeatures")
-trait SweepFeatures extends Base {
+class SweepFeatures extends Base {
   /**
   * Creates a new sweep feature.
   */
@@ -77,9 +77,12 @@ object SweepFeatures extends js.Object {
 }
 
   object SweepFeaturesUtilities {
+    
     def toSeq(xs: SweepFeatures): IndexedSeq[SweepFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

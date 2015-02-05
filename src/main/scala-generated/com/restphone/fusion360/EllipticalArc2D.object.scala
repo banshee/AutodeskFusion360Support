@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 2D elliptical arc. A transient elliptical arc is not displayed or saved in a document. Transient 2D elliptical arcs are used as a wrapper to work with raw 2D elliptical arc information. 
  */
 @JSName("adsk.core.EllipticalArc2D")
-trait EllipticalArc2D extends Curve2D {
+class EllipticalArc2D extends Curve2D {
   /**
   * Returns a NURBS curve that is geometrically identical to the elliptical arc.
   */
@@ -151,4 +151,24 @@ object EllipticalArc2D extends js.Object {
   */
   val startPoint: Point2D = js.native
 }
-// no utilities
+
+  object EllipticalArc2DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the elliptical arc.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: EllipticalArc2D): (Boolean, Point2D, Vector2D, double, double, double, double) = {
+
+val center = js.Dynamic.literal(value = 0)
+val majorAxis = js.Dynamic.literal(value = 0)
+val majorRadius = js.Dynamic.literal(value = 0)
+val minorRadius = js.Dynamic.literal(value = 0)
+val startAngle = js.Dynamic.literal(value = 0)
+val endAngle = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(center.asInstanceOf[Point2D], majorAxis.asInstanceOf[Vector2D], majorRadius.asInstanceOf[double], minorRadius.asInstanceOf[double], startAngle.asInstanceOf[double], endAngle.asInstanceOf[double])
+(result, center.value.asInstanceOf[Point2D], majorAxis.value.asInstanceOf[Vector2D], majorRadius.value.asInstanceOf[double], minorRadius.value.asInstanceOf[double], startAngle.value.asInstanceOf[double], endAngle.value.asInstanceOf[double])
+}
+  }
+       

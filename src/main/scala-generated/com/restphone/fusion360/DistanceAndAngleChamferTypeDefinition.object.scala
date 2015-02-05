@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides information to create a chamfer that is defined by a distance from the edge and an angle. 
  */
 @JSName("adsk.fusion.DistanceAndAngleChamferTypeDefinition")
-trait DistanceAndAngleChamferTypeDefinition extends ChamferTypeDefinition {
+class DistanceAndAngleChamferTypeDefinition extends ChamferTypeDefinition {
   /**
   * Returns the parameter controlling the angle. You can edit the angle by editing the value of the parameter object.
   */
@@ -42,4 +42,9 @@ object DistanceAndAngleChamferTypeDefinition extends js.Object {
   */
   val distance: ModelParameter = js.native
 }
-// no utilities
+
+  object DistanceAndAngleChamferTypeDefinitionUtilities {
+    // no toSeq
+
+  }
+       

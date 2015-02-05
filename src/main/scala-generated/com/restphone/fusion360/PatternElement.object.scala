@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the properties that pertain to the pattern element. 
  */
 @JSName("adsk.fusion.PatternElement")
-trait PatternElement extends Base {
+class PatternElement extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -91,4 +91,9 @@ object PatternElement extends js.Object {
   */
   val transform: Matrix3D = js.native
 }
-// no utilities
+
+  object PatternElementUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Generic collection used to handle lists of any object type. 
  */
 @JSName("adsk.core.ObjectCollection")
-trait ObjectCollection extends Base {
+class ObjectCollection extends Base {
   /**
   * Adds an object to the end of the collection. Duplicates can be added to the collection.
   */
@@ -125,9 +125,12 @@ object ObjectCollection extends js.Object {
 }
 
   object ObjectCollectionUtilities {
+    
     def toSeq(xs: ObjectCollection): IndexedSeq[Base] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

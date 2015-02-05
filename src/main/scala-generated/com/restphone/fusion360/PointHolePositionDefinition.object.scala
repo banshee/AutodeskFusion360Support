@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides positioning information for a hole that is positioned relative to a 3D coordinate point. 
  */
 @JSName("adsk.fusion.PointHolePositionDefinition")
-trait PointHolePositionDefinition extends HolePositionDefinition {
+class PointHolePositionDefinition extends HolePositionDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -41,4 +41,9 @@ object PointHolePositionDefinition extends js.Object {
   */
   val point: Base = js.native
 }
-// no utilities
+
+  object PointHolePositionDefinitionUtilities {
+    // no toSeq
+
+  }
+       

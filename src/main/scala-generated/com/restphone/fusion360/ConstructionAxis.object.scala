@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ConstructionAxis Object 
  */
 @JSName("adsk.fusion.ConstructionAxis")
-trait ConstructionAxis extends Base {
+class ConstructionAxis extends Base {
   /**
   * Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.
   */
@@ -163,4 +163,9 @@ object ConstructionAxis extends js.Object {
   */
   val timelineObject: TimelineObject = js.native
 }
-// no utilities
+
+  object ConstructionAxisUtilities {
+    // no toSeq
+
+  }
+       

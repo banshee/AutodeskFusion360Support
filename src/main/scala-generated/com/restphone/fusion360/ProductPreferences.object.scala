@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for the general product preferences. There is a derived class for each product where the specific preference values are exposed. 
  */
 @JSName("adsk.core.ProductPreferences")
-trait ProductPreferences extends Base {
+class ProductPreferences extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object ProductPreferences extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object ProductPreferencesUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An appearance. 
  */
 @JSName("adsk.core.Appearance")
-trait Appearance extends Base {
+class Appearance extends Base {
   /**
   * returns the collection of Properties that define this appearance
   */
@@ -115,4 +115,9 @@ object Appearance extends js.Object {
   */
   val usedBy: ObjectCollection = js.native
 }
-// no utilities
+
+  object AppearanceUtilities {
+    // no toSeq
+
+  }
+       

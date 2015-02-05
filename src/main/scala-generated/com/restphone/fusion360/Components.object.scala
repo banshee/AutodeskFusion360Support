@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The Components collection object provides access to existing components in a design. 
  */
 @JSName("adsk.fusion.Components")
-trait Components extends Base {
+class Components extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object Components extends js.Object {
 }
 
   object ComponentsUtilities {
+    
     def toSeq(xs: Components): IndexedSeq[Component] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

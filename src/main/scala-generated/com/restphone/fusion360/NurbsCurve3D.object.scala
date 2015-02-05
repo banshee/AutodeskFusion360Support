@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D NURBS curve. A transient NURBS curve is not displayed or saved in a document. Transient 3D NURBS curves are used as a wrapper to work with raw 3D NURBS curve information. 
  */
 @JSName("adsk.core.NurbsCurve3D")
-trait NurbsCurve3D extends Curve3D {
+class NurbsCurve3D extends Curve3D {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -151,4 +151,24 @@ object NurbsCurve3D extends js.Object {
   */
   def set(controlPoints: Array[Point3D], degree: Integer, knots: Array[Double], isRational: Boolean, weights: Array[Double], isPeriodic: Boolean): Boolean = js.native
 }
-// no utilities
+
+  object NurbsCurve3DUtilities {
+    // no toSeq
+/**
+* Gets the data that defines a transient 3D NURBS rational b-spline object.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: NurbsCurve3D): (Boolean, Point3D, integer, Double, boolean, Double, boolean) = {
+
+val controlPoints = js.Dynamic.literal(value = 0)
+val degree = js.Dynamic.literal(value = 0)
+val knots = js.Dynamic.literal(value = 0)
+val isRational = js.Dynamic.literal(value = 0)
+val weights = js.Dynamic.literal(value = 0)
+val isPeriodic = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(controlPoints.asInstanceOf[Array[Point3D]], degree.asInstanceOf[Integer], knots.asInstanceOf[Array[Double]], isRational.asInstanceOf[Boolean], weights.asInstanceOf[Array[Double]], isPeriodic.asInstanceOf[Boolean])
+(result, controlPoints.value.asInstanceOf[Point3D], degree.value.asInstanceOf[integer], knots.value.asInstanceOf[Double], isRational.value.asInstanceOf[boolean], weights.value.asInstanceOf[Double], isPeriodic.value.asInstanceOf[boolean])
+}
+  }
+       

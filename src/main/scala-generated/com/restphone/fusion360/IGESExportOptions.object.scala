@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Defines that an IGES export is to be done and specifies the various options. 
  */
 @JSName("adsk.fusion.IGESExportOptions")
-trait IGESExportOptions extends ExportOptions {
+class IGESExportOptions extends ExportOptions {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -27,4 +27,9 @@ trait IGESExportOptions extends ExportOptions {
 object IGESExportOptions extends js.Object {
 
 }
-// no utilities
+
+  object IGESExportOptionsUtilities {
+    // no toSeq
+
+  }
+       

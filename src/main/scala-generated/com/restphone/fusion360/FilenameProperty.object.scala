@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A file name property associated with an appearance. 
  */
 @JSName("adsk.core.FilenameProperty")
-trait FilenameProperty extends Property {
+class FilenameProperty extends Property {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -53,4 +53,9 @@ object FilenameProperty extends js.Object {
   */
   var values: String = js.native
 }
-// no utilities
+
+  object FilenamePropertyUtilities {
+    // no toSeq
+
+  }
+       

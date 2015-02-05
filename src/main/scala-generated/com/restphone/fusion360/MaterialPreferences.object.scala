@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the material related preferences. 
  */
 @JSName("adsk.core.MaterialPreferences")
-trait MaterialPreferences extends Base {
+class MaterialPreferences extends Base {
   /**
   * Gets and sets an appearance override. This property return null indicating that there is no override, or be set to null to remove the current appearance override.
   */
@@ -59,4 +59,9 @@ object MaterialPreferences extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object MaterialPreferencesUtilities {
+    // no toSeq
+
+  }
+       

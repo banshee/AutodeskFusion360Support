@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 2D vector. This object is a wrapper for 2D vector data and is used to pass vector data in and out of the API. 
  */
 @JSName("adsk.core.Vector2D")
-trait Vector2D extends Base {
+class Vector2D extends Base {
   /**
   * Add a vector to this vector.
   */
@@ -203,4 +203,9 @@ object Vector2D extends js.Object {
   */
   var y: double = js.native
 }
-// no utilities
+
+  object Vector2DUtilities {
+    // no toSeq
+
+  }
+       

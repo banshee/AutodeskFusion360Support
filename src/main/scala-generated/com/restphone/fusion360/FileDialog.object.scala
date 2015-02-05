@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to a file dialog. A file dialog can be used to prompt the user for file names to open or save to. 
  */
 @JSName("adsk.core.FileDialog")
-trait FileDialog extends Base {
+class FileDialog extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -115,4 +115,9 @@ object FileDialog extends js.Object {
   */
   var title: String = js.native
 }
-// no utilities
+
+  object FileDialogUtilities {
+    // no toSeq
+
+  }
+       

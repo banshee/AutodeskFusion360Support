@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the time line groups within a design and provides methods to create new groups. 
  */
 @JSName("adsk.fusion.TimelineGroups")
-trait TimelineGroups extends Base {
+class TimelineGroups extends Base {
   /**
   * Creates a new group within the timeline. The items indicates by the indexes will be included in the group. None of the items being grouped can be a group of this will fail.
   */
@@ -69,9 +69,12 @@ object TimelineGroups extends js.Object {
 }
 
   object TimelineGroupsUtilities {
+    
     def toSeq(xs: TimelineGroups): IndexedSeq[TimelineGroup] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

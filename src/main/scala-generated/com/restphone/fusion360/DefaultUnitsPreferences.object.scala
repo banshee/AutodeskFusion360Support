@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for the default units preference. There is a derived class supported by each product where the specific preference values are exposed. 
  */
 @JSName("adsk.core.DefaultUnitsPreferences")
-trait DefaultUnitsPreferences extends Base {
+class DefaultUnitsPreferences extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object DefaultUnitsPreferences extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object DefaultUnitsPreferencesUtilities {
+    // no toSeq
+
+  }
+       

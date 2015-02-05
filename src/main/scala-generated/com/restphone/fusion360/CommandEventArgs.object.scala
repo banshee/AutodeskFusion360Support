@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a set of arguments from a firing CommandEvent to a CommandEventHandler's notify callback method. 
  */
 @JSName("adsk.core.CommandEventArgs")
-trait CommandEventArgs extends EventArgs {
+class CommandEventArgs extends EventArgs {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -58,4 +58,9 @@ object CommandEventArgs extends js.Object {
   */
   var isValidResult: Boolean = js.native
 }
-// no utilities
+
+  object CommandEventArgsUtilities {
+    // no toSeq
+
+  }
+       

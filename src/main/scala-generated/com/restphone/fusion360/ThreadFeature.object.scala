@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing thread feature in a design. 
  */
 @JSName("adsk.fusion.ThreadFeature")
-trait ThreadFeature extends Feature {
+class ThreadFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -129,4 +129,9 @@ object ThreadFeature extends js.Object {
   */
   val threadOffset: ModelParameter = js.native
 }
-// no utilities
+
+  object ThreadFeatureUtilities {
+    // no toSeq
+
+  }
+       

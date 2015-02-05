@@ -11,10 +11,9 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The collection of lines in a sketch. This provides access to the existing lines and supports the methods to create new lines. 
  */
 @JSName("adsk.fusion.SketchLines")
-trait SketchLines extends Base {
+class SketchLines extends Base {
   /**
-  * Creates a sketch line between the two input points.
-   * The input points can be either existing SketchPoints or Point3D objects. If a SketchPoint is used the new line will be based on that sketch point and update if the sketch point is modified.
+  * Creates a sketch line between the two input points. The input points can be either existing SketchPoints or Point3D objects. If a SketchPoint is used the new line will be based on that sketch point and update if the sketch point is modified.
   */
   def addByTwoPoints(startPoint: Base, endPoint: Base): SketchLine = js.native
   /**
@@ -22,9 +21,7 @@ trait SketchLines extends Base {
   */
   def addCenterPointRectangle(centerPoint: Point3D, cornerPoint: Base): SketchLineList = js.native
   /**
-  * Creates four sketch lines representing
-   * a rectangle where the first two points are
-   * the base corners of the rectangle and the third point defines the height.
+  * Creates four sketch lines representing a rectangle where the first two points are the base corners of the rectangle and the third point defines the height.
   */
   def addThreePointRectangle(pointOne: Base, pointTwo: Base, pointThree: Point3D): SketchLineList = js.native
   /**
@@ -96,9 +93,12 @@ object SketchLines extends js.Object {
 }
 
   object SketchLinesUtilities {
+    
     def toSeq(xs: SketchLines): IndexedSeq[SketchLine] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

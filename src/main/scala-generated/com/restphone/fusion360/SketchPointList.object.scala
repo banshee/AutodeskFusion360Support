@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A list of sketch points. 
  */
 @JSName("adsk.fusion.SketchPointList")
-trait SketchPointList extends Base {
+class SketchPointList extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object SketchPointList extends js.Object {
 }
 
   object SketchPointListUtilities {
+    
     def toSeq(xs: SketchPointList): IndexedSeq[SketchPoint] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

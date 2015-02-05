@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A Workspace provides access to a set of panels, which contain commands that are relevant for that particular workspace. The user can switch from one workspace to another in a product (e.g. switch from Model to Sculpt in Fusion). 
  */
 @JSName("adsk.core.Workspace")
-trait Workspace extends Base {
+class Workspace extends Base {
   /**
   * Activate the workspace (assuming it is valid to do so - a SIM workspace can't be activated if Fusion is the active product).
   */
@@ -107,4 +107,9 @@ object Workspace extends js.Object {
   */
   val toolbarPanels: ToolbarPanels = js.native
 }
-// no utilities
+
+  object WorkspaceUtilities {
+    // no toSeq
+
+  }
+       

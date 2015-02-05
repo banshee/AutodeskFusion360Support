@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A WorkspaceList is a list of Workspaces - e.g. the Workspaces for a given product. 
  */
 @JSName("adsk.core.WorkspaceList")
-trait WorkspaceList extends Base {
+class WorkspaceList extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -69,9 +69,12 @@ object WorkspaceList extends js.Object {
 }
 
   object WorkspaceListUtilities {
+    
     def toSeq(xs: WorkspaceList): IndexedSeq[Workspace] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

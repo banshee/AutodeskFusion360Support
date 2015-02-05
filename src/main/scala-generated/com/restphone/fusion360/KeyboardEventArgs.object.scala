@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a set of arguments from a firing KeyboardEvent to a KeyboardEventHandler's notify callback method. 
  */
 @JSName("adsk.core.KeyboardEventArgs")
-trait KeyboardEventArgs extends EventArgs {
+class KeyboardEventArgs extends EventArgs {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -42,4 +42,9 @@ object KeyboardEventArgs extends js.Object {
   */
   val modifierMask: Integer = js.native
 }
-// no utilities
+
+  object KeyboardEventArgsUtilities {
+    // no toSeq
+
+  }
+       

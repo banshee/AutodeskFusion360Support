@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to a set of toolbar panels. There exist many toolbar panels and their visibility is determined by the active workspace. A panel can be associated with one or more workspaces and when the associated workspace is active, the panel is made visible. 
  */
 @JSName("adsk.core.ToolbarPanels")
-trait ToolbarPanels extends Base {
+class ToolbarPanels extends Base {
   /**
   * Creates a new ToolbarPanel. The panel is initially empty. Use the associated ToolbarControls collection to add buttons.
   */
@@ -85,9 +85,12 @@ object ToolbarPanels extends js.Object {
 }
 
   object ToolbarPanelsUtilities {
+    
     def toSeq(xs: ToolbarPanels): IndexedSeq[ToolbarPanel] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

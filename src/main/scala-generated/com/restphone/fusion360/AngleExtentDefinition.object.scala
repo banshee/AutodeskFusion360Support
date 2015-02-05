@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Defines the inputs for a AngleExtentDefinition object. This feature extent is defined by an angle as well as whether the extent is symmetric or only in one direction. If the extent is not symmetric, a positive or negative angle can be used to control the direction. 
  */
 @JSName("adsk.fusion.AngleExtentDefinition")
-trait AngleExtentDefinition extends ExtentDefinition {
+class AngleExtentDefinition extends ExtentDefinition {
   /**
   * Gets the ModelParameter that defines the angle
   */
@@ -42,4 +42,9 @@ object AngleExtentDefinition extends js.Object {
   */
   var isSymmetric: Boolean = js.native
 }
-// no utilities
+
+  object AngleExtentDefinitionUtilities {
+    // no toSeq
+
+  }
+       

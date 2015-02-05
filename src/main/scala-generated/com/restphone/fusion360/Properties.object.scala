@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection of properties that are associated with a material or appearance. 
  */
 @JSName("adsk.core.Properties")
-trait Properties extends Base {
+class Properties extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -77,9 +77,12 @@ object Properties extends js.Object {
 }
 
   object PropertiesUtilities {
+    
     def toSeq(xs: Properties): IndexedSeq[Property] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

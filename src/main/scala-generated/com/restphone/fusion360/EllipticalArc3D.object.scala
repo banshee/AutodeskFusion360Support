@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D elliptical arc. A transient elliptical arc is not displayed or saved in a document. Transient 3D elliptical arcs are used as a wrapper to work with raw 3D elliptical arc information. 
  */
 @JSName("adsk.core.EllipticalArc3D")
-trait EllipticalArc3D extends Curve3D {
+class EllipticalArc3D extends Curve3D {
   /**
   * Returns a NURBS curve that is geometrically identical to the elliptical arc.
   */
@@ -127,4 +127,25 @@ object EllipticalArc3D extends js.Object {
   */
   var startAngle: double = js.native
 }
-// no utilities
+
+  object EllipticalArc3DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the elliptical arc.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: EllipticalArc3D): (Boolean, Point3D, Vector3D, Vector3D, double, double, double, double) = {
+
+val center = js.Dynamic.literal(value = 0)
+val normal = js.Dynamic.literal(value = 0)
+val majorAxis = js.Dynamic.literal(value = 0)
+val majorRadius = js.Dynamic.literal(value = 0)
+val minorRadius = js.Dynamic.literal(value = 0)
+val startAngle = js.Dynamic.literal(value = 0)
+val endAngle = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(center.asInstanceOf[Point3D], normal.asInstanceOf[Vector3D], majorAxis.asInstanceOf[Vector3D], majorRadius.asInstanceOf[double], minorRadius.asInstanceOf[double], startAngle.asInstanceOf[double], endAngle.asInstanceOf[double])
+(result, center.value.asInstanceOf[Point3D], normal.value.asInstanceOf[Vector3D], majorAxis.value.asInstanceOf[Vector3D], majorRadius.value.asInstanceOf[double], minorRadius.value.asInstanceOf[double], startAngle.value.asInstanceOf[double], endAngle.value.asInstanceOf[double])
+}
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A line in a sketch. 
  */
 @JSName("adsk.fusion.SketchLine")
-trait SketchLine extends SketchCurve {
+class SketchLine extends SketchCurve {
 
 
   /**
@@ -109,4 +109,20 @@ object SketchLine extends js.Object {
   */
   val worldGeometry: Line3D = js.native
 }
-// no utilities
+
+  object SketchLineUtilities {
+    // no toSeq
+/**
+* Get the curves that intersect this curve along with the intersection points (Point2D)
+*
+* Out parameters are returned in a tuple.
+*/
+def intersectionsWithResults(activeObject: SketchLine, sketchCurves: ObjectCollection): (Boolean, ObjectCollection, ObjectCollection) = {
+
+val intersectingCurves = js.Dynamic.literal(value = 0)
+val intersectionPoints = js.Dynamic.literal(value = 0)
+val result = activeObject.intersections(sketchCurves.asInstanceOf[ObjectCollection], intersectingCurves.asInstanceOf[ObjectCollection], intersectionPoints.asInstanceOf[ObjectCollection])
+(result, intersectingCurves.value.asInstanceOf[ObjectCollection], intersectionPoints.value.asInstanceOf[ObjectCollection])
+}
+  }
+       

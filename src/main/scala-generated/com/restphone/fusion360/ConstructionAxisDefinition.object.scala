@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A Base class to return the information (possibly parametric) used to define a ConstructionAxis. 
  */
 @JSName("adsk.fusion.ConstructionAxisDefinition")
-trait ConstructionAxisDefinition extends Base {
+class ConstructionAxisDefinition extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object ConstructionAxisDefinition extends js.Object {
   */
   val parentConstructionAxis: ConstructionAxis = js.native
 }
-// no utilities
+
+  object ConstructionAxisDefinitionUtilities {
+    // no toSeq
+
+  }
+       

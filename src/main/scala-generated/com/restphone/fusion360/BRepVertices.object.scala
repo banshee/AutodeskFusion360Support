@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * BRepVertex collection. 
  */
 @JSName("adsk.fusion.BRepVertices")
-trait BRepVertices extends Base {
+class BRepVertices extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object BRepVertices extends js.Object {
 }
 
   object BRepVerticesUtilities {
+    
     def toSeq(xs: BRepVertices): IndexedSeq[BRepVertex] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

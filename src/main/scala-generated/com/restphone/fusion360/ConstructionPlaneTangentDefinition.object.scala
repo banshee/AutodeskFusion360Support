@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ConstructionPlaneTangentDefinition defines a ConstructionPlane tangent to a cylindrical or conical face at a point. 
  */
 @JSName("adsk.fusion.ConstructionPlaneTangentDefinition")
-trait ConstructionPlaneTangentDefinition extends ConstructionPlaneDefinition {
+class ConstructionPlaneTangentDefinition extends ConstructionPlaneDefinition {
   /**
   * Returns a Value object that for a transient definition provides the current assigned value. For a definition associated with a construction plane, it provides access to the associated parameter controlling the angle.
   */
@@ -58,4 +58,9 @@ object ConstructionPlaneTangentDefinition extends js.Object {
   */
   val tangentFace: Base = js.native
 }
-// no utilities
+
+  object ConstructionPlaneTangentDefinitionUtilities {
+    // no toSeq
+
+  }
+       

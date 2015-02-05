@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing scale features in a component and supports the ability to create new scale features. 
  */
 @JSName("adsk.fusion.ScaleFeatures")
-trait ScaleFeatures extends Base {
+class ScaleFeatures extends Base {
   /**
   * Creates a new scale feature.
   */
@@ -77,9 +77,12 @@ object ScaleFeatures extends js.Object {
 }
 
   object ScaleFeaturesUtilities {
+    
     def toSeq(xs: ScaleFeatures): IndexedSeq[ScaleFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

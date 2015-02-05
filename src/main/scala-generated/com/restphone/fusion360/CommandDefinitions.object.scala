@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to all of the available command definitions. This is all those created via the API but also includes the command definitions defined by Fusion for the native commands. 
  */
 @JSName("adsk.core.CommandDefinitions")
-trait CommandDefinitions extends Base {
+class CommandDefinitions extends Base {
   /**
   * Creates a new command definition that can be used to create a button control and handle the response when the button is clicked.
   */
@@ -109,9 +109,12 @@ object CommandDefinitions extends js.Object {
 }
 
   object CommandDefinitionsUtilities {
+    
     def toSeq(xs: CommandDefinitions): IndexedSeq[CommandDefinition] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

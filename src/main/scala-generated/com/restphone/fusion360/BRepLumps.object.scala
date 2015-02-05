@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * BRepLump collection. 
  */
 @JSName("adsk.fusion.BRepLumps")
-trait BRepLumps extends Base {
+class BRepLumps extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object BRepLumps extends js.Object {
 }
 
   object BRepLumpsUtilities {
+    
     def toSeq(xs: BRepLumps): IndexedSeq[BRepLump] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

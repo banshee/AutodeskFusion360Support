@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection of profile curves within a profile loop. 
  */
 @JSName("adsk.fusion.ProfileCurves")
-trait ProfileCurves extends Base {
+class ProfileCurves extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object ProfileCurves extends js.Object {
 }
 
   object ProfileCurvesUtilities {
+    
     def toSeq(xs: ProfileCurves): IndexedSeq[ProfileCurve] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

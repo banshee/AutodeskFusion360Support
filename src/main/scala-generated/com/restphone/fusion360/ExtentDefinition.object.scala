@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for all extent definition classes 
  */
 @JSName("adsk.fusion.ExtentDefinition")
-trait ExtentDefinition extends Base {
+class ExtentDefinition extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object ExtentDefinition extends js.Object {
   */
   val parentFeature: Feature = js.native
 }
-// no utilities
+
+  object ExtentDefinitionUtilities {
+    // no toSeq
+
+  }
+       

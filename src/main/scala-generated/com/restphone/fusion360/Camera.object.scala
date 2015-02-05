@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The Camera class represents the information that specifies how a model is viewed and displayed. It's analogous to a real camera where it has a position in space, is pointed towards a specific point and is oriented in a particular way. 
  */
 @JSName("adsk.core.Camera")
-trait Camera extends Base {
+class Camera extends Base {
   /**
   * Gets and sets the current camera type.
   */
@@ -115,4 +115,9 @@ object Camera extends js.Object {
   */
   var viewOrientation: ViewOrientations = js.native
 }
-// no utilities
+
+  object CameraUtilities {
+    // no toSeq
+
+  }
+       

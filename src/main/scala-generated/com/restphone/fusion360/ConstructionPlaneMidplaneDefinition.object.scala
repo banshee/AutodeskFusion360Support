@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ConstructionPlaneMidplaneDefinition defines a ConstructionPlane by... 
  */
 @JSName("adsk.fusion.ConstructionPlaneMidplaneDefinition")
-trait ConstructionPlaneMidplaneDefinition extends ConstructionPlaneDefinition {
+class ConstructionPlaneMidplaneDefinition extends ConstructionPlaneDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object ConstructionPlaneMidplaneDefinition extends js.Object {
   */
   def redefine(planarEntityOne: Base, planarEntityTwo: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPlaneMidplaneDefinitionUtilities {
+    // no toSeq
+
+  }
+       

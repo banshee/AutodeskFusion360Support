@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing chamfer feature in a design. 
  */
 @JSName("adsk.fusion.ChamferFeature")
-trait ChamferFeature extends Feature {
+class ChamferFeature extends Feature {
 
   /**
   * Gets an enum indicating how the chamfer was defined. The valid return values are EqualDistanceType, TwoDistancesType and DistanceAndAngleType. This property returns nothing in the case where the feature is non-parametric.
@@ -113,4 +113,9 @@ object ChamferFeature extends js.Object {
   */
   def setTwoDistances(distanceOne: ValueInput, distanceTwo: ValueInput): Boolean = js.native
 }
-// no utilities
+
+  object ChamferFeatureUtilities {
+    // no toSeq
+
+  }
+       

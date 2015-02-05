@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * BRepEdge collection. 
  */
 @JSName("adsk.fusion.BRepEdges")
-trait BRepEdges extends Base {
+class BRepEdges extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object BRepEdges extends js.Object {
 }
 
   object BRepEdgesUtilities {
+    
     def toSeq(xs: BRepEdges): IndexedSeq[BRepEdge] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

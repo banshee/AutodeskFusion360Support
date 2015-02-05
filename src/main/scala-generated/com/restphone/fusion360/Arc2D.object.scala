@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 2D arc. A transient arc is not displayed or saved in a document. Transient arcs are used as a wrapper to work with raw 2D arc information. 
  */
 @JSName("adsk.core.Arc2D")
-trait Arc2D extends Curve2D {
+class Arc2D extends Curve2D {
   /**
   * Returns a NURBS curve that is geometrically identical to the arc.
   */
@@ -143,4 +143,23 @@ object Arc2D extends js.Object {
   */
   val startPoint: Point2D = js.native
 }
-// no utilities
+
+  object Arc2DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the arc.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Arc2D): (Boolean, Point2D, double, double, double, boolean) = {
+
+val center = js.Dynamic.literal(value = 0)
+val radius = js.Dynamic.literal(value = 0)
+val startAngle = js.Dynamic.literal(value = 0)
+val endAngle = js.Dynamic.literal(value = 0)
+val isClockwise = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(center.asInstanceOf[Point2D], radius.asInstanceOf[double], startAngle.asInstanceOf[double], endAngle.asInstanceOf[double], isClockwise.asInstanceOf[Boolean])
+(result, center.value.asInstanceOf[Point2D], radius.value.asInstanceOf[double], startAngle.value.asInstanceOf[double], endAngle.value.asInstanceOf[double], isClockwise.value.asInstanceOf[boolean])
+}
+  }
+       

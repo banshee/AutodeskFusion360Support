@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An diameter dimension in a sketch. 
  */
 @JSName("adsk.fusion.SketchDiameterDimension")
-trait SketchDiameterDimension extends SketchDimension {
+class SketchDiameterDimension extends SketchDimension {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -58,4 +58,9 @@ object SketchDiameterDimension extends js.Object {
   */
   val nativeObject: SketchDiameterDimension = js.native
 }
-// no utilities
+
+  object SketchDiameterDimensionUtilities {
+    // no toSeq
+
+  }
+       

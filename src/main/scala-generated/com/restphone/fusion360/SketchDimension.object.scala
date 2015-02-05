@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for the all sketch dimensions. 
  */
 @JSName("adsk.fusion.SketchDimension")
-trait SketchDimension extends Base {
+class SketchDimension extends Base {
   /**
   * Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly but is already the native object.
   */
@@ -91,4 +91,9 @@ object SketchDimension extends js.Object {
   */
   var textPosition: Point3D = js.native
 }
-// no utilities
+
+  object SketchDimensionUtilities {
+    // no toSeq
+
+  }
+       

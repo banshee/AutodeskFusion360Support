@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an open Fusion design. This derives from the Design base class and adds the Fusion specific functionality. 
  */
 @JSName("adsk.fusion.Design")
-trait Design extends Product {
+class Design extends Product {
   /**
   * Returns the component that is current being edited. This can return the root component or another component within the design.
   */
@@ -118,4 +118,9 @@ object Design extends js.Object {
   */
   val userParameters: UserParameters = js.native
 }
-// no utilities
+
+  object DesignUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing thread features in a component and supports the ability to create new thread features. 
  */
 @JSName("adsk.fusion.ThreadFeatures")
-trait ThreadFeatures extends Base {
+class ThreadFeatures extends Base {
   /**
   * Creates a new thread feature.
   */
@@ -93,9 +93,12 @@ object ThreadFeatures extends js.Object {
 }
 
   object ThreadFeaturesUtilities {
+    
     def toSeq(xs: ThreadFeatures): IndexedSeq[ThreadFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a thread feature. 
  */
 @JSName("adsk.fusion.ThreadFeatureInput")
-trait ThreadFeatureInput extends Base {
+class ThreadFeatureInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -107,4 +107,9 @@ object ThreadFeatureInput extends js.Object {
   */
   var threadOffset: ValueInput = js.native
 }
-// no utilities
+
+  object ThreadFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

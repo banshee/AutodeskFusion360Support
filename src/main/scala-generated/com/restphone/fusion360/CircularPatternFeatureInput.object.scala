@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a circular pattern feature. 
  */
 @JSName("adsk.fusion.CircularPatternFeatureInput")
-trait CircularPatternFeatureInput extends Base {
+class CircularPatternFeatureInput extends Base {
   /**
   * Gets and sets the axis of circular pattern. This can be a sketch line, linear edge, construction axis, an edge/sketch curve that defines an axis (circle, etc.) or a face that defines an axis (cylinder, cone, torus, etc.).
   */
@@ -83,4 +83,9 @@ object CircularPatternFeatureInput extends js.Object {
   */
   var totalAngle: ValueInput = js.native
 }
-// no utilities
+
+  object CircularPatternFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to a list of MeshBody objects. 
  */
 @JSName("adsk.fusion.MeshBodyList")
-trait MeshBodyList extends Base {
+class MeshBodyList extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object MeshBodyList extends js.Object {
 }
 
   object MeshBodyListUtilities {
+    
     def toSeq(xs: MeshBodyList): IndexedSeq[MeshBody] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A ValueInput provides a flexible way of specifying a string or a double. No semantics are associated with a ValueInput (e.g. is the string valid, can the string be converted to a double) - it is merely a way of supplying information in either string OR double form as a function parameter. ValueInput objects are typically used to specify things like an extrude depth, or hole dia, etc. 
  */
 @JSName("adsk.core.ValueInput")
-trait ValueInput extends Base {
+class ValueInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -75,4 +75,9 @@ object ValueInput extends js.Object {
   */
   val stringValue: String = js.native
 }
-// no utilities
+
+  object ValueInputUtilities {
+    // no toSeq
+
+  }
+       

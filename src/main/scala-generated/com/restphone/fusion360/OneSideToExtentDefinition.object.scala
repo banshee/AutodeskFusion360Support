@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Defines the inputs for a OneSideToExtentDefinition object. This defines a feature extent that goes up to a face or construction plane in one direction. 
  */
 @JSName("adsk.fusion.OneSideToExtentDefinition")
-trait OneSideToExtentDefinition extends ExtentDefinition {
+class OneSideToExtentDefinition extends ExtentDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -42,4 +42,9 @@ object OneSideToExtentDefinition extends js.Object {
   */
   var toEntity: Base = js.native
 }
-// no utilities
+
+  object OneSideToExtentDefinitionUtilities {
+    // no toSeq
+
+  }
+       

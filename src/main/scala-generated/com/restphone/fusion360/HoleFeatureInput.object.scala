@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a hole feature. 
  */
 @JSName("adsk.fusion.HoleFeatureInput")
-trait HoleFeatureInput extends Base {
+class HoleFeatureInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -131,4 +131,9 @@ object HoleFeatureInput extends js.Object {
   */
   var tipAngle: ValueInput = js.native
 }
-// no utilities
+
+  object HoleFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

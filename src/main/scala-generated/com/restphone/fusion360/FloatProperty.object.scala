@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A float or real value property associated with a material or appearance. 
  */
 @JSName("adsk.core.FloatProperty")
-trait FloatProperty extends Property {
+class FloatProperty extends Property {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -101,4 +101,22 @@ object FloatProperty extends js.Object {
   */
   var values: Double = js.native
 }
-// no utilities
+
+  object FloatPropertyUtilities {
+    // no toSeq
+/**
+* Method that returns any limits for the value of this property. The HasLimits property can be used to see if there are any limits or not.
+*
+* Out parameters are returned in a tuple.
+*/
+def getLimitsWithResults(activeObject: FloatProperty): (Boolean, boolean, double, boolean, double) = {
+
+val hasLowLimit = js.Dynamic.literal(value = 0)
+val lowLimit = js.Dynamic.literal(value = 0)
+val hasHighLimit = js.Dynamic.literal(value = 0)
+val highLimit = js.Dynamic.literal(value = 0)
+val result = activeObject.getLimits(hasLowLimit.asInstanceOf[Boolean], lowLimit.asInstanceOf[double], hasHighLimit.asInstanceOf[Boolean], highLimit.asInstanceOf[double])
+(result, hasLowLimit.value.asInstanceOf[boolean], lowLimit.value.asInstanceOf[double], hasHighLimit.value.asInstanceOf[boolean], highLimit.value.asInstanceOf[double])
+}
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Returns the items within a folder. This includes everything in a folder except for other folders. 
  */
 @JSName("adsk.core.DataFiles")
-trait DataFiles extends Base {
+class DataFiles extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object DataFiles extends js.Object {
 }
 
   object DataFilesUtilities {
+    
     def toSeq(xs: DataFiles): IndexedSeq[DataFile] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

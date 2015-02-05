@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a scale feature. 
  */
 @JSName("adsk.fusion.ScaleFeatureInput")
-trait ScaleFeatureInput extends Base {
+class ScaleFeatureInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -107,4 +107,9 @@ object ScaleFeatureInput extends js.Object {
   */
   val zScale: ValueInput = js.native
 }
-// no utilities
+
+  object ScaleFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

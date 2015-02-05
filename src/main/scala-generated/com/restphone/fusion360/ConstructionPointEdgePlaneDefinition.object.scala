@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction point created using the SetbyEdgePlane method 
  */
 @JSName("adsk.fusion.ConstructionPointEdgePlaneDefinition")
-trait ConstructionPointEdgePlaneDefinition extends ConstructionPointDefinition {
+class ConstructionPointEdgePlaneDefinition extends ConstructionPointDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object ConstructionPointEdgePlaneDefinition extends js.Object {
   */
   def redefine(edge: Base, plane: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPointEdgePlaneDefinitionUtilities {
+    // no toSeq
+
+  }
+       

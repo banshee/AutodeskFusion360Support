@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a list of components. 
  */
 @JSName("adsk.fusion.ComponentList")
-trait ComponentList extends Base {
+class ComponentList extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object ComponentList extends js.Object {
 }
 
   object ComponentListUtilities {
+    
     def toSeq(xs: ComponentList): IndexedSeq[Component] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

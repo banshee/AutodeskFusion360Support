@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the user-interface related objects and functionality. 
  */
 @JSName("adsk.core.UserInterface")
-trait UserInterface extends Base {
+class UserInterface extends Base {
   /**
   * Gets the current set of selected objects.
   */
@@ -147,4 +147,19 @@ object UserInterface extends js.Object {
   */
   def workspacesByProduct(product: Product): WorkspaceList = js.native
 }
-// no utilities
+
+  object UserInterfaceUtilities {
+    // no toSeq
+/**
+* Displays a modal dialog to get string input from the user.
+*
+* Out parameters are returned in a tuple.
+*/
+def inputBoxWithResults(activeObject: UserInterface, prompt: String, title: String, defaultValue: String): (String, boolean) = {
+
+val cancelled = js.Dynamic.literal(value = 0)
+val result = activeObject.inputBox(prompt.asInstanceOf[String], cancelled.asInstanceOf[Boolean], title.asInstanceOf[String], defaultValue.asInstanceOf[String])
+(result, cancelled.value.asInstanceOf[boolean])
+}
+  }
+       

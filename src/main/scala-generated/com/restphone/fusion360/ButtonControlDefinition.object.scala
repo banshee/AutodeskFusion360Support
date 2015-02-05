@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents the information used to define a button. This isn't the visible button control but is the information needed to create a button control and fully defines a button except for it's position within the user interface. 
  */
 @JSName("adsk.core.ButtonControlDefinition")
-trait ButtonControlDefinition extends ControlDefinition {
+class ButtonControlDefinition extends ControlDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -29,4 +29,9 @@ trait ButtonControlDefinition extends ControlDefinition {
 object ButtonControlDefinition extends js.Object {
 
 }
-// no utilities
+
+  object ButtonControlDefinitionUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a mirror feature. 
  */
 @JSName("adsk.fusion.MirrorFeatureInput")
-trait MirrorFeatureInput extends Base {
+class MirrorFeatureInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -59,4 +59,9 @@ object MirrorFeatureInput extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object MirrorFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

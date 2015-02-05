@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a draft feature. 
  */
 @JSName("adsk.fusion.DraftFeatureInput")
-trait DraftFeatureInput extends Base {
+class DraftFeatureInput extends Base {
   /**
   * Gets the first, or the only angle in the case of a single angle definition.
   */
@@ -115,4 +115,9 @@ object DraftFeatureInput extends js.Object {
   */
   def setTwoAngles(angleOne: ValueInput, angleTwo: ValueInput): Boolean = js.native
 }
-// no utilities
+
+  object DraftFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

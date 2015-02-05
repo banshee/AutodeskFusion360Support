@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a shell feature. 
  */
 @JSName("adsk.fusion.ShellFeatureInput")
-trait ShellFeatureInput extends Base {
+class ShellFeatureInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -83,4 +83,9 @@ object ShellFeatureInput extends js.Object {
   */
   var outsideThickness: ValueInput = js.native
 }
-// no utilities
+
+  object ShellFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection of the dimensions in a sketch. This object also supports the methods to add new sketch dimensions. 
  */
 @JSName("adsk.fusion.SketchDimensions")
-trait SketchDimensions extends Base {
+class SketchDimensions extends Base {
   /**
   * Creates a new angular dimension constraint between the two input lines. The position of the text controls which of the four quadrants will be dimensioned.
   */
@@ -125,9 +125,12 @@ object SketchDimensions extends js.Object {
 }
 
   object SketchDimensionsUtilities {
+    
     def toSeq(xs: SketchDimensions): IndexedSeq[SketchDimension] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

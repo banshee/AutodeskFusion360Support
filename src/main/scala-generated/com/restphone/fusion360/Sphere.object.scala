@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient sphere. A transient sphere is not displayed or saved in a document. Transient spheres are used as a wrapper to work with raw sphere information. A transient sphere is a full sphere defined by a point and a radius. 
  */
 @JSName("adsk.core.Sphere")
-trait Sphere extends Surface {
+class Sphere extends Surface {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -79,4 +79,20 @@ object Sphere extends js.Object {
   */
   def set(origin: Point3D, radius: double): Boolean = js.native
 }
-// no utilities
+
+  object SphereUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the sphere.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Sphere): (Boolean, Point3D, double) = {
+
+val origin = js.Dynamic.literal(value = 0)
+val radius = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(origin.asInstanceOf[Point3D], radius.asInstanceOf[double])
+(result, origin.value.asInstanceOf[Point3D], radius.value.asInstanceOf[double])
+}
+  }
+       

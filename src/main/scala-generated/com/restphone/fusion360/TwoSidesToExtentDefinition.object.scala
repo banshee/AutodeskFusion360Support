@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Defines the inputs for a TwoSidesToExtentDefinition object This defines a feature extent where the extents of feature go up to faces or construction planes in both directions. 
  */
 @JSName("adsk.fusion.TwoSidesToExtentDefinition")
-trait TwoSidesToExtentDefinition extends ExtentDefinition {
+class TwoSidesToExtentDefinition extends ExtentDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object TwoSidesToExtentDefinition extends js.Object {
   */
   var toEntityTwo: Base = js.native
 }
-// no utilities
+
+  object TwoSidesToExtentDefinitionUtilities {
+    // no toSeq
+
+  }
+       

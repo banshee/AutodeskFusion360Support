@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An event handler base class that a client derives from to handle events triggered by a SelectionEvent. A client implemented instance of this class can be added to a SelectionEvent to receive these event notifications. 
  */
 @JSName("SelectionEventHandler")
-trait SelectionEventHandler extends EventHandler {
+class SelectionEventHandler extends EventHandler {
   /**
   * This notify member is called when an event is triggered from any event that this handler has been added to.
   */
@@ -27,4 +27,9 @@ object SelectionEventHandler extends js.Object {
   */
   def notify(eventArgs: SelectionEventArgs): Unit = js.native
 }
-// no utilities
+
+  object SelectionEventHandlerUtilities {
+    // no toSeq
+
+  }
+       

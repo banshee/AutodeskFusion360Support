@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class Parameter object that can represent model or user parameters. 
  */
 @JSName("adsk.fusion.Parameter")
-trait Parameter extends Base {
+class Parameter extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -99,4 +99,9 @@ object Parameter extends js.Object {
   */
   var value: double = js.native
 }
-// no utilities
+
+  object ParameterUtilities {
+    // no toSeq
+
+  }
+       

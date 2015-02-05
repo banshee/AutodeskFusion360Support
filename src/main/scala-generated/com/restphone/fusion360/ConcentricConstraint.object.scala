@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A concentric constraint in a sketch. 
  */
 @JSName("adsk.fusion.ConcentricConstraint")
-trait ConcentricConstraint extends GeometricConstraint {
+class ConcentricConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object ConcentricConstraint extends js.Object {
   */
   val nativeObject: ConcentricConstraint = js.native
 }
-// no utilities
+
+  object ConcentricConstraintUtilities {
+    // no toSeq
+
+  }
+       

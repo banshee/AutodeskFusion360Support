@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction axis created using the SetbyCircularFace method 
  */
 @JSName("adsk.fusion.ConstructionAxisCircularFaceDefinition")
-trait ConstructionAxisCircularFaceDefinition extends ConstructionAxisDefinition {
+class ConstructionAxisCircularFaceDefinition extends ConstructionAxisDefinition {
   /**
   * Gets and sets the cylinder, cone, or torus this work axis is parametrically dependent on.
   */
@@ -34,4 +34,9 @@ object ConstructionAxisCircularFaceDefinition extends js.Object {
   */
   var circularFace: BRepFace = js.native
 }
-// no utilities
+
+  object ConstructionAxisCircularFaceDefinitionUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing fillet edge sets in a component 
  */
 @JSName("adsk.fusion.FilletEdgeSets")
-trait FilletEdgeSets extends Base {
+class FilletEdgeSets extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object FilletEdgeSets extends js.Object {
 }
 
   object FilletEdgeSetsUtilities {
+    
     def toSeq(xs: FilletEdgeSets): IndexedSeq[FilletEdgeSet] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient torus. A transient torus is not displayed or saved in a document. A transient torus is used as a wrapper to work with raw torus information. A transient torus is a full torus with no boundaries. 
  */
 @JSName("adsk.core.Torus")
-trait Torus extends Surface {
+class Torus extends Surface {
   /**
   * Gets and sets the center axis of the torus.
   */
@@ -95,4 +95,22 @@ object Torus extends js.Object {
   */
   def set(origin: Point3D, axis: Vector3D, majorRadius: double, minorRadius: double): Boolean = js.native
 }
-// no utilities
+
+  object TorusUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the torus.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Torus): (Boolean, Point3D, Vector3D, double, double) = {
+
+val origin = js.Dynamic.literal(value = 0)
+val axis = js.Dynamic.literal(value = 0)
+val majorRadius = js.Dynamic.literal(value = 0)
+val minorRadius = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(origin.asInstanceOf[Point3D], axis.asInstanceOf[Vector3D], majorRadius.asInstanceOf[double], minorRadius.asInstanceOf[double])
+(result, origin.value.asInstanceOf[Point3D], axis.value.asInstanceOf[Vector3D], majorRadius.value.asInstanceOf[double], minorRadius.value.asInstanceOf[double])
+}
+  }
+       

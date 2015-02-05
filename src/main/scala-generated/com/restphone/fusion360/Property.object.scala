@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for the specific property types used by materials and appearances. 
  */
 @JSName("adsk.core.Property")
-trait Property extends Base {
+class Property extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -75,4 +75,9 @@ object Property extends js.Object {
   */
   val parent: Base = js.native
 }
-// no utilities
+
+  object PropertyUtilities {
+    // no toSeq
+
+  }
+       

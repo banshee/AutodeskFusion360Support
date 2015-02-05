@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection of appearances. 
  */
 @JSName("adsk.core.Appearances")
-trait Appearances extends Base {
+class Appearances extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -77,9 +77,12 @@ object Appearances extends js.Object {
 }
 
   object AppearancesUtilities {
+    
     def toSeq(xs: Appearances): IndexedSeq[Appearance] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

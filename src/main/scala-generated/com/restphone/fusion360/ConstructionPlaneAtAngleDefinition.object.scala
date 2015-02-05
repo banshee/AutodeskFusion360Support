@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ConstructionPlaneAtAngleDefinition defines a ConstructionPlane by... 
  */
 @JSName("adsk.fusion.ConstructionPlaneAtAngleDefinition")
-trait ConstructionPlaneAtAngleDefinition extends ConstructionPlaneDefinition {
+class ConstructionPlaneAtAngleDefinition extends ConstructionPlaneDefinition {
   /**
   * Returns a Value object that for a transient definition provides the current assigned value. For a definition associated with a construction plane, this provides access to the associated parameter controlling the angle.
   */
@@ -58,4 +58,9 @@ object ConstructionPlaneAtAngleDefinition extends js.Object {
   */
   def redefine(angle: ValueInput, linearEntity: Base, planarEntity: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPlaneAtAngleDefinitionUtilities {
+    // no toSeq
+
+  }
+       

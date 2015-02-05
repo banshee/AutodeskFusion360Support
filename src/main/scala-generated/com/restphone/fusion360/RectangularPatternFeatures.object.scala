@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing rectangular pattern features in a component and supports the ability to create new rectangular pattern features. 
  */
 @JSName("adsk.fusion.RectangularPatternFeatures")
-trait RectangularPatternFeatures extends Base {
+class RectangularPatternFeatures extends Base {
   /**
   * Creates a new rectangular pattern feature.
   */
@@ -77,9 +77,12 @@ object RectangularPatternFeatures extends js.Object {
 }
 
   object RectangularPatternFeaturesUtilities {
+    
     def toSeq(xs: RectangularPatternFeatures): IndexedSeq[RectangularPatternFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

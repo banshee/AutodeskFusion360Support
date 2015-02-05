@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction point created using the SetbyPoint method All non-parametric constructions points will return this type of definition regardless of the method used to initially create them. 
  */
 @JSName("adsk.fusion.ConstructionPointPointDefinition")
-trait ConstructionPointPointDefinition extends ConstructionPointDefinition {
+class ConstructionPointPointDefinition extends ConstructionPointDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -34,4 +34,9 @@ object ConstructionPointPointDefinition extends js.Object {
   */
   var pointEntity: Base = js.native
 }
-// no utilities
+
+  object ConstructionPointPointDefinitionUtilities {
+    // no toSeq
+
+  }
+       

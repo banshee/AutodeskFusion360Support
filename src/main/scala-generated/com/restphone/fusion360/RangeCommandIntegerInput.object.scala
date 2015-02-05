@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a command input to get the value of a slider from the user, the value type is integer. 
  */
 @JSName("adsk.core.RangeCommandIntegerInput")
-trait RangeCommandIntegerInput extends RangeCommandInput {
+class RangeCommandIntegerInput extends RangeCommandInput {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -90,4 +90,9 @@ object RangeCommandIntegerInput extends js.Object {
   */
   var valueTwo: Integer = js.native
 }
-// no utilities
+
+  object RangeCommandIntegerInputUtilities {
+    // no toSeq
+
+  }
+       

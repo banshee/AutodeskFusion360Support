@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing hole features in a component and supports the ability to create new hole features. 
  */
 @JSName("adsk.fusion.HoleFeatures")
-trait HoleFeatures extends Base {
+class HoleFeatures extends Base {
   /**
   * Creates a new hole feature based on the information provided by a HoleFeatureInput object. To create a new hole, use one of CreateInput functions to define a new input object for the type of hole you want to create. Use the methods and properties on the input object to define any additional input. Once the information is defined on the input object, you can pass it to the Add method to create the hole.
   */
@@ -93,9 +93,12 @@ object HoleFeatures extends js.Object {
 }
 
   object HoleFeaturesUtilities {
+    
     def toSeq(xs: HoleFeatures): IndexedSeq[HoleFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

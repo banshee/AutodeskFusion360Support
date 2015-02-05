@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A texture value property associated with a material or appearance. 
  */
 @JSName("adsk.core.AppearanceTextureProperty")
-trait AppearanceTextureProperty extends Property {
+class AppearanceTextureProperty extends Property {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -37,4 +37,9 @@ object AppearanceTextureProperty extends js.Object {
   */
   var value: AppearanceTexture = js.native
 }
-// no utilities
+
+  object AppearanceTexturePropertyUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the construction points within a component and provides methods to create new construction points. 
  */
 @JSName("adsk.fusion.ConstructionPoints")
-trait ConstructionPoints extends Base {
+class ConstructionPoints extends Base {
   /**
   * Creates a new construction point.
   */
@@ -93,9 +93,12 @@ object ConstructionPoints extends js.Object {
 }
 
   object ConstructionPointsUtilities {
+    
     def toSeq(xs: ConstructionPoints): IndexedSeq[ConstructionPoint] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

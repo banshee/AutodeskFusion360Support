@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ConstructionDistanceOnPathDefinition defines a ConstructionPlane normal to an edge or sketch profile at a specified position along the path defined by the edge or sketch profile. 
  */
 @JSName("adsk.fusion.ConstructionPlaneDistanceOnPathDefinition")
-trait ConstructionPlaneDistanceOnPathDefinition extends ConstructionPlaneDefinition {
+class ConstructionPlaneDistanceOnPathDefinition extends ConstructionPlaneDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -42,4 +42,9 @@ object ConstructionPlaneDistanceOnPathDefinition extends js.Object {
   */
   def redefine(pathEntity: Base, distance: ValueInput): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPlaneDistanceOnPathDefinitionUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Class that contains the call back function that is called when the CommandCreated event is fired. 
  */
 @JSName("CommandCreatedEventHandler")
-trait CommandCreatedEventHandler extends EventHandler {
+class CommandCreatedEventHandler extends EventHandler {
   /**
   * This notify member is called when an event is triggered from any event that this handler has been added to.
   */
@@ -27,4 +27,9 @@ object CommandCreatedEventHandler extends js.Object {
   */
   def notify(eventArgs: CommandCreatedEventArgs): Unit = js.native
 }
-// no utilities
+
+  object CommandCreatedEventHandlerUtilities {
+    // no toSeq
+
+  }
+       

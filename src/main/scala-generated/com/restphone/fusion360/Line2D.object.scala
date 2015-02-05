@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 2D line. A transient line is not displayed or saved in a document. Transient 2D lines are used as a wrapper to work with raw 2D line information. 
  */
 @JSName("adsk.core.Line2D")
-trait Line2D extends Curve2D {
+class Line2D extends Curve2D {
   /**
   * Returns a NURBS curve that is geometrically identical to the line.
   */
@@ -87,4 +87,20 @@ object Line2D extends js.Object {
   */
   var startPoint: Point2D = js.native
 }
-// no utilities
+
+  object Line2DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the line segment.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Line2D): (Boolean, Point2D, Point2D) = {
+
+val startPoint = js.Dynamic.literal(value = 0)
+val endPoint = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(startPoint.asInstanceOf[Point2D], endPoint.asInstanceOf[Point2D])
+(result, startPoint.value.asInstanceOf[Point2D], endPoint.value.asInstanceOf[Point2D])
+}
+  }
+       

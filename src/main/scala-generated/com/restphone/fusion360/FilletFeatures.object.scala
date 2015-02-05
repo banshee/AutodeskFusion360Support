@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing fillet features in a component and supports the ability to create new fillet features. 
  */
 @JSName("adsk.fusion.FilletFeatures")
-trait FilletFeatures extends Base {
+class FilletFeatures extends Base {
   /**
   * Creates a new fillet feature.
   */
@@ -77,9 +77,12 @@ object FilletFeatures extends js.Object {
 }
 
   object FilletFeaturesUtilities {
+    
     def toSeq(xs: FilletFeatures): IndexedSeq[FilletFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

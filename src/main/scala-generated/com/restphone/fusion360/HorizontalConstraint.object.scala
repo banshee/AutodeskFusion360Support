@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A horizontal constraint in a sketch. 
  */
 @JSName("adsk.fusion.HorizontalConstraint")
-trait HorizontalConstraint extends GeometricConstraint {
+class HorizontalConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -56,4 +56,9 @@ object HorizontalConstraint extends js.Object {
   */
   val nativeObject: HorizontalConstraint = js.native
 }
-// no utilities
+
+  object HorizontalConstraintUtilities {
+    // no toSeq
+
+  }
+       

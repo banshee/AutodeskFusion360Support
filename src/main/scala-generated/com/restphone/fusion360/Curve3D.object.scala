@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for all 3D transient geometry classes. 
  */
 @JSName("adsk.core.Curve3D")
-trait Curve3D extends Base {
+class Curve3D extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -67,4 +67,9 @@ object Curve3D extends js.Object {
   */
   def transformBy(matrix: Matrix3D): Boolean = js.native
 }
-// no utilities
+
+  object Curve3DUtilities {
+    // no toSeq
+
+  }
+       

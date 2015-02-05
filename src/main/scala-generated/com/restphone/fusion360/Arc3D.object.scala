@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D arc. A transient arc is not displayed or saved in a document. Transient 3D arcs are used as a wrapper to work with raw 3D arc information. 
  */
 @JSName("adsk.core.Arc3D")
-trait Arc3D extends Curve3D {
+class Arc3D extends Curve3D {
   /**
   * Returns a NURBS curve that is geometrically identical to the arc.
   */
@@ -151,4 +151,24 @@ object Arc3D extends js.Object {
   */
   val startPoint: Point3D = js.native
 }
-// no utilities
+
+  object Arc3DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the arc.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Arc3D): (Boolean, Point3D, Vector3D, Vector3D, double, double, double) = {
+
+val center = js.Dynamic.literal(value = 0)
+val normal = js.Dynamic.literal(value = 0)
+val referenceVector = js.Dynamic.literal(value = 0)
+val radius = js.Dynamic.literal(value = 0)
+val startAngle = js.Dynamic.literal(value = 0)
+val endAngle = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(center.asInstanceOf[Point3D], normal.asInstanceOf[Vector3D], referenceVector.asInstanceOf[Vector3D], radius.asInstanceOf[double], startAngle.asInstanceOf[double], endAngle.asInstanceOf[double])
+(result, center.value.asInstanceOf[Point3D], normal.value.asInstanceOf[Vector3D], referenceVector.value.asInstanceOf[Vector3D], radius.value.asInstanceOf[double], startAngle.value.asInstanceOf[double], endAngle.value.asInstanceOf[double])
+}
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An offset dimension in a sketch. 
  */
 @JSName("adsk.fusion.SketchOffsetDimension")
-trait SketchOffsetDimension extends SketchDimension {
+class SketchOffsetDimension extends SketchDimension {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -66,4 +66,9 @@ object SketchOffsetDimension extends js.Object {
   */
   val nativeObject: SketchOffsetDimension = js.native
 }
-// no utilities
+
+  object SketchOffsetDimensionUtilities {
+    // no toSeq
+
+  }
+       

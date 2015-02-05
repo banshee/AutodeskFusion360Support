@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An integer value property associated with a material or appearance. 
  */
 @JSName("adsk.core.IntegerProperty")
-trait IntegerProperty extends Property {
+class IntegerProperty extends Property {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -69,4 +69,22 @@ object IntegerProperty extends js.Object {
   */
   var values: Int32 = js.native
 }
-// no utilities
+
+  object IntegerPropertyUtilities {
+    // no toSeq
+/**
+* Method that returns any limits for the value of this property. The HasLimits property can be used to see if there are any limits or not.
+*
+* Out parameters are returned in a tuple.
+*/
+def getLimitsWithResults(activeObject: IntegerProperty): (Boolean, boolean, integer, boolean, integer) = {
+
+val hasLowLimit = js.Dynamic.literal(value = 0)
+val lowLimit = js.Dynamic.literal(value = 0)
+val hasHighLimit = js.Dynamic.literal(value = 0)
+val highLimit = js.Dynamic.literal(value = 0)
+val result = activeObject.getLimits(hasLowLimit.asInstanceOf[Boolean], lowLimit.asInstanceOf[Integer], hasHighLimit.asInstanceOf[Boolean], highLimit.asInstanceOf[Integer])
+(result, hasLowLimit.value.asInstanceOf[boolean], lowLimit.value.asInstanceOf[integer], hasHighLimit.value.asInstanceOf[boolean], highLimit.value.asInstanceOf[integer])
+}
+  }
+       

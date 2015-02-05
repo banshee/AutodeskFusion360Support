@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the construction planes within a component and provides methods to create new construction planes. 
  */
 @JSName("adsk.fusion.ConstructionPlanes")
-trait ConstructionPlanes extends Base {
+class ConstructionPlanes extends Base {
   /**
   * Creates and adds a new ConstructionPlane using the creation parameters in the ConstructionPlaneInput.
   */
@@ -93,9 +93,12 @@ object ConstructionPlanes extends js.Object {
 }
 
   object ConstructionPlanesUtilities {
+    
     def toSeq(xs: ConstructionPlanes): IndexedSeq[ConstructionPlane] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to a toolbar in the user interface. A toolbar is a collection of toolbar controls. 
  */
 @JSName("adsk.core.Toolbar")
-trait Toolbar extends Base {
+class Toolbar extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -67,4 +67,9 @@ object Toolbar extends js.Object {
   */
   val parentUserInterface: UserInterface = js.native
 }
-// no utilities
+
+  object ToolbarUtilities {
+    // no toSeq
+
+  }
+       

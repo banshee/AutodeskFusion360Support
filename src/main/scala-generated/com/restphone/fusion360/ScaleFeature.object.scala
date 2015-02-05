@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing scale feature in a design. 
  */
 @JSName("adsk.fusion.ScaleFeature")
-trait ScaleFeature extends Feature {
+class ScaleFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -129,4 +129,9 @@ object ScaleFeature extends js.Object {
   */
   val zScale: ModelParameter = js.native
 }
-// no utilities
+
+  object ScaleFeatureUtilities {
+    // no toSeq
+
+  }
+       

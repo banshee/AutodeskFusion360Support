@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection of sketch points. 
  */
 @JSName("adsk.fusion.SketchPoints")
-trait SketchPoints extends Base {
+class SketchPoints extends Base {
   /**
   * Creates a point at the specified location. This is the equivalent of creating a sketch point using the Point command in the user interface and will create a visible point in the graphics window.
   */
@@ -69,9 +69,12 @@ object SketchPoints extends js.Object {
 }
 
   object SketchPointsUtilities {
+    
     def toSeq(xs: SketchPoints): IndexedSeq[SketchPoint] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

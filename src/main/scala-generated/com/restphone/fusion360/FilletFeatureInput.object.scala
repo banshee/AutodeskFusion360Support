@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a fillet feature. 
  */
 @JSName("adsk.fusion.FilletFeatureInput")
-trait FilletFeatureInput extends Base {
+class FilletFeatureInput extends Base {
   /**
   * Adds a set of edges with a constant radius to this input.
   */
@@ -83,4 +83,9 @@ object FilletFeatureInput extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object FilletFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

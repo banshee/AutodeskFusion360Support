@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Fusion General Design Preferences 
  */
 @JSName("adsk.fusion.FusionProductPreferences")
-trait FusionProductPreferences extends ProductPreferences {
+class FusionProductPreferences extends ProductPreferences {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -66,4 +66,9 @@ object FusionProductPreferences extends js.Object {
   */
   var isJointPreviewAnimated: Boolean = js.native
 }
-// no utilities
+
+  object FusionProductPreferencesUtilities {
+    // no toSeq
+
+  }
+       

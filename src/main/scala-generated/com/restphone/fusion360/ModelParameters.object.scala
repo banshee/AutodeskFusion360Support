@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the Model Parameters within a component. 
  */
 @JSName("adsk.fusion.ModelParameters")
-trait ModelParameters extends Base {
+class ModelParameters extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -77,9 +77,12 @@ object ModelParameters extends js.Object {
 }
 
   object ModelParametersUtilities {
+    
     def toSeq(xs: ModelParameters): IndexedSeq[ModelParameter] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

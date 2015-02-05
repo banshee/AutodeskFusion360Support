@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a drop-down control. 
  */
 @JSName("adsk.core.DropDownControl")
-trait DropDownControl extends ToolbarControl {
+class DropDownControl extends ToolbarControl {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -57,4 +57,9 @@ object DropDownControl extends js.Object {
   */
   var resourceFolder: String = js.native
 }
-// no utilities
+
+  object DropDownControlUtilities {
+    // no toSeq
+
+  }
+       

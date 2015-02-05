@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A data folder that contains a collection of data items. 
  */
 @JSName("adsk.core.DataFolder")
-trait DataFolder extends Base {
+class DataFolder extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -91,4 +91,9 @@ object DataFolder extends js.Object {
   */
   val parentProject: DataProject = js.native
 }
-// no utilities
+
+  object DataFolderUtilities {
+    // no toSeq
+
+  }
+       

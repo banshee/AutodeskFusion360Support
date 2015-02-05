@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The BaseComponent object that defines all of the common design data and is the base class for the product specific components. 
  */
 @JSName("adsk.fusion.BaseComponent")
-trait BaseComponent extends Base {
+class BaseComponent extends Base {
   /**
   * Returns all of the occurrences in the assembly regardless of their level within the assembly structure. The returned list is read-only.
   */
@@ -123,4 +123,9 @@ object BaseComponent extends js.Object {
   */
   val parentDesign: Design = js.native
 }
-// no utilities
+
+  object BaseComponentUtilities {
+    // no toSeq
+
+  }
+       

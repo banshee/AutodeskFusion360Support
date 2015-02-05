@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ToolbarControls is a collection of ToolbarControl objects displayed in a toolbar or menu. 
  */
 @JSName("adsk.core.ToolbarControls")
-trait ToolbarControls extends Base {
+class ToolbarControls extends Base {
   /**
   * Adds a button to the controls in the toolbar, panel, or drop-down.
   */
@@ -157,9 +157,12 @@ object ToolbarControls extends js.Object {
 }
 
   object ToolbarControlsUtilities {
+    
     def toSeq(xs: ToolbarControls): IndexedSeq[ToolbarControl] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

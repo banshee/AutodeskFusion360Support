@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing sweep feature in a design. 
  */
 @JSName("adsk.fusion.SweepFeature")
-trait SweepFeature extends Feature {
+class SweepFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -129,4 +129,9 @@ object SweepFeature extends js.Object {
   */
   val startFaces: BRepFaces = js.native
 }
-// no utilities
+
+  object SweepFeatureUtilities {
+    // no toSeq
+
+  }
+       

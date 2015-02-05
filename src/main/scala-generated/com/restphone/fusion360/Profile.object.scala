@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a profile in a sketch. Profiles are automatically computed by Fusion and represent closed areas within the sketch. 
  */
 @JSName("adsk.fusion.Profile")
-trait Profile extends Base {
+class Profile extends Base {
   /**
   * Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly. but is already the native object.
   */
@@ -99,4 +99,9 @@ object Profile extends js.Object {
   */
   val profileLoops: ProfileLoops = js.native
 }
-// no utilities
+
+  object ProfileUtilities {
+    // no toSeq
+
+  }
+       

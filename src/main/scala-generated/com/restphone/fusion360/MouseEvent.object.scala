@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An event endpoint that supports the connection to client implemented MouseEventHandlers. 
  */
 @JSName("adsk.core.MouseEvent")
-trait MouseEvent extends Event {
+class MouseEvent extends Event {
   /**
   * Adds an event handler to this event endpoint.
   */
@@ -43,4 +43,9 @@ object MouseEvent extends js.Object {
   */
   def remove(handler: MouseEventHandler): Boolean = js.native
 }
-// no utilities
+
+  object MouseEventUtilities {
+    // no toSeq
+
+  }
+       

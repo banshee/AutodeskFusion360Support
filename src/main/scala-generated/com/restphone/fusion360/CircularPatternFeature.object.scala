@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing circular pattern feature in a design. 
  */
 @JSName("adsk.fusion.CircularPatternFeature")
-trait CircularPatternFeature extends Feature {
+class CircularPatternFeature extends Feature {
 
   /**
   * Gets and sets the axis of circular pattern. This can be a sketch line, linear edge, construction axis, an edge/sketch curve that defines an axis (circle, etc.) or a face that defines an axis (cylinder, cone, torus, etc.).
@@ -121,4 +121,9 @@ object CircularPatternFeature extends js.Object {
   */
   val totalAngle: ModelParameter = js.native
 }
-// no utilities
+
+  object CircularPatternFeatureUtilities {
+    // no toSeq
+
+  }
+       

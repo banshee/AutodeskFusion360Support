@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A data file in a data folder. 
  */
 @JSName("adsk.core.DataFile")
-trait DataFile extends Base {
+class DataFile extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -75,4 +75,9 @@ object DataFile extends js.Object {
   */
   val parentProject: DataProject = js.native
 }
-// no utilities
+
+  object DataFileUtilities {
+    // no toSeq
+
+  }
+       

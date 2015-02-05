@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing draft feature in a design. 
  */
 @JSName("adsk.fusion.DraftFeature")
-trait DraftFeature extends Feature {
+class DraftFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -113,4 +113,9 @@ object DraftFeature extends js.Object {
   */
   def setTwoAngles(angleOne: ValueInput, angleTwo: ValueInput): Boolean = js.native
 }
-// no utilities
+
+  object DraftFeatureUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a sweep feature. 
  */
 @JSName("adsk.fusion.SweepFeatureInput")
-trait SweepFeatureInput extends Base {
+class SweepFeatureInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -99,4 +99,9 @@ object SweepFeatureInput extends js.Object {
   */
   var profile: Base = js.native
 }
-// no utilities
+
+  object SweepFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

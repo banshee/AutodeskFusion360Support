@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a revolve feature. 
  */
 @JSName("adsk.fusion.RevolveFeatureInput")
-trait RevolveFeatureInput extends Base {
+class RevolveFeatureInput extends Base {
   /**
   * Gets and sets the entity used to define the axis of revolution. The axis can be a sketch line, construction axis, or linear edge. If it is not in the same plane as the profile, it is projected onto the profile plane.
   */
@@ -107,4 +107,9 @@ object RevolveFeatureInput extends js.Object {
   */
   def setTwoSideToExtent(toEntityOne: Base, toEntityTwo: Base): Boolean = js.native
 }
-// no utilities
+
+  object RevolveFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * BRepFace collection. 
  */
 @JSName("adsk.fusion.BRepFaces")
-trait BRepFaces extends Base {
+class BRepFaces extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object BRepFaces extends js.Object {
 }
 
   object BRepFacesUtilities {
+    
     def toSeq(xs: BRepFaces): IndexedSeq[BRepFace] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

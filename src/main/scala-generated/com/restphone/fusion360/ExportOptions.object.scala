@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for the different export types. This class is never directly used in an export because you need the specific export type to specify the type of export to be performed. 
  */
 @JSName("adsk.fusion.ExportOptions")
-trait ExportOptions extends Base {
+class ExportOptions extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object ExportOptions extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object ExportOptionsUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Objects can have several Event properties that fire when some 'event' occurs. Clients can attach EventHandlers to one or more Events and they get notified when the 'event' occurs. This is a base class - classes like DocumentEvent add type safety (i.e. only allow the correct type of handler to be added to them). 
  */
 @JSName("adsk.core.Event")
-trait Event extends Base {
+class Event extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -59,4 +59,9 @@ object Event extends js.Object {
   */
   val sender: Base = js.native
 }
-// no utilities
+
+  object EventUtilities {
+    // no toSeq
+
+  }
+       

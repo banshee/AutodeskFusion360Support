@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The GraphicsPreferences object provides access to the various graphics related preferences. 
  */
 @JSName("adsk.core.GraphicsPreferences")
-trait GraphicsPreferences extends Base {
+class GraphicsPreferences extends Base {
   /**
   * Gets and sets if automatically disable or degrade visual effects to keep the video memory pressure under a safe threshold.
   */
@@ -91,4 +91,9 @@ object GraphicsPreferences extends js.Object {
   */
   var transparencyEffects: TransparencyDisplayEffects = js.native
 }
-// no utilities
+
+  object GraphicsPreferencesUtilities {
+    // no toSeq
+
+  }
+       

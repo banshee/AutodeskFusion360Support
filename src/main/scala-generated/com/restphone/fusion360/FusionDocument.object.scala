@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents a Fusion specific document. 
  */
 @JSName("adsk.fusion.FusionDocument")
-trait FusionDocument extends Document {
+class FusionDocument extends Document {
   /**
   * Causes this document to become the active document in the user interface.
   */
@@ -50,4 +50,9 @@ object FusionDocument extends js.Object {
   */
   val design: Design = js.native
 }
-// no utilities
+
+  object FusionDocumentUtilities {
+    // no toSeq
+
+  }
+       

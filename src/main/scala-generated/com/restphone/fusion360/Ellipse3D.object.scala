@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D ellipse. A transient ellipse is n0t displayed or saved in a document. Transient 3D ellipses are used as a wrapper to work with raw 3D ellipse information. 
  */
 @JSName("adsk.core.Ellipse3D")
-trait Ellipse3D extends Curve3D {
+class Ellipse3D extends Curve3D {
   /**
   * Returns a NURBS curve that is geometrically identical to the ellipse.
   */
@@ -111,4 +111,23 @@ object Ellipse3D extends js.Object {
   */
   def set(center: Point3D, normal: Vector3D, majorAxis: Vector3D, majorRadius: double, minorRadius: double): Boolean = js.native
 }
-// no utilities
+
+  object Ellipse3DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the ellipse.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Ellipse3D): (Boolean, Point3D, Vector3D, Vector3D, double, double) = {
+
+val center = js.Dynamic.literal(value = 0)
+val normal = js.Dynamic.literal(value = 0)
+val majorAxis = js.Dynamic.literal(value = 0)
+val majorRadius = js.Dynamic.literal(value = 0)
+val minorRadius = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(center.asInstanceOf[Point3D], normal.asInstanceOf[Vector3D], majorAxis.asInstanceOf[Vector3D], majorRadius.asInstanceOf[double], minorRadius.asInstanceOf[double])
+(result, center.value.asInstanceOf[Point3D], normal.value.asInstanceOf[Vector3D], majorAxis.value.asInstanceOf[Vector3D], majorRadius.value.asInstanceOf[double], minorRadius.value.asInstanceOf[double])
+}
+  }
+       

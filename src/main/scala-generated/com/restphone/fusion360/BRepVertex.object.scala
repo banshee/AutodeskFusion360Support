@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A 0-dimentional topological entity that bounds a BRepEdge. 
  */
 @JSName("adsk.fusion.BRepVertex")
-trait BRepVertex extends Base {
+class BRepVertex extends Base {
   /**
   * Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this BRepVertex object is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly. but is already the native object.
   */
@@ -123,4 +123,9 @@ object BRepVertex extends js.Object {
   */
   val tolerance: double = js.native
 }
-// no utilities
+
+  object BRepVertexUtilities {
+    // no toSeq
+
+  }
+       

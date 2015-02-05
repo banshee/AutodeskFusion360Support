@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection of the favorite materials. To add a material to the favorites list use the CopyTo method of the Material object. 
  */
 @JSName("adsk.core.FavoriteMaterials")
-trait FavoriteMaterials extends Base {
+class FavoriteMaterials extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -77,9 +77,12 @@ object FavoriteMaterials extends js.Object {
 }
 
   object FavoriteMaterialsUtilities {
+    
     def toSeq(xs: FavoriteMaterials): IndexedSeq[Material] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

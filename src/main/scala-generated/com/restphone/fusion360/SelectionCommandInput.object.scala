@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a command input to get a selection from the user. 
  */
 @JSName("adsk.core.SelectionCommandInput")
-trait SelectionCommandInput extends CommandInput {
+class SelectionCommandInput extends CommandInput {
   /**
   * Adds the selection to the list of selections associated with this input.
   */
@@ -110,4 +110,20 @@ object SelectionCommandInput extends js.Object {
   */
   def setSelectionLimits(minimum: uinteger, /* optional */ maximum: uinteger): Boolean = js.native
 }
-// no utilities
+
+  object SelectionCommandInputUtilities {
+    // no toSeq
+/**
+* Get the limits currently defined for this input.
+*
+* Out parameters are returned in a tuple.
+*/
+def getSelectionLimitsWithResults(activeObject: SelectionCommandInput): (Boolean, uinteger, uinteger) = {
+
+val minimum = js.Dynamic.literal(value = 0)
+val maximum = js.Dynamic.literal(value = 0)
+val result = activeObject.getSelectionLimits(minimum.asInstanceOf[uinteger], maximum.asInstanceOf[uinteger])
+(result, minimum.value.asInstanceOf[uinteger], maximum.value.asInstanceOf[uinteger])
+}
+  }
+       

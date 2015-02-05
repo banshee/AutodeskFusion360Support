@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A material or appearance property that is a pre-defined list of choices. 
  */
 @JSName("adsk.core.ChoiceProperty")
-trait ChoiceProperty extends Property {
+class ChoiceProperty extends Property {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -45,4 +45,20 @@ object ChoiceProperty extends js.Object {
   */
   var value: String = js.native
 }
-// no utilities
+
+  object ChoicePropertyUtilities {
+    // no toSeq
+/**
+* Method that returns the list of available choices.
+*
+* Out parameters are returned in a tuple.
+*/
+def getChoicesWithResults(activeObject: ChoiceProperty): (Boolean, String, String) = {
+
+val names = js.Dynamic.literal(value = 0)
+val choices = js.Dynamic.literal(value = 0)
+val result = activeObject.getChoices(names.asInstanceOf[Array[String]], choices.asInstanceOf[Array[String]])
+(result, names.value.asInstanceOf[String], choices.value.asInstanceOf[String])
+}
+  }
+       

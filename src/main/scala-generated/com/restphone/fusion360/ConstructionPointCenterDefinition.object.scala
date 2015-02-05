@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction point created using the SetbyCenter method 
  */
 @JSName("adsk.fusion.ConstructionPointCenterDefinition")
-trait ConstructionPointCenterDefinition extends ConstructionPointDefinition {
+class ConstructionPointCenterDefinition extends ConstructionPointDefinition {
   /**
   * Gets and sets the spherical face (sphere or torus), circular edge or sketch arc/circle whose center defines the location for the construction point.
   */
@@ -34,4 +34,9 @@ object ConstructionPointCenterDefinition extends js.Object {
   */
   var circularEntity: Base = js.native
 }
-// no utilities
+
+  object ConstructionPointCenterDefinitionUtilities {
+    // no toSeq
+
+  }
+       

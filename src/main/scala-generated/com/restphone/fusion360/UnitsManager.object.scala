@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Utility class used to work with Values and control default units. Internal values are held in SI units (e.g. seconds, radians, kg for time, angle, mass) with the exception that all lengths are in cm rather than meter and this affects derived units (e.g. velocity is cm/s, volume is cm^3). Units are specified flexibility via strings (e.g. "cm", "in", "inch", "cm^3", "cm*cm*cm", "mph", "mps" "m/s"). Units like length can be defaulted based on the design settings if the user does not explicitly specify units - so "3" can be 3 inches, mm or cm depending on what the design settings are. 
  */
 @JSName("adsk.core.UnitsManager")
-trait UnitsManager extends Base {
+class UnitsManager extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -131,4 +131,9 @@ object UnitsManager extends js.Object {
   */
   def standardizeExpression(expression: String, units: String): String = js.native
 }
-// no utilities
+
+  object UnitsManagerUtilities {
+    // no toSeq
+
+  }
+       

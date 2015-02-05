@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the MeshBodies in the parent Component and supports the creation of new mesh bodies. 
  */
 @JSName("adsk.fusion.MeshBodies")
-trait MeshBodies extends Base {
+class MeshBodies extends Base {
   /**
   * Creates a new mesh body by importing a .stl or .obj file.
   */
@@ -69,9 +69,12 @@ object MeshBodies extends js.Object {
 }
 
   object MeshBodiesUtilities {
+    
     def toSeq(xs: MeshBodies): IndexedSeq[MeshBody] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

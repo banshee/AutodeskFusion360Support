@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the construction axes within a component and provides methods to create new construction axes. 
  */
 @JSName("adsk.fusion.ConstructionAxes")
-trait ConstructionAxes extends Base {
+class ConstructionAxes extends Base {
   /**
   * Creates and adds a new ConstructionAxis using the creation parameters in the ConstructionAxisInput.
   */
@@ -93,9 +93,12 @@ object ConstructionAxes extends js.Object {
 }
 
   object ConstructionAxesUtilities {
+    
     def toSeq(xs: ConstructionAxes): IndexedSeq[ConstructionAxis] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

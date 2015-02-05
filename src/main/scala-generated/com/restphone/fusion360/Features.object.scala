@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The features collection which provides access to all existing features. This collection provides direct access to all features regardless of type. It also provides access to type specific collections where you can get features of a specific type and also create new features of that type. 
  */
 @JSName("adsk.fusion.Features")
-trait Features extends Base {
+class Features extends Base {
   /**
   * Returns the collection that provides access to the circular pattern features within the component and supports the creation of new circular pattern features.
   */
@@ -189,9 +189,12 @@ object Features extends js.Object {
 }
 
   object FeaturesUtilities {
+    
     def toSeq(xs: Features): IndexedSeq[Feature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

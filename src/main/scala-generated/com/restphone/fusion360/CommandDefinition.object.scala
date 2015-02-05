@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The CommandDefinition is the base class of the various types of commands. Command types are based on the type of control used to execute them in the user-interface. For example, most commands will use a ButtonDefinition since they're executed using a button in the user-interface. A command definition contains the information that defines the user-interface. For example, the name and icon. The command definition and also gets the notification when the user interacts with the associated control. 
  */
 @JSName("adsk.core.CommandDefinition")
-trait CommandDefinition extends Base {
+class CommandDefinition extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -131,4 +131,9 @@ object CommandDefinition extends js.Object {
   */
   var tooltipDescription: String = js.native
 }
-// no utilities
+
+  object CommandDefinitionUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing revolve feature in a design. 
  */
 @JSName("adsk.fusion.RevolveFeature")
-trait RevolveFeature extends Feature {
+class RevolveFeature extends Feature {
 
   /**
   * Gets and sets the entity used to define the axis of revolution. The axis can be a sketch line, construction axis, or linear edge. If it is not in the same plane as the profile, it is projected onto the profile plane.
@@ -145,4 +145,9 @@ object RevolveFeature extends js.Object {
   */
   val startFaces: BRepFaces = js.native
 }
-// no utilities
+
+  object RevolveFeatureUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a project within a hub. 
  */
 @JSName("adsk.core.DataProject")
-trait DataProject extends Base {
+class DataProject extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -59,4 +59,9 @@ object DataProject extends js.Object {
   */
   val rootFolder: DataFolder = js.native
 }
-// no utilities
+
+  object DataProjectUtilities {
+    // no toSeq
+
+  }
+       

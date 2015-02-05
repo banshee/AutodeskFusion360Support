@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction axis created using the SetbyEdge method 
  */
 @JSName("adsk.fusion.ConstructionAxisEdgeDefinition")
-trait ConstructionAxisEdgeDefinition extends ConstructionAxisDefinition {
+class ConstructionAxisEdgeDefinition extends ConstructionAxisDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -34,4 +34,9 @@ object ConstructionAxisEdgeDefinition extends js.Object {
   */
   var edgeEntity: Base = js.native
 }
-// no utilities
+
+  object ConstructionAxisEdgeDefinitionUtilities {
+    // no toSeq
+
+  }
+       

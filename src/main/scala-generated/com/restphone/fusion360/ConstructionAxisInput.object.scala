@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A ConstructionAxisInput is a throwaway object used to create a ConstructionAxis The usage pattern is: a. create a ConstructionAxisInput (ConstructionAxes.CreateInput) b. call one of the member functions to specify how the ConstructionAxis is created c. create the ConstructionAxis (call ConstructionAxes.Add) d. stop referencing the ConstructionAxisInput (so it gets deleted). 
  */
 @JSName("adsk.fusion.ConstructionAxisInput")
-trait ConstructionAxisInput extends Base {
+class ConstructionAxisInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -107,4 +107,9 @@ object ConstructionAxisInput extends js.Object {
   */
   def setByTwoPoints(pointEntityOne: Base, pointEntityTwo: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionAxisInputUtilities {
+    // no toSeq
+
+  }
+       

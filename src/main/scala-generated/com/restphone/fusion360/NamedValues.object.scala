@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Wraps a list of named values. 
  */
 @JSName("adsk.core.NamedValues")
-trait NamedValues extends Base {
+class NamedValues extends Base {
   /**
   * Adds a name value pair to the NamedValues object
   */
@@ -83,4 +83,31 @@ object NamedValues extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object NamedValuesUtilities {
+    // no toSeq
+/**
+* Function that returns the name and ValueInput object of a name value pair by specifying an index number
+*
+* Out parameters are returned in a tuple.
+*/
+def getByIndexWithResults(activeObject: NamedValues, index: Integer): (Boolean, string, ValueInput) = {
+
+val name = js.Dynamic.literal(value = 0)
+val value = js.Dynamic.literal(value = 0)
+val result = activeObject.getByIndex(index.asInstanceOf[Integer], name.asInstanceOf[String], value.asInstanceOf[ValueInput])
+(result, name.value.asInstanceOf[string], value.value.asInstanceOf[ValueInput])
+}
+/**
+* Function that returns the ValueInput object of a name value pair by specifying its name
+*
+* Out parameters are returned in a tuple.
+*/
+def getValueByNameWithResults(activeObject: NamedValues, name: String): (Boolean, ValueInput) = {
+
+val value = js.Dynamic.literal(value = 0)
+val result = activeObject.getValueByName(name.asInstanceOf[String], value.asInstanceOf[ValueInput])
+(result, value.value.asInstanceOf[ValueInput])
+}
+  }
+       

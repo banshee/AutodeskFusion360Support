@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Defines the inputs for a TwoSidesAngleExtentDefinition object. This feature extent type defines the extents of the feature using angle extents on two sides. 
  */
 @JSName("adsk.fusion.TwoSidesAngleExtentDefinition")
-trait TwoSidesAngleExtentDefinition extends ExtentDefinition {
+class TwoSidesAngleExtentDefinition extends ExtentDefinition {
   /**
   * Gets the ModelParameter that defines the angle on the first side
   */
@@ -42,4 +42,9 @@ object TwoSidesAngleExtentDefinition extends js.Object {
   */
   val angleTwo: ModelParameter = js.native
 }
-// no utilities
+
+  object TwoSidesAngleExtentDefinitionUtilities {
+    // no toSeq
+
+  }
+       

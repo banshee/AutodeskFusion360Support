@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient object that represents a 3D bounding box. It defines a rectangular box whose sides are parallel to the model space x, y, and z planes. Because of the fixed orientation of the box it can be fully defined by two points at opposing corners; the min and max points. This object is usually used to provide a rough approximation of the volume in space that an entity occupies. It also provides some convenience function when working with the bounding box data. 
  */
 @JSName("adsk.core.BoundingBox3D")
-trait BoundingBox3D extends Base {
+class BoundingBox3D extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -99,4 +99,9 @@ object BoundingBox3D extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object BoundingBox3DUtilities {
+    // no toSeq
+
+  }
+       

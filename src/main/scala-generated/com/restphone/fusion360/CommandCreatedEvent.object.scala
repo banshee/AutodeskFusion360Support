@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Class that needs to be implemented in order to respond to the CommandCreatedEvent event. 
  */
 @JSName("adsk.core.CommandCreatedEvent")
-trait CommandCreatedEvent extends Event {
+class CommandCreatedEvent extends Event {
   /**
   * Adds an event handler object to this event endpoint.
   */
@@ -43,4 +43,9 @@ object CommandCreatedEvent extends js.Object {
   */
   def remove(handler: CommandCreatedEventHandler): Boolean = js.native
 }
-// no utilities
+
+  object CommandCreatedEventUtilities {
+    // no toSeq
+
+  }
+       

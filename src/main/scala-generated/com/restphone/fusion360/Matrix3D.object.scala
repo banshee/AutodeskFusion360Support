@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D matrix. This object is a wrapper over 3D matrx data and is used as way to pass matrix data in and out of the API and as a convenience when operating on matrix data. 
  */
 @JSName("adsk.core.Matrix3D")
-trait Matrix3D extends Base {
+class Matrix3D extends Base {
   /**
   * Returns the contents of the matrix as a 16 element array.
   */
@@ -187,4 +187,22 @@ object Matrix3D extends js.Object {
   */
   var translation: Vector3D = js.native
 }
-// no utilities
+
+  object Matrix3DUtilities {
+    // no toSeq
+/**
+* Gets the matrix data as the components that define a coorinate system.
+*
+* Out parameters are returned in a tuple.
+*/
+def getAsCoordinateSystemWithResults(activeObject: Matrix3D): (Unit, Point3D, Vector3D, Vector3D, Vector3D) = {
+
+val origin = js.Dynamic.literal(value = 0)
+val xAxis = js.Dynamic.literal(value = 0)
+val yAxis = js.Dynamic.literal(value = 0)
+val zAxis = js.Dynamic.literal(value = 0)
+val result = activeObject.getAsCoordinateSystem(origin.asInstanceOf[Point3D], xAxis.asInstanceOf[Vector3D], yAxis.asInstanceOf[Vector3D], zAxis.asInstanceOf[Vector3D])
+(result, origin.value.asInstanceOf[Point3D], xAxis.value.asInstanceOf[Vector3D], yAxis.value.asInstanceOf[Vector3D], zAxis.value.asInstanceOf[Vector3D])
+}
+  }
+       

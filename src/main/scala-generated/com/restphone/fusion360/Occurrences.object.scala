@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to occurrences within a component and provides methods to create new occurrences. 
  */
 @JSName("adsk.fusion.Occurrences")
-trait Occurrences extends Base {
+class Occurrences extends Base {
   /**
   * Method that creates a new occurrence using an existing component. This is the equivalent of copying and pasting an occurrence in the user interface.
   */
@@ -93,9 +93,12 @@ object Occurrences extends js.Object {
 }
 
   object OccurrencesUtilities {
+    
     def toSeq(xs: Occurrences): IndexedSeq[Occurrence] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

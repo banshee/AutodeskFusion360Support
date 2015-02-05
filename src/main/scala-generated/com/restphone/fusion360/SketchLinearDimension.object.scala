@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A linear dimension in a sketch. 
  */
 @JSName("adsk.fusion.SketchLinearDimension")
-trait SketchLinearDimension extends SketchDimension {
+class SketchLinearDimension extends SketchDimension {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -74,4 +74,9 @@ object SketchLinearDimension extends js.Object {
   */
   val orientation: DimensionOrientations = js.native
 }
-// no utilities
+
+  object SketchLinearDimensionUtilities {
+    // no toSeq
+
+  }
+       

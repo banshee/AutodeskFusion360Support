@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ConstructionPlaneTwoEdgesDefinition defines a ConstructionPlane by two co-planar linear entities like edges, sketch lines or construction axis. 
  */
 @JSName("adsk.fusion.ConstructionPlaneTwoEdgesDefinition")
-trait ConstructionPlaneTwoEdgesDefinition extends ConstructionPlaneDefinition {
+class ConstructionPlaneTwoEdgesDefinition extends ConstructionPlaneDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object ConstructionPlaneTwoEdgesDefinition extends js.Object {
   */
   def redefine(linearEntityOne: Base, linearEntityTwo: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPlaneTwoEdgesDefinitionUtilities {
+    // no toSeq
+
+  }
+       

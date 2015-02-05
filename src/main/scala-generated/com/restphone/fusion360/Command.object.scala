@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The Command class contains all of the functionality needed by a command to gather various command input from a user, provide previews, and create the final result which is also encapsulated within a transaction so it can be undone. 
  */
 @JSName("adsk.core.Command")
-trait Command extends Base {
+class Command extends Base {
   /**
   * Gets an event that is fired when the command is first activated or re-activated after being suspended.
   */
@@ -203,4 +203,9 @@ object Command extends js.Object {
   */
   val validateInputs: ValidateInputsEvent = js.native
 }
-// no utilities
+
+  object CommandUtilities {
+    // no toSeq
+
+  }
+       

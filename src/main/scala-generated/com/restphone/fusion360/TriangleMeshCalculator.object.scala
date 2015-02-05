@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Used to calculate new meshes for a B-Rep or T-Spline using defined criteria. 
  */
 @JSName("adsk.fusion.TriangleMeshCalculator")
-trait TriangleMeshCalculator extends Base {
+class TriangleMeshCalculator extends Base {
   /**
   * Calculates a new triangle mesh based on the current settings.
   */
@@ -99,4 +99,9 @@ object TriangleMeshCalculator extends js.Object {
   */
   var surfaceTolerance: double = js.native
 }
-// no utilities
+
+  object TriangleMeshCalculatorUtilities {
+    // no toSeq
+
+  }
+       

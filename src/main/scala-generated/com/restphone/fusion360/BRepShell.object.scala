@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents an entirely connected set of BRepFaces. A BRepLump may contain multiple BRepShells. 
  */
 @JSName("adsk.fusion.BRepShell")
-trait BRepShell extends Base {
+class BRepShell extends Base {
   /**
   * Returns the area in cm ^ 2.
   */
@@ -163,4 +163,9 @@ object BRepShell extends js.Object {
   */
   val volume: double = js.native
 }
-// no utilities
+
+  object BRepShellUtilities {
+    // no toSeq
+
+  }
+       

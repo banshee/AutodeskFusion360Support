@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * BRepShell collection. 
  */
 @JSName("adsk.fusion.BRepShells")
-trait BRepShells extends Base {
+class BRepShells extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object BRepShells extends js.Object {
 }
 
   object BRepShellsUtilities {
+    
     def toSeq(xs: BRepShells): IndexedSeq[BRepShell] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

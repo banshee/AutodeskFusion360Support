@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A material library. 
  */
 @JSName("adsk.core.MaterialLibrary")
-trait MaterialLibrary extends Base {
+class MaterialLibrary extends Base {
   /**
   * Returns the appearances defined within this library.
   */
@@ -75,4 +75,9 @@ object MaterialLibrary extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object MaterialLibraryUtilities {
+    // no toSeq
+
+  }
+       

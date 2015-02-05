@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an open document. This is the base class for all document types. 
  */
 @JSName("adsk.core.Document")
-trait Document extends Base {
+class Document extends Base {
   /**
   * Causes this document to become the active document in the user interface.
   */
@@ -107,4 +107,9 @@ object Document extends js.Object {
   */
   def save(description: String): Boolean = js.native
 }
-// no utilities
+
+  object DocumentUtilities {
+    // no toSeq
+
+  }
+       

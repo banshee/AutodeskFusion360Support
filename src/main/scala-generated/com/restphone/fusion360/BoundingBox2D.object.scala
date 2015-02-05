@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient object that represents a 2D bounding box. A 2D bounding box is a rectangle box that is parallel to the x and y axes. The box is defined by a minimum point (smallest x-y values) and maximum point (largest x-y values). This object is a wrapper for these points and serves as a way to pass bounding box information in and out of functions. It also provides some convenience function when working with the bounding box data. 
  */
 @JSName("adsk.core.BoundingBox2D")
-trait BoundingBox2D extends Base {
+class BoundingBox2D extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -99,4 +99,9 @@ object BoundingBox2D extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object BoundingBox2DUtilities {
+    // no toSeq
+
+  }
+       

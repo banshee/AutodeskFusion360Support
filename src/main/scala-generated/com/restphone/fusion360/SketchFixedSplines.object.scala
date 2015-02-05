@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The collection of fixed splines in a sketch. Fixed splines are splines that were created as the result of some operation (i.e. intersection) and is not directly editable. 
  */
 @JSName("adsk.fusion.SketchFixedSplines")
-trait SketchFixedSplines extends Base {
+class SketchFixedSplines extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object SketchFixedSplines extends js.Object {
 }
 
   object SketchFixedSplinesUtilities {
+    
     def toSeq(xs: SketchFixedSplines): IndexedSeq[SketchFixedSpline] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

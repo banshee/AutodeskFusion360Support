@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to meshes that approximate a B-Rep and T-Spline. 
  */
 @JSName("adsk.fusion.MeshManager")
-trait MeshManager extends Base {
+class MeshManager extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -67,4 +67,9 @@ object MeshManager extends js.Object {
   */
   val parent: Base = js.native
 }
-// no utilities
+
+  object MeshManagerUtilities {
+    // no toSeq
+
+  }
+       

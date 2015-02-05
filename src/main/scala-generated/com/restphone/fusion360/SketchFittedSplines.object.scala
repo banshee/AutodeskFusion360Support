@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The collection of fitted splines in a sketch. This provides access to the existing fitted splines and supports the methods to create new fitted splines. 
  */
 @JSName("adsk.fusion.SketchFittedSplines")
-trait SketchFittedSplines extends Base {
+class SketchFittedSplines extends Base {
   /**
   * Creates a new fitted spline through the specified points.
   */
@@ -69,9 +69,12 @@ object SketchFittedSplines extends js.Object {
 }
 
   object SketchFittedSplinesUtilities {
+    
     def toSeq(xs: SketchFittedSplines): IndexedSeq[SketchFittedSpline] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

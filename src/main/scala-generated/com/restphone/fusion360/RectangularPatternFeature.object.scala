@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing rectangular pattern feature in a design. 
  */
 @JSName("adsk.fusion.RectangularPatternFeature")
-trait RectangularPatternFeature extends Feature {
+class RectangularPatternFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -177,4 +177,9 @@ object RectangularPatternFeature extends js.Object {
   */
   var suppressedElementsIds: UInt32 = js.native
 }
-// no utilities
+
+  object RectangularPatternFeatureUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * When an event handler is called, it is passed an EventArgs object that describes the 'event'. This is a base class - classes like DocumentEventArgs add more information on the 'event'. 
  */
 @JSName("adsk.core.EventArgs")
-trait EventArgs extends Base {
+class EventArgs extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object EventArgs extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object EventArgsUtilities {
+    // no toSeq
+
+  }
+       

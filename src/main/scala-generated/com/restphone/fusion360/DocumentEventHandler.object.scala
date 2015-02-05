@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The DocumentEventHandler is a client implemented class that can be added as a handler to a DocumentEvent. 
  */
 @JSName("DocumentEventHandler")
-trait DocumentEventHandler extends EventHandler {
+class DocumentEventHandler extends EventHandler {
   /**
   * The function called by Fusion when the associated event is fired.
   */
@@ -27,4 +27,9 @@ object DocumentEventHandler extends js.Object {
   */
   def notify(eventArgs: DocumentEventArgs): Unit = js.native
 }
-// no utilities
+
+  object DocumentEventHandlerUtilities {
+    // no toSeq
+
+  }
+       

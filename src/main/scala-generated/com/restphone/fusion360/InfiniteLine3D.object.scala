@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D infinite line. An infinite line is defined by a position and direction in space and has no start or end points. 
  */
 @JSName("adsk.core.InfiniteLine3D")
-trait InfiniteLine3D extends Curve3D {
+class InfiniteLine3D extends Curve3D {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -103,4 +103,20 @@ object InfiniteLine3D extends js.Object {
   */
   def set(origin: Point3D, direction: Vector3D): Boolean = js.native
 }
-// no utilities
+
+  object InfiniteLine3DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the infinite line.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: InfiniteLine3D): (Boolean, Point3D, Vector3D) = {
+
+val origin = js.Dynamic.literal(value = 0)
+val direction = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(origin.asInstanceOf[Point3D], direction.asInstanceOf[Vector3D])
+(result, origin.value.asInstanceOf[Point3D], direction.value.asInstanceOf[Vector3D])
+}
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for the classes that define how a chamfer can be defined. 
  */
 @JSName("adsk.fusion.ChamferTypeDefinition")
-trait ChamferTypeDefinition extends Base {
+class ChamferTypeDefinition extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object ChamferTypeDefinition extends js.Object {
   */
   val parentFeature: ChamferFeature = js.native
 }
-// no utilities
+
+  object ChamferTypeDefinitionUtilities {
+    // no toSeq
+
+  }
+       

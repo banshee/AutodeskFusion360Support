@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a command input to get a boolean value from the user. 
  */
 @JSName("adsk.core.BoolValueCommandInput")
-trait BoolValueCommandInput extends CommandInput {
+class BoolValueCommandInput extends CommandInput {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -38,4 +38,9 @@ object BoolValueCommandInput extends js.Object {
   */
   var value: Boolean = js.native
 }
-// no utilities
+
+  object BoolValueCommandInputUtilities {
+    // no toSeq
+
+  }
+       

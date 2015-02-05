@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient NURBS surface. A transient NURBS surface is not displayed or saved in a document. A transient NURBS surface is used as a wrapper to work with raw NURBS surface information. A transient NURBS surface is bounded by it's natural boundaries and does not support the definition of arbitrary boundaries. A NURBS surface is typically obtained from a BREPFace object, which does have boundary information. 
  */
 @JSName("adsk.core.NurbsSurface")
-trait NurbsSurface extends Surface {
+class NurbsSurface extends Surface {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -151,4 +151,28 @@ object NurbsSurface extends js.Object {
   */
   def set(degreeU: Integer, degreeV: Integer, controlPointCountU: Integer, controlPointCountV: Integer, controlPoints: Array[Point3D], knotsU: Array[Double], knotsV: Array[Double], weights: Array[Double], propertiesU: NurbsSurfaceProperties, propertiesV: NurbsSurfaceProperties): Boolean = js.native
 }
-// no utilities
+
+  object NurbsSurfaceUtilities {
+    // no toSeq
+/**
+* Gets the data that defines the NURBS surface.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: NurbsSurface): (Boolean, integer, integer, integer, integer, Point3D, Double, Double, Double, NurbsSurfaceProperties, NurbsSurfaceProperties) = {
+
+val degreeU = js.Dynamic.literal(value = 0)
+val degreeV = js.Dynamic.literal(value = 0)
+val controlPointCountU = js.Dynamic.literal(value = 0)
+val controlPointCountV = js.Dynamic.literal(value = 0)
+val controlPoints = js.Dynamic.literal(value = 0)
+val knotsU = js.Dynamic.literal(value = 0)
+val knotsV = js.Dynamic.literal(value = 0)
+val weights = js.Dynamic.literal(value = 0)
+val propertiesU = js.Dynamic.literal(value = 0)
+val propertiesV = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(degreeU.asInstanceOf[Integer], degreeV.asInstanceOf[Integer], controlPointCountU.asInstanceOf[Integer], controlPointCountV.asInstanceOf[Integer], controlPoints.asInstanceOf[Array[Point3D]], knotsU.asInstanceOf[Array[Double]], knotsV.asInstanceOf[Array[Double]], weights.asInstanceOf[Array[Double]], propertiesU.asInstanceOf[NurbsSurfaceProperties], propertiesV.asInstanceOf[NurbsSurfaceProperties])
+(result, degreeU.value.asInstanceOf[integer], degreeV.value.asInstanceOf[integer], controlPointCountU.value.asInstanceOf[integer], controlPointCountV.value.asInstanceOf[integer], controlPoints.value.asInstanceOf[Point3D], knotsU.value.asInstanceOf[Double], knotsV.value.asInstanceOf[Double], weights.value.asInstanceOf[Double], propertiesU.value.asInstanceOf[NurbsSurfaceProperties], propertiesV.value.asInstanceOf[NurbsSurfaceProperties])
+}
+  }
+       

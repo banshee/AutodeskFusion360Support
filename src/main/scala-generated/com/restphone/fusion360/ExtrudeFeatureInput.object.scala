@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of an extrude feature. This class also provides properties for setting/getting the Profile and Operation of the extrude. The Profile and Operation are defined when the ExtrudeFeatures.CreateInput method is called so they do not exist as properties on this class. 
  */
 @JSName("adsk.fusion.ExtrudeFeatureInput")
-trait ExtrudeFeatureInput extends Base {
+class ExtrudeFeatureInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -115,4 +115,9 @@ object ExtrudeFeatureInput extends js.Object {
   */
   var taperAngle: ValueInput = js.native
 }
-// no utilities
+
+  object ExtrudeFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

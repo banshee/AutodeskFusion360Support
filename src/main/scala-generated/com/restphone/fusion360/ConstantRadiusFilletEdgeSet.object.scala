@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides information to create a constant radius fillet. 
  */
 @JSName("adsk.fusion.ConstantRadiusFilletEdgeSet")
-trait ConstantRadiusFilletEdgeSet extends FilletEdgeSet {
+class ConstantRadiusFilletEdgeSet extends FilletEdgeSet {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -41,4 +41,9 @@ object ConstantRadiusFilletEdgeSet extends js.Object {
   */
   val radius: ModelParameter = js.native
 }
-// no utilities
+
+  object ConstantRadiusFilletEdgeSetUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A point within a sketch. 
  */
 @JSName("adsk.fusion.SketchPoint")
-trait SketchPoint extends SketchEntity {
+class SketchPoint extends SketchEntity {
 
 
   /**
@@ -87,4 +87,9 @@ object SketchPoint extends js.Object {
   */
   val worldGeometry: Point3D = js.native
 }
-// no utilities
+
+  object SketchPointUtilities {
+    // no toSeq
+
+  }
+       

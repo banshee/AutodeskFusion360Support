@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ConstructionPlaneTangentAtPointDefinition defines a ConstructionPlane tangent to a face and aligned to a point. 
  */
 @JSName("adsk.fusion.ConstructionPlaneTangentAtPointDefinition")
-trait ConstructionPlaneTangentAtPointDefinition extends ConstructionPlaneDefinition {
+class ConstructionPlaneTangentAtPointDefinition extends ConstructionPlaneDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object ConstructionPlaneTangentAtPointDefinition extends js.Object {
   */
   val tangentFace: BRepFace = js.native
 }
-// no utilities
+
+  object ConstructionPlaneTangentAtPointDefinitionUtilities {
+    // no toSeq
+
+  }
+       

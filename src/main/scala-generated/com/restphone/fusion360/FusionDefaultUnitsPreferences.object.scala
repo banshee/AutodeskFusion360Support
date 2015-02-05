@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Fusion Default Units for Design Preferences 
  */
 @JSName("adsk.fusion.FusionDefaultUnitsPreferences")
-trait FusionDefaultUnitsPreferences extends DefaultUnitsPreferences {
+class FusionDefaultUnitsPreferences extends DefaultUnitsPreferences {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -34,4 +34,9 @@ object FusionDefaultUnitsPreferences extends js.Object {
   */
   var distanceDisplayUnits: DistanceUnits = js.native
 }
-// no utilities
+
+  object FusionDefaultUnitsPreferencesUtilities {
+    // no toSeq
+
+  }
+       

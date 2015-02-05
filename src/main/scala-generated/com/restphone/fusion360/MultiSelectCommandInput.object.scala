@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a command input to get the multi-selected items from the user. 
  */
 @JSName("adsk.core.MultiSelectCommandInput")
-trait MultiSelectCommandInput extends CommandInput {
+class MultiSelectCommandInput extends CommandInput {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -38,4 +38,9 @@ object MultiSelectCommandInput extends js.Object {
   */
   val listItems: ListItems = js.native
 }
-// no utilities
+
+  object MultiSelectCommandInputUtilities {
+    // no toSeq
+
+  }
+       

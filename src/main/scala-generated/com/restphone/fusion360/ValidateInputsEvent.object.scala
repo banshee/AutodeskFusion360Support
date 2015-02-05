@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An event endpoint that supports the connection to client implemented ValidateInputsEventHandlers. 
  */
 @JSName("adsk.core.ValidateInputsEvent")
-trait ValidateInputsEvent extends Event {
+class ValidateInputsEvent extends Event {
   /**
   * Adds an event handler to this event endpoint.
   */
@@ -43,4 +43,9 @@ object ValidateInputsEvent extends js.Object {
   */
   def remove(handler: ValidateInputsEventHandler): Boolean = js.native
 }
-// no utilities
+
+  object ValidateInputsEventUtilities {
+    // no toSeq
+
+  }
+       

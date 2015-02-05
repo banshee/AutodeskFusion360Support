@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides positioning information for a hole that is positioned on a plane and at a distance from one or two edges. 
  */
 @JSName("adsk.fusion.PlaneAndOffsetsHolePositionDefinition")
-trait PlaneAndOffsetsHolePositionDefinition extends HolePositionDefinition {
+class PlaneAndOffsetsHolePositionDefinition extends HolePositionDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -65,4 +65,9 @@ object PlaneAndOffsetsHolePositionDefinition extends js.Object {
   */
   val planarEntity: Base = js.native
 }
-// no utilities
+
+  object PlaneAndOffsetsHolePositionDefinitionUtilities {
+    // no toSeq
+
+  }
+       

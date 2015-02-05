@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection of TimelineObjects in a parametric design. 
  */
 @JSName("adsk.fusion.Timeline")
-trait Timeline extends Base {
+class Timeline extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -117,9 +117,12 @@ object Timeline extends js.Object {
 }
 
   object TimelineUtilities {
+    
     def toSeq(xs: Timeline): IndexedSeq[TimelineObject] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing hole feature in a design. 
  */
 @JSName("adsk.fusion.HoleFeature")
-trait HoleFeature extends Feature {
+class HoleFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -257,4 +257,9 @@ object HoleFeature extends js.Object {
   */
   val tipAngle: ModelParameter = js.native
 }
-// no utilities
+
+  object HoleFeatureUtilities {
+    // no toSeq
+
+  }
+       

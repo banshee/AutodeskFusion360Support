@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to a list of features. This is used in the API to return a list of features from an API call. 
  */
 @JSName("adsk.fusion.FeatureList")
-trait FeatureList extends Base {
+class FeatureList extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object FeatureList extends js.Object {
 }
 
   object FeatureListUtilities {
+    
     def toSeq(xs: FeatureList): IndexedSeq[Feature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

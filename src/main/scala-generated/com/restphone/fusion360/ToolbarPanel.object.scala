@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Toolbar panels are the panels shown in the command toolbar. 
  */
 @JSName("adsk.core.ToolbarPanel")
-trait ToolbarPanel extends Base {
+class ToolbarPanel extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -115,4 +115,9 @@ object ToolbarPanel extends js.Object {
   */
   var relatedWorkspaces: ObjectCollection = js.native
 }
-// no utilities
+
+  object ToolbarPanelUtilities {
+    // no toSeq
+
+  }
+       

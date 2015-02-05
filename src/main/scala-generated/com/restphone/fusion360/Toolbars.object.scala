@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the toolbars. These are currently the right and left QAT's and the NavBar. 
  */
 @JSName("adsk.core.Toolbars")
-trait Toolbars extends Base {
+class Toolbars extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -69,9 +69,12 @@ object Toolbars extends js.Object {
 }
 
   object ToolbarsUtilities {
+    
     def toSeq(xs: Toolbars): IndexedSeq[Toolbar] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

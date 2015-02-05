@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represent a connected region on a single geometric surface. 
  */
 @JSName("adsk.fusion.BRepFace")
-trait BRepFace extends Base {
+class BRepFace extends Base {
   /**
   * Read-write property that gets and sets the current appearance of the face. Setting this property will result in applying an override appearance to the face and the AppearanceSourceType property will return OverrideAppearanceSource. Setting this property to null will remove any override.
   */
@@ -163,4 +163,9 @@ object BRepFace extends js.Object {
   */
   val vertices: BRepVertices = js.native
 }
-// no utilities
+
+  object BRepFaceUtilities {
+    // no toSeq
+
+  }
+       

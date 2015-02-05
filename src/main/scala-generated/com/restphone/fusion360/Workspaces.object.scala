@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to all of the existing workspaces. 
  */
 @JSName("adsk.core.Workspaces")
-trait Workspaces extends Base {
+class Workspaces extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -69,9 +69,12 @@ object Workspaces extends js.Object {
 }
 
   object WorkspacesUtilities {
+    
     def toSeq(xs: Workspaces): IndexedSeq[Workspace] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

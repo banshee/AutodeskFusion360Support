@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * ConstructionPlaneThreePointDefinition defines a ConstructionPlane by 3 point entities (e.g. (sketch points, vectrices or construction points) that form a triangle (i.e. no two points the same and they aren't collinear). 
  */
 @JSName("adsk.fusion.ConstructionPlaneThreePointsDefinition")
-trait ConstructionPlaneThreePointsDefinition extends ConstructionPlaneDefinition {
+class ConstructionPlaneThreePointsDefinition extends ConstructionPlaneDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -58,4 +58,9 @@ object ConstructionPlaneThreePointsDefinition extends js.Object {
   */
   def redefine(pointEntityOne: Base, pointEntityTwo: Base, pointEntityThree: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPlaneThreePointsDefinitionUtilities {
+    // no toSeq
+
+  }
+       

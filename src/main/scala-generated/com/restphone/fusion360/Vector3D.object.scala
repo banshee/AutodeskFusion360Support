@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 3D vector. This object is a wrapper over 3D vector data and is used as way to pass vector data in and out of the API and as a convenience when operating on vector data. 
  */
 @JSName("adsk.core.Vector3D")
-trait Vector3D extends Base {
+class Vector3D extends Base {
   /**
   * Adds a vector to this vector.
   */
@@ -227,4 +227,9 @@ object Vector3D extends js.Object {
   */
   var z: double = js.native
 }
-// no utilities
+
+  object Vector3DUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents an occurrence of a component at any level within a subassembly. 
  */
 @JSName("adsk.fusion.Occurrence")
-trait Occurrence extends Base {
+class Occurrence extends Base {
   /**
   * Read-write property that gets and sets the appearance override for this occurrence. This property can return null indicating there is no override appearance and that the contents of the occurrence are displayed using there defined appearance. Setting the property to null will remove any override appearance for this occurrence.
   */
@@ -155,4 +155,9 @@ object Occurrence extends js.Object {
   */
   var transform: Matrix3D = js.native
 }
-// no utilities
+
+  object OccurrenceUtilities {
+    // no toSeq
+
+  }
+       

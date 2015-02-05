@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents the use of a BRepEdge by a BRepFace. 
  */
 @JSName("adsk.fusion.BRepCoEdge")
-trait BRepCoEdge extends Base {
+class BRepCoEdge extends Base {
   /**
   * Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this BRepCoEdge object is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly. but is already the native object.
   */
@@ -147,4 +147,9 @@ object BRepCoEdge extends js.Object {
   */
   val previous: BRepCoEdge = js.native
 }
-// no utilities
+
+  object BRepCoEdgeUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a sketch within a component. 
  */
 @JSName("adsk.fusion.Sketch")
-trait Sketch extends Base {
+class Sketch extends Base {
   /**
   * Indicates if the dimensions of the sketch are displayed when the sketch is not active (in sketch edit mode)
   */
@@ -45,15 +45,11 @@ trait Sketch extends Base {
   */
   def deleteMe(): Boolean = js.native
   /**
-  * Finds the sketch curves that are end connected to the input curve.
-   * This can be useful for many cases but is especially useful in
-   * gathering the input when creating an offset.
+  * Finds the sketch curves that are end connected to the input curve. This can be useful for many cases but is especially useful in gathering the input when creating an offset.
   */
   def findConnectedCurves(curve: SketchCurve): ObjectCollection = js.native
   /**
-  * Returns the sketch constraints collection associated with this sketch.
-   * This provides access to the existing sketch constraints
-   * and supports the creation of new sketch constraints.
+  * Returns the sketch constraints collection associated with this sketch. This provides access to the existing sketch constraints and supports the creation of new sketch constraints.
   */
   val geometricConstraints: GeometricConstraints = js.native
   /**
@@ -335,4 +331,9 @@ object Sketch extends js.Object {
   */
   val yDirection: Vector3D = js.native
 }
-// no utilities
+
+  object SketchUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction point created using the SetbyTwoEdges method 
  */
 @JSName("adsk.fusion.ConstructionPointTwoEdgesDefinition")
-trait ConstructionPointTwoEdgesDefinition extends ConstructionPointDefinition {
+class ConstructionPointTwoEdgesDefinition extends ConstructionPointDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object ConstructionPointTwoEdgesDefinition extends js.Object {
   */
   def redefine(edgeOne: Base, edgeTwo: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPointTwoEdgesDefinitionUtilities {
+    // no toSeq
+
+  }
+       

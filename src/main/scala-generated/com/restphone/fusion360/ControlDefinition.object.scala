@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The ControlDefinition is the base class for the various types of control definitions. You can use properties on the control definition to define the look and behavior of the control. 
  */
 @JSName("adsk.core.ControlDefinition")
-trait ControlDefinition extends Base {
+class ControlDefinition extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -67,4 +67,9 @@ object ControlDefinition extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object ControlDefinitionUtilities {
+    // no toSeq
+
+  }
+       

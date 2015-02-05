@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents the information used to define a check box. This isn't the visible check box control but is the information needed to create a check box control and fully defines a check box except for it's position within the user interface. 
  */
 @JSName("adsk.core.CheckBoxControlDefinition")
-trait CheckBoxControlDefinition extends ControlDefinition {
+class CheckBoxControlDefinition extends ControlDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -36,4 +36,9 @@ object CheckBoxControlDefinition extends js.Object {
   */
   var isChecked: Boolean = js.native
 }
-// no utilities
+
+  object CheckBoxControlDefinitionUtilities {
+    // no toSeq
+
+  }
+       

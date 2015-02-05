@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The PolygonMesh represents a mesh that can contain any combination of polygons, quads, and triangles. 
  */
 @JSName("adsk.fusion.PolygonMesh")
-trait PolygonMesh extends Base {
+class PolygonMesh extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -155,4 +155,9 @@ object PolygonMesh extends js.Object {
   */
   val triangleNodeIndices: Int32 = js.native
 }
-// no utilities
+
+  object PolygonMeshUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient cone. A transient cone is not displayed or saved in a document. A transient cone is used as a wrapper to work with raw cone information. A transient cone has no boundaries. The cone always goes to a point in its narrowing direction, and is infinite in its widening direction. 
  */
 @JSName("adsk.core.Cone")
-trait Cone extends Surface {
+class Cone extends Surface {
   /**
   * Gets and sets the center axis (along the length) of the cone that defines its normal direction.
   */
@@ -95,4 +95,22 @@ object Cone extends js.Object {
   */
   def set(origin: Point3D, axis: Vector3D, radius: double, halfAngle: double): Boolean = js.native
 }
-// no utilities
+
+  object ConeUtilities {
+    // no toSeq
+/**
+* Gets the data that defines the cone.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Cone): (Boolean, Point3D, Vector3D, double, double) = {
+
+val origin = js.Dynamic.literal(value = 0)
+val axis = js.Dynamic.literal(value = 0)
+val radius = js.Dynamic.literal(value = 0)
+val halfAngle = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(origin.asInstanceOf[Point3D], axis.asInstanceOf[Vector3D], radius.asInstanceOf[double], halfAngle.asInstanceOf[double])
+(result, origin.value.asInstanceOf[Point3D], axis.value.asInstanceOf[Vector3D], radius.value.asInstanceOf[double], halfAngle.value.asInstanceOf[double])
+}
+  }
+       

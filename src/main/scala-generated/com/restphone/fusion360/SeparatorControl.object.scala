@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a separator within a panel, toolbar, or drop-down control. 
  */
 @JSName("adsk.core.SeparatorControl")
-trait SeparatorControl extends ToolbarControl {
+class SeparatorControl extends ToolbarControl {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -34,4 +34,9 @@ trait SeparatorControl extends ToolbarControl {
 object SeparatorControl extends js.Object {
 
 }
-// no utilities
+
+  object SeparatorControlUtilities {
+    // no toSeq
+
+  }
+       

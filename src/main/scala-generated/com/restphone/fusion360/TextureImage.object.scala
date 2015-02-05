@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the image data associated with a texture map. 
  */
 @JSName("adsk.fusion.TextureImage")
-trait TextureImage extends Base {
+class TextureImage extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object TextureImage extends js.Object {
   */
   val transform: Matrix2D = js.native
 }
-// no utilities
+
+  object TextureImageUtilities {
+    // no toSeq
+
+  }
+       

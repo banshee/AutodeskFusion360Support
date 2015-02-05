@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides positioning information for a hole that is positioned at the center of a circular or elliptical edge. 
  */
 @JSName("adsk.fusion.AtCenterHolePositionDefinition")
-trait AtCenterHolePositionDefinition extends HolePositionDefinition {
+class AtCenterHolePositionDefinition extends HolePositionDefinition {
   /**
   * Returns the circular or elliptical edge the hole is centered at.
   */
@@ -41,4 +41,9 @@ object AtCenterHolePositionDefinition extends js.Object {
   */
   val planarEntity: Base = js.native
 }
-// no utilities
+
+  object AtCenterHolePositionDefinitionUtilities {
+    // no toSeq
+
+  }
+       

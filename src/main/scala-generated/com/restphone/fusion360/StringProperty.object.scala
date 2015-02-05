@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A string value property associated with a material or appearance. 
  */
 @JSName("adsk.core.StringProperty")
-trait StringProperty extends Property {
+class StringProperty extends Property {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -37,4 +37,9 @@ object StringProperty extends js.Object {
   */
   var value: String = js.native
 }
-// no utilities
+
+  object StringPropertyUtilities {
+    // no toSeq
+
+  }
+       

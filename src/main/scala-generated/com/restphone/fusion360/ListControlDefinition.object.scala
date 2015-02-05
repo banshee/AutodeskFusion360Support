@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents the information used to define a list of check boxes, radio buttons, or text with icons. This class isn't the visible list control but is the information needed to create a list control and fully defines a list except for it's position within the user interface. 
  */
 @JSName("adsk.core.ListControlDefinition")
-trait ListControlDefinition extends ControlDefinition {
+class ListControlDefinition extends ControlDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -52,4 +52,9 @@ object ListControlDefinition extends js.Object {
   */
   val listItems: ListItems = js.native
 }
-// no utilities
+
+  object ListControlDefinitionUtilities {
+    // no toSeq
+
+  }
+       

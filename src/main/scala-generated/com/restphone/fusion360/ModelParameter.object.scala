@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a Model Parameter. 
  */
 @JSName("adsk.fusion.ModelParameter")
-trait ModelParameter extends Parameter {
+class ModelParameter extends Parameter {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -64,4 +64,9 @@ object ModelParameter extends js.Object {
   */
   val role: String = js.native
 }
-// no utilities
+
+  object ModelParameterUtilities {
+    // no toSeq
+
+  }
+       

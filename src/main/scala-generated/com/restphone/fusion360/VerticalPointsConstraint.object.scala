@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A vertical constraint between two points in a sketch. 
  */
 @JSName("adsk.fusion.VerticalPointsConstraint")
-trait VerticalPointsConstraint extends GeometricConstraint {
+class VerticalPointsConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object VerticalPointsConstraint extends js.Object {
   */
   val pointTwo: SketchPoint = js.native
 }
-// no utilities
+
+  object VerticalPointsConstraintUtilities {
+    // no toSeq
+
+  }
+       

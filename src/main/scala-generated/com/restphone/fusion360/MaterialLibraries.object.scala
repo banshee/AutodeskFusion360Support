@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The MaterialLibraries collection object provides access to currently loaded Material and Appearance libraries 
  */
 @JSName("adsk.core.MaterialLibraries")
-trait MaterialLibraries extends Base {
+class MaterialLibraries extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -77,9 +77,12 @@ object MaterialLibraries extends js.Object {
 }
 
   object MaterialLibrariesUtilities {
+    
     def toSeq(xs: MaterialLibraries): IndexedSeq[MaterialLibrary] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An ellipse minor radius dimension in a sketch. 
  */
 @JSName("adsk.fusion.SketchEllipseMinorRadiusDimension")
-trait SketchEllipseMinorRadiusDimension extends SketchDimension {
+class SketchEllipseMinorRadiusDimension extends SketchDimension {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -58,4 +58,9 @@ object SketchEllipseMinorRadiusDimension extends js.Object {
   */
   val nativeObject: SketchEllipseMinorRadiusDimension = js.native
 }
-// no utilities
+
+  object SketchEllipseMinorRadiusDimensionUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the list of items in a check box list. This object supports the ability to add items to the list and iterate through the existing items. 
  */
 @JSName("adsk.core.ListItems")
-trait ListItems extends Base {
+class ListItems extends Base {
   /**
   * Adds a new item to the list.
   */
@@ -93,9 +93,12 @@ object ListItems extends js.Object {
 }
 
   object ListItemsUtilities {
+    
     def toSeq(xs: ListItems): IndexedSeq[ListItem] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

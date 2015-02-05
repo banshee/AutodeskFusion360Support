@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a list of occurrences. 
  */
 @JSName("adsk.fusion.OccurrenceList")
-trait OccurrenceList extends Base {
+class OccurrenceList extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object OccurrenceList extends js.Object {
 }
 
   object OccurrenceListUtilities {
+    
     def toSeq(xs: OccurrenceList): IndexedSeq[Occurrence] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

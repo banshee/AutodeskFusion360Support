@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a chamfer feature. 
  */
 @JSName("adsk.fusion.ChamferFeatureInput")
-trait ChamferFeatureInput extends Base {
+class ChamferFeatureInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -83,4 +83,9 @@ object ChamferFeatureInput extends js.Object {
   */
   def setToTwoDistances(distanceOne: ValueInput, distanceTwo: ValueInput): Boolean = js.native
 }
-// no utilities
+
+  object ChamferFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

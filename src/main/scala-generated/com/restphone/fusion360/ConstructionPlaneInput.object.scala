@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A ConstructionPlaneInput is a throwaway object used to create a ConstructionPlane The usage pattern is: a. create a ConstructionPlaneInput (ConstructionPlanes.CreateInput) b. call one of the member functions to specify how the ConstructionPlane is created c. create the ConstructionPlane (call ConstructionPlanes.Add) d. stop referencing the ConstructionPlaneInput (so it gets deleted). 
  */
 @JSName("adsk.fusion.ConstructionPlaneInput")
-trait ConstructionPlaneInput extends Base {
+class ConstructionPlaneInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -123,4 +123,9 @@ object ConstructionPlaneInput extends js.Object {
   */
   def setByTwoPlanes(planarEntityOne: Base, planarEntityTwo: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPlaneInputUtilities {
+    // no toSeq
+
+  }
+       

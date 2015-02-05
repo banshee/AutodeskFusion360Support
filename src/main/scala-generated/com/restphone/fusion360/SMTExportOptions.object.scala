@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Defines that an SMT export is to be done and specifies the various options. 
  */
 @JSName("adsk.fusion.SMTExportOptions")
-trait SMTExportOptions extends ExportOptions {
+class SMTExportOptions extends ExportOptions {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -27,4 +27,9 @@ trait SMTExportOptions extends ExportOptions {
 object SMTExportOptions extends js.Object {
 
 }
-// no utilities
+
+  object SMTExportOptionsUtilities {
+    // no toSeq
+
+  }
+       

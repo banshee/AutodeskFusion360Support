@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A horizontal constraint between two points in a sketch. 
  */
 @JSName("adsk.fusion.HorizontalPointsConstraint")
-trait HorizontalPointsConstraint extends GeometricConstraint {
+class HorizontalPointsConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object HorizontalPointsConstraint extends js.Object {
   */
   val pointTwo: SketchPoint = js.native
 }
-// no utilities
+
+  object HorizontalPointsConstraintUtilities {
+    // no toSeq
+
+  }
+       

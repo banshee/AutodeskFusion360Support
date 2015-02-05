@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a command input to get a string value from the user. 
  */
 @JSName("adsk.core.StringValueCommandInput")
-trait StringValueCommandInput extends CommandInput {
+class StringValueCommandInput extends CommandInput {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -38,4 +38,9 @@ object StringValueCommandInput extends js.Object {
   */
   var value: String = js.native
 }
-// no utilities
+
+  object StringValueCommandInputUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides a set of arguments from a firing ValidateInputsEvent to a ValidateInputsEventHandler's notify callback method. 
  */
 @JSName("adsk.core.ValidateInputsEventArgs")
-trait ValidateInputsEventArgs extends EventArgs {
+class ValidateInputsEventArgs extends EventArgs {
   /**
   * Used during the AreInputsValid event to get or set if all inputs are valid and the OK button should be enabled.
   */
@@ -34,4 +34,9 @@ object ValidateInputsEventArgs extends js.Object {
   */
   var areInputsValid: Boolean = js.native
 }
-// no utilities
+
+  object ValidateInputsEventArgsUtilities {
+    // no toSeq
+
+  }
+       

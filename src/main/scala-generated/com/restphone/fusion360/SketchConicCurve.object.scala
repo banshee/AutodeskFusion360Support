@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The SketchConicCurve class represents conic curves in a sketch. 
  */
 @JSName("adsk.fusion.SketchConicCurve")
-trait SketchConicCurve extends SketchCurve {
+class SketchConicCurve extends SketchCurve {
   /**
   * The sketch point at the apex of the conic curve.
   */
@@ -125,4 +125,20 @@ object SketchConicCurve extends js.Object {
   */
   val worldGeometry: NurbsCurve3D = js.native
 }
-// no utilities
+
+  object SketchConicCurveUtilities {
+    // no toSeq
+/**
+* Get the curves that intersect this curve along with the intersection points (Point2D)
+*
+* Out parameters are returned in a tuple.
+*/
+def intersectionsWithResults(activeObject: SketchConicCurve, sketchCurves: ObjectCollection): (Boolean, ObjectCollection, ObjectCollection) = {
+
+val intersectingCurves = js.Dynamic.literal(value = 0)
+val intersectionPoints = js.Dynamic.literal(value = 0)
+val result = activeObject.intersections(sketchCurves.asInstanceOf[ObjectCollection], intersectingCurves.asInstanceOf[ObjectCollection], intersectionPoints.asInstanceOf[ObjectCollection])
+(result, intersectingCurves.value.asInstanceOf[ObjectCollection], intersectionPoints.value.asInstanceOf[ObjectCollection])
+}
+  }
+       

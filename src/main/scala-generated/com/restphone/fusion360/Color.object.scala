@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The Color class wraps all of the information that defines a simple color. 
  */
 @JSName("adsk.core.Color")
-trait Color extends Base {
+class Color extends Base {
   /**
   * Gets and sets the blue component of the color. The value can be 0 to 255.
   */
@@ -99,4 +99,22 @@ object Color extends js.Object {
   */
   def setColor(red: short, green: short, blue: short, opacity: short): Boolean = js.native
 }
-// no utilities
+
+  object ColorUtilities {
+    // no toSeq
+/**
+* Gets all of the information defining this color.
+*
+* Out parameters are returned in a tuple.
+*/
+def getColorWithResults(activeObject: Color): (Boolean, short, short, short, short) = {
+
+val red = js.Dynamic.literal(value = 0)
+val green = js.Dynamic.literal(value = 0)
+val blue = js.Dynamic.literal(value = 0)
+val opacity = js.Dynamic.literal(value = 0)
+val result = activeObject.getColor(red.asInstanceOf[short], green.asInstanceOf[short], blue.asInstanceOf[short], opacity.asInstanceOf[short])
+(result, red.value.asInstanceOf[short], green.value.asInstanceOf[short], blue.value.asInstanceOf[short], opacity.value.asInstanceOf[short])
+}
+  }
+       

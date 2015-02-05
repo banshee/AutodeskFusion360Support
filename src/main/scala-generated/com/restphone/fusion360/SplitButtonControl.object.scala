@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A split button has two active areas that the user can click; the main button portion and the drop-down arrow. Clicking the main button, executes the displayed command. Clicking the drop-down displays the drop-down with additional commands. 
  */
 @JSName("adsk.core.SplitButtonControl")
-trait SplitButtonControl extends ToolbarControl {
+class SplitButtonControl extends ToolbarControl {
   /**
   * Gets or sets the command definitions used to define the buttons associated with the split button.
   */
@@ -57,4 +57,9 @@ object SplitButtonControl extends js.Object {
   */
   val isLastUsedShown: Boolean = js.native
 }
-// no utilities
+
+  object SplitButtonControlUtilities {
+    // no toSeq
+
+  }
+       

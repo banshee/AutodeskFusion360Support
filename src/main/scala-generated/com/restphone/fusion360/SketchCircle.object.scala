@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A circle in a sketch. 
  */
 @JSName("adsk.fusion.SketchCircle")
-trait SketchCircle extends SketchCurve {
+class SketchCircle extends SketchCurve {
   /**
   * Returns the area of the circle in square centimeters.
   */
@@ -117,4 +117,20 @@ object SketchCircle extends js.Object {
   */
   val worldGeometry: Circle3D = js.native
 }
-// no utilities
+
+  object SketchCircleUtilities {
+    // no toSeq
+/**
+* Get the curves that intersect this curve along with the intersection points (Point2D)
+*
+* Out parameters are returned in a tuple.
+*/
+def intersectionsWithResults(activeObject: SketchCircle, sketchCurves: ObjectCollection): (Boolean, ObjectCollection, ObjectCollection) = {
+
+val intersectingCurves = js.Dynamic.literal(value = 0)
+val intersectionPoints = js.Dynamic.literal(value = 0)
+val result = activeObject.intersections(sketchCurves.asInstanceOf[ObjectCollection], intersectingCurves.asInstanceOf[ObjectCollection], intersectionPoints.asInstanceOf[ObjectCollection])
+(result, intersectingCurves.value.asInstanceOf[ObjectCollection], intersectionPoints.value.asInstanceOf[ObjectCollection])
+}
+  }
+       

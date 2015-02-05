@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction point created using the SetbyThreePlanes method 
  */
 @JSName("adsk.fusion.ConstructionPointThreePlanesDefinition")
-trait ConstructionPointThreePlanesDefinition extends ConstructionPointDefinition {
+class ConstructionPointThreePlanesDefinition extends ConstructionPointDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -58,4 +58,9 @@ object ConstructionPointThreePlanesDefinition extends js.Object {
   */
   def redefine(planeOne: Base, planeTwo: Base, planeThree: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPointThreePlanesDefinitionUtilities {
+    // no toSeq
+
+  }
+       

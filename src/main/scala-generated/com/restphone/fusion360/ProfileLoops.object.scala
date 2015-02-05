@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection of loops within a Profile. 
  */
 @JSName("adsk.fusion.ProfileLoops")
-trait ProfileLoops extends Base {
+class ProfileLoops extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object ProfileLoops extends js.Object {
 }
 
   object ProfileLoopsUtilities {
+    
     def toSeq(xs: ProfileLoops): IndexedSeq[ProfileLoop] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

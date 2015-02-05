@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An arc in a sketch. 
  */
 @JSName("adsk.fusion.SketchArc")
-trait SketchArc extends SketchCurve {
+class SketchArc extends SketchCurve {
 
 
   /**
@@ -125,4 +125,20 @@ object SketchArc extends js.Object {
   */
   val worldGeometry: Arc3D = js.native
 }
-// no utilities
+
+  object SketchArcUtilities {
+    // no toSeq
+/**
+* Get the curves that intersect this curve along with the intersection points (Point2D)
+*
+* Out parameters are returned in a tuple.
+*/
+def intersectionsWithResults(activeObject: SketchArc, sketchCurves: ObjectCollection): (Boolean, ObjectCollection, ObjectCollection) = {
+
+val intersectingCurves = js.Dynamic.literal(value = 0)
+val intersectionPoints = js.Dynamic.literal(value = 0)
+val result = activeObject.intersections(sketchCurves.asInstanceOf[ObjectCollection], intersectingCurves.asInstanceOf[ObjectCollection], intersectionPoints.asInstanceOf[ObjectCollection])
+(result, intersectingCurves.value.asInstanceOf[ObjectCollection], intersectionPoints.value.asInstanceOf[ObjectCollection])
+}
+  }
+       

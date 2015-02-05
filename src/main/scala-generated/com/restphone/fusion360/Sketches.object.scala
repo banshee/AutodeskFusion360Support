@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the sketches within a design and provides methods to create new sketches. 
  */
 @JSName("adsk.fusion.Sketches")
-trait Sketches extends Base {
+class Sketches extends Base {
   /**
   * Creates a new sketch on the specified planar entity.
   */
@@ -77,9 +77,12 @@ object Sketches extends js.Object {
 }
 
   object SketchesUtilities {
+    
     def toSeq(xs: Sketches): IndexedSeq[Sketch] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient elliptical cone. A transient elliptical cone is not displayed or saved in a document. A transient elliptical cone is used as a wrapper to work with raw elliptical cone information. A transient elliptical cone has no boundaries. The cone always goes to a point in its narrowing direction, and is infinite in its widening direction. 
  */
 @JSName("adsk.core.EllipticalCone")
-trait EllipticalCone extends Surface {
+class EllipticalCone extends Surface {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -111,4 +111,36 @@ object EllipticalCone extends js.Object {
   */
   def setAxes(axis: Vector3D, majorAxisDirection: Vector3D): Boolean = js.native
 }
-// no utilities
+
+  object EllipticalConeUtilities {
+    // no toSeq
+/**
+* Gets the center axis of the cone that defines its normal direction and the major axis direction of the ellipse that defines it.
+*
+* Out parameters are returned in a tuple.
+*/
+def getAxesWithResults(activeObject: EllipticalCone): (Unit, Vector3D, Vector3D) = {
+
+val axis = js.Dynamic.literal(value = 0)
+val majorAxisDirection = js.Dynamic.literal(value = 0)
+val result = activeObject.getAxes(axis.asInstanceOf[Vector3D], majorAxisDirection.asInstanceOf[Vector3D])
+(result, axis.value.asInstanceOf[Vector3D], majorAxisDirection.value.asInstanceOf[Vector3D])
+}
+/**
+* Gets the data that defines the Elliptical Cone.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: EllipticalCone): (Boolean, Point3D, Vector3D, Vector3D, double, double, double) = {
+
+val origin = js.Dynamic.literal(value = 0)
+val axis = js.Dynamic.literal(value = 0)
+val majorAxisDirection = js.Dynamic.literal(value = 0)
+val majorRadius = js.Dynamic.literal(value = 0)
+val minorRadius = js.Dynamic.literal(value = 0)
+val halfAngle = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(origin.asInstanceOf[Point3D], axis.asInstanceOf[Vector3D], majorAxisDirection.asInstanceOf[Vector3D], majorRadius.asInstanceOf[double], minorRadius.asInstanceOf[double], halfAngle.asInstanceOf[double])
+(result, origin.value.asInstanceOf[Point3D], axis.value.asInstanceOf[Vector3D], majorAxisDirection.value.asInstanceOf[Vector3D], majorRadius.value.asInstanceOf[double], minorRadius.value.asInstanceOf[double], halfAngle.value.asInstanceOf[double])
+}
+  }
+       

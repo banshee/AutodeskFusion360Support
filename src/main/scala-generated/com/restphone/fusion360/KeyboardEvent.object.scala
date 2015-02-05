@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An event endpoint that supports the connection to client implemented KeyboardEventHandlers. 
  */
 @JSName("adsk.core.KeyboardEvent")
-trait KeyboardEvent extends Event {
+class KeyboardEvent extends Event {
   /**
   * Adds an event handler to this event endpoint.
   */
@@ -43,4 +43,9 @@ object KeyboardEvent extends js.Object {
   */
   def remove(handler: KeyboardEventHandler): Boolean = js.native
 }
-// no utilities
+
+  object KeyboardEventUtilities {
+    // no toSeq
+
+  }
+       

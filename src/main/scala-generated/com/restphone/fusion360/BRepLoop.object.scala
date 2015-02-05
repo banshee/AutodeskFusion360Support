@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a connected portion of a BRepFace boundary. It consists of a chain of BRepCoEdges. 
  */
 @JSName("adsk.fusion.BRepLoop")
-trait BRepLoop extends Base {
+class BRepLoop extends Base {
   /**
   * Returns the assembly occurrence (i.e. the occurrence) of this object in an assembly. This is only valid in the case where this BRepLoop object is acting as a proxy in an assembly. Returns null in the case where the object is not in the context of an assembly. but is already the native object.
   */
@@ -115,4 +115,9 @@ object BRepLoop extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object BRepLoopUtilities {
+    // no toSeq
+
+  }
+       

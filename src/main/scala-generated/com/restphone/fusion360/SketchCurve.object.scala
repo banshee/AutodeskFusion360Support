@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A single sketch curve. This is the base class for the specific curve types. 
  */
 @JSName("adsk.fusion.SketchCurve")
-trait SketchCurve extends SketchEntity {
+class SketchCurve extends SketchEntity {
 
 
   /**
@@ -95,4 +95,20 @@ object SketchCurve extends js.Object {
   */
   def trim(segmentPoint: Point3D, createConstraints: Boolean): ObjectCollection = js.native
 }
-// no utilities
+
+  object SketchCurveUtilities {
+    // no toSeq
+/**
+* Get the curves that intersect this curve along with the intersection points (Point2D)
+*
+* Out parameters are returned in a tuple.
+*/
+def intersectionsWithResults(activeObject: SketchCurve, sketchCurves: ObjectCollection): (Boolean, ObjectCollection, ObjectCollection) = {
+
+val intersectingCurves = js.Dynamic.literal(value = 0)
+val intersectionPoints = js.Dynamic.literal(value = 0)
+val result = activeObject.intersections(sketchCurves.asInstanceOf[ObjectCollection], intersectingCurves.asInstanceOf[ObjectCollection], intersectionPoints.asInstanceOf[ObjectCollection])
+(result, intersectingCurves.value.asInstanceOf[ObjectCollection], intersectionPoints.value.asInstanceOf[ObjectCollection])
+}
+  }
+       

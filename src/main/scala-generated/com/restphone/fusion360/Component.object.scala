@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a component in the data model. A component represents a set of geometry, features, and parameters that make up an item in the design. A component can be referenced multiple times into a design with a Occurrence object. 
  */
 @JSName("adsk.fusion.Component")
-trait Component extends BaseComponent {
+class Component extends BaseComponent {
 
   /**
   * Returns all occurrences, at any level of the assembly, that reference the specified component. The returned list is read-only.
@@ -145,4 +145,9 @@ object Component extends js.Object {
   */
   val zConstructionAxis: ConstructionAxis = js.native
 }
-// no utilities
+
+  object ComponentUtilities {
+    // no toSeq
+
+  }
+       

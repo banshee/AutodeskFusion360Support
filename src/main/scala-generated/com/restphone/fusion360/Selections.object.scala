@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to and control over the set of selected entities in the user interface. 
  */
 @JSName("adsk.core.Selections")
-trait Selections extends Base {
+class Selections extends Base {
   /**
   * Adds the entity to the set of currently selected entities. The user will see the entity become selected in the user interface.
   */
@@ -109,9 +109,12 @@ object Selections extends js.Object {
 }
 
   object SelectionsUtilities {
+    
     def toSeq(xs: Selections): IndexedSeq[Selection] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

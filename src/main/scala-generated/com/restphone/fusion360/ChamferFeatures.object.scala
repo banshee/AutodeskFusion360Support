@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing chamfer features in a component and supports the ability to create new chamfer features. 
  */
 @JSName("adsk.fusion.ChamferFeatures")
-trait ChamferFeatures extends Base {
+class ChamferFeatures extends Base {
   /**
   * Creates a new chamfer feature.
   */
@@ -77,9 +77,12 @@ object ChamferFeatures extends js.Object {
 }
 
   object ChamferFeaturesUtilities {
+    
     def toSeq(xs: ChamferFeatures): IndexedSeq[ChamferFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Describes a two-dimensional topological, manifold in three-dimensional space. It is used as the underlying geometry for a BRepFace. 
  */
 @JSName("adsk.core.Surface")
-trait Surface extends Base {
+class Surface extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -67,4 +67,9 @@ object Surface extends js.Object {
   */
   def transformBy(matrix: Matrix3D): Boolean = js.native
 }
-// no utilities
+
+  object SurfaceUtilities {
+    // no toSeq
+
+  }
+       

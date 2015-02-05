@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A vertical constraint in a sketch. 
  */
 @JSName("adsk.fusion.VerticalConstraint")
-trait VerticalConstraint extends GeometricConstraint {
+class VerticalConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -56,4 +56,9 @@ object VerticalConstraint extends js.Object {
   */
   val nativeObject: VerticalConstraint = js.native
 }
-// no utilities
+
+  object VerticalConstraintUtilities {
+    // no toSeq
+
+  }
+       

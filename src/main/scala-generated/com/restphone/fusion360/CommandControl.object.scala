@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a button, check box, or radio control list in a panel, toolbar, or drop-down. 
  */
 @JSName("adsk.core.CommandControl")
-trait CommandControl extends ToolbarControl {
+class CommandControl extends ToolbarControl {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -57,4 +57,9 @@ object CommandControl extends js.Object {
   */
   var isPromotedByDefault: Boolean = js.native
 }
-// no utilities
+
+  object CommandControlUtilities {
+    // no toSeq
+
+  }
+       

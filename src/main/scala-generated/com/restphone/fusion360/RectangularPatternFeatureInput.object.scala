@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This class defines the methods and properties that pertain to the definition of a rectangular pattern feature. 
  */
 @JSName("adsk.fusion.RectangularPatternFeatureInput")
-trait RectangularPatternFeatureInput extends Base {
+class RectangularPatternFeatureInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -147,4 +147,9 @@ object RectangularPatternFeatureInput extends js.Object {
   */
   def setDirectionTwo(directionTwoEntity: Base, quantityTwo: ValueInput, distanceTwo: ValueInput): Boolean = js.native
 }
-// no utilities
+
+  object RectangularPatternFeatureInputUtilities {
+    // no toSeq
+
+  }
+       

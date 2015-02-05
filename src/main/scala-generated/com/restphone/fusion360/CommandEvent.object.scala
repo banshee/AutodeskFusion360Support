@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An event endpoint that supports the connection to client implemented CommandEventHandlers. 
  */
 @JSName("adsk.core.CommandEvent")
-trait CommandEvent extends Event {
+class CommandEvent extends Event {
   /**
   * Adds an event handler object to this event endpoint.
   */
@@ -43,4 +43,9 @@ object CommandEvent extends js.Object {
   */
   def remove(handler: CommandEventHandler): Boolean = js.native
 }
-// no utilities
+
+  object CommandEventUtilities {
+    // no toSeq
+
+  }
+       

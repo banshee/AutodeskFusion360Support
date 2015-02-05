@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient elliptical cylinder. A transient elliptical cylinder is not displayed or saved in a document. A transient elliptical cylinder is used as a wrapper to work with raw elliptical cylinder information. A transient elliptical cylinder has no boundaries and is infinite in length. 
  */
 @JSName("adsk.core.EllipticalCylinder")
-trait EllipticalCylinder extends Surface {
+class EllipticalCylinder extends Surface {
   /**
   * Gets and set the center axis (along the length) of the cylinder that defines its normal direction.
   */
@@ -103,4 +103,23 @@ object EllipticalCylinder extends js.Object {
   */
   def set(origin: Point3D, axis: Vector3D, majorAxis: Vector3D, majorRadius: double, minorRadius: double): Boolean = js.native
 }
-// no utilities
+
+  object EllipticalCylinderUtilities {
+    // no toSeq
+/**
+* Gets the data defining the elliptical cylinder.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: EllipticalCylinder): (Boolean, Point3D, Vector3D, Vector3D, double, double) = {
+
+val origin = js.Dynamic.literal(value = 0)
+val axis = js.Dynamic.literal(value = 0)
+val majorAxis = js.Dynamic.literal(value = 0)
+val majorRadius = js.Dynamic.literal(value = 0)
+val minorRadius = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(origin.asInstanceOf[Point3D], axis.asInstanceOf[Vector3D], majorAxis.asInstanceOf[Vector3D], majorRadius.asInstanceOf[double], minorRadius.asInstanceOf[double])
+(result, origin.value.asInstanceOf[Point3D], axis.value.asInstanceOf[Vector3D], majorAxis.value.asInstanceOf[Vector3D], majorRadius.value.asInstanceOf[double], minorRadius.value.asInstanceOf[double])
+}
+  }
+       

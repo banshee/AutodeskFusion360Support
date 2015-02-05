@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing fillet feature in a design. 
  */
 @JSName("adsk.fusion.FilletFeature")
-trait FilletFeature extends Feature {
+class FilletFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -89,4 +89,9 @@ object FilletFeature extends js.Object {
   */
   val nativeObject: FilletFeature = js.native
 }
-// no utilities
+
+  object FilletFeatureUtilities {
+    // no toSeq
+
+  }
+       

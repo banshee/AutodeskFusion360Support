@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The definition for a parametric construction axis created using the SetByPerpendicularAtPoint method 
  */
 @JSName("adsk.fusion.ConstructionAxisPerpendicularAtPointDefinition")
-trait ConstructionAxisPerpendicularAtPointDefinition extends ConstructionAxisDefinition {
+class ConstructionAxisPerpendicularAtPointDefinition extends ConstructionAxisDefinition {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -50,4 +50,9 @@ object ConstructionAxisPerpendicularAtPointDefinition extends js.Object {
   */
   def redefine(face: BRepFace, pointEntity: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionAxisPerpendicularAtPointDefinitionUtilities {
+    // no toSeq
+
+  }
+       

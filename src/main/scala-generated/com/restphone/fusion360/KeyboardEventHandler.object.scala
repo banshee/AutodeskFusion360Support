@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An event handler base class that a client derives from to handle events triggered by a KeyboardEvent. A client implemented instance of this class can be added to a KeyboardEvent to receive these event notifications. 
  */
 @JSName("KeyboardEventHandler")
-trait KeyboardEventHandler extends EventHandler {
+class KeyboardEventHandler extends EventHandler {
   /**
   * This notify member is called when an event is triggered from any event that this handler has been added to.
   */
@@ -27,4 +27,9 @@ object KeyboardEventHandler extends js.Object {
   */
   def notify(eventArgs: KeyboardEventArgs): Unit = js.native
 }
-// no utilities
+
+  object KeyboardEventHandlerUtilities {
+    // no toSeq
+
+  }
+       

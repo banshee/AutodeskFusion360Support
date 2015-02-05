@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing circular pattern features in a component and supports the ability to create new circular pattern features. 
  */
 @JSName("adsk.fusion.CircularPatternFeatures")
-trait CircularPatternFeatures extends Base {
+class CircularPatternFeatures extends Base {
   /**
   * Creates a new circular pattern feature.
   */
@@ -77,9 +77,12 @@ object CircularPatternFeatures extends js.Object {
 }
 
   object CircularPatternFeaturesUtilities {
+    
     def toSeq(xs: CircularPatternFeatures): IndexedSeq[CircularPatternFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

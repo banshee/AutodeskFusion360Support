@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to a list of properties that define a texture. 
  */
 @JSName("adsk.core.AppearanceTexture")
-trait AppearanceTexture extends Base {
+class AppearanceTexture extends Base {
   /**
   * Changes the image of this texture.
   */
@@ -67,4 +67,9 @@ object AppearanceTexture extends js.Object {
   */
   val textureType: TextureTypes = js.native
 }
-// no utilities
+
+  object AppearanceTextureUtilities {
+    // no toSeq
+
+  }
+       

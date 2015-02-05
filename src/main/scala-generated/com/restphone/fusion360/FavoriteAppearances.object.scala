@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection of the favorite appearances. To add an appearance to the favorites list use the CopyTo method of the Appearance object. 
  */
 @JSName("adsk.core.FavoriteAppearances")
-trait FavoriteAppearances extends Base {
+class FavoriteAppearances extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -77,9 +77,12 @@ object FavoriteAppearances extends js.Object {
 }
 
   object FavoriteAppearancesUtilities {
+    
     def toSeq(xs: FavoriteAppearances): IndexedSeq[Appearance] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the User Parameters within a design and provides methods to create new user parameters. 
  */
 @JSName("adsk.fusion.UserParameters")
-trait UserParameters extends Base {
+class UserParameters extends Base {
   /**
   * Adds a new user parameter to the collection.
   */
@@ -85,9 +85,12 @@ object UserParameters extends js.Object {
 }
 
   object UserParametersUtilities {
+    
     def toSeq(xs: UserParameters): IndexedSeq[UserParameter] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

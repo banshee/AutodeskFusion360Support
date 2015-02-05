@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An event handler base class that a client derives from to handle events triggered by a ValidateInputsEvent. A client implemented instance of this class can be added to a ValidateInputsEvent to receive these event notifications. 
  */
 @JSName("ValidateInputsEventHandler")
-trait ValidateInputsEventHandler extends EventHandler {
+class ValidateInputsEventHandler extends EventHandler {
   /**
   * This notify member is called when an event is triggered from any event that this handler has been added to.
   */
@@ -27,4 +27,9 @@ object ValidateInputsEventHandler extends js.Object {
   */
   def notify(eventArgs: ValidateInputsEventArgs): Unit = js.native
 }
-// no utilities
+
+  object ValidateInputsEventHandlerUtilities {
+    // no toSeq
+
+  }
+       

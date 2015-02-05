@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the general preferences. 
  */
 @JSName("adsk.core.GeneralPreferences")
-trait GeneralPreferences extends Base {
+class GeneralPreferences extends Base {
   /**
   * Gets and sets if Autodesk 360 notifications are shown.
   */
@@ -171,4 +171,9 @@ object GeneralPreferences extends js.Object {
   */
   var userLanguage: UserLanguages = js.native
 }
-// no utilities
+
+  object GeneralPreferencesUtilities {
+    // no toSeq
+
+  }
+       

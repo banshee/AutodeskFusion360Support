@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A ConstructionPointInput is a throwaway object used to create a ConstructionPoint The usage pattern is a. create a ConstructionPointInput (ConstructionPoints.CreateInput) b. call one of the member functions to specify how the ConstructionPoint is created c. create the ConstructionPoint (call ConstructionPoints.Add) d. stop referencing the ConstructionPointInput (so it gets deleted). 
  */
 @JSName("adsk.fusion.ConstructionPointInput")
-trait ConstructionPointInput extends Base {
+class ConstructionPointInput extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -91,4 +91,9 @@ object ConstructionPointInput extends js.Object {
   */
   def setByTwoEdges(edgeOne: Base, edgeTwo: Base): Boolean = js.native
 }
-// no utilities
+
+  object ConstructionPointInputUtilities {
+    // no toSeq
+
+  }
+       

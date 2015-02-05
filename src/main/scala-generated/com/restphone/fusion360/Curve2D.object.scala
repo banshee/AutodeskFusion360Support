@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for all 2D transient geometry classes. 
  */
 @JSName("adsk.core.Curve2D")
-trait Curve2D extends Base {
+class Curve2D extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -67,4 +67,9 @@ object Curve2D extends js.Object {
   */
   def transformBy(matrix: Matrix2D): Boolean = js.native
 }
-// no utilities
+
+  object Curve2DUtilities {
+    // no toSeq
+
+  }
+       

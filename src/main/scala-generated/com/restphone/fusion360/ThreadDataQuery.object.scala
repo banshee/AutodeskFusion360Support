@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * This object provides methods to query the thread data contained in the XML files under ThreadData folder. 
  */
 @JSName("adsk.fusion.ThreadDataQuery")
-trait ThreadDataQuery extends Base {
+class ThreadDataQuery extends Base {
   /**
   * Method that returns all the available classes for a thread type of a given thread designation.
   */
@@ -115,4 +115,20 @@ object ThreadDataQuery extends js.Object {
   */
   def threadTypeUnit(threadType: String): String = js.native
 }
-// no utilities
+
+  object ThreadDataQueryUtilities {
+    // no toSeq
+/**
+* Method that gets the recommended thread data for a given model diameter.
+*
+* Out parameters are returned in a tuple.
+*/
+def recommendThreadDataWithResults(activeObject: ThreadDataQuery, modelDiameter: double, isInternal: Boolean, threadType: String): (Boolean, string, string) = {
+
+val designation = js.Dynamic.literal(value = 0)
+val threadClass = js.Dynamic.literal(value = 0)
+val result = activeObject.recommendThreadData(modelDiameter.asInstanceOf[double], isInternal.asInstanceOf[Boolean], threadType.asInstanceOf[String], designation.asInstanceOf[String], threadClass.asInstanceOf[String])
+(result, designation.value.asInstanceOf[string], threadClass.value.asInstanceOf[string])
+}
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient 2D ellipse. A transient ellipse is not displayed or saved in a document. Transient 2D ellipses are used as a wrapper to work with raw 2D ellipse information. 
  */
 @JSName("adsk.core.Ellipse2D")
-trait Ellipse2D extends Curve2D {
+class Ellipse2D extends Curve2D {
   /**
   * Returns a NURBS curve that is geometrically identical to the ellipse.
   */
@@ -103,4 +103,22 @@ object Ellipse2D extends js.Object {
   */
   def set(center: Point2D, majorAxis: Vector2D, majorRadius: double, minorRadius: double): Boolean = js.native
 }
-// no utilities
+
+  object Ellipse2DUtilities {
+    // no toSeq
+/**
+* Gets all of the data defining the ellipse.
+*
+* Out parameters are returned in a tuple.
+*/
+def getDataWithResults(activeObject: Ellipse2D): (Boolean, Point2D, Vector2D, double, double) = {
+
+val center = js.Dynamic.literal(value = 0)
+val majorAxis = js.Dynamic.literal(value = 0)
+val majorRadius = js.Dynamic.literal(value = 0)
+val minorRadius = js.Dynamic.literal(value = 0)
+val result = activeObject.getData(center.asInstanceOf[Point2D], majorAxis.asInstanceOf[Vector2D], majorRadius.asInstanceOf[double], minorRadius.asInstanceOf[double])
+(result, center.value.asInstanceOf[Point2D], majorAxis.value.asInstanceOf[Vector2D], majorRadius.value.asInstanceOf[double], minorRadius.value.asInstanceOf[double])
+}
+  }
+       

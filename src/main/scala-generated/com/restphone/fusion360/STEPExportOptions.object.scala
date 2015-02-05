@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Defines that a STEP export is to be done and specifies the various options. 
  */
 @JSName("adsk.fusion.STEPExportOptions")
-trait STEPExportOptions extends ExportOptions {
+class STEPExportOptions extends ExportOptions {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -27,4 +27,9 @@ trait STEPExportOptions extends ExportOptions {
 object STEPExportOptions extends js.Object {
 
 }
-// no utilities
+
+  object STEPExportOptionsUtilities {
+    // no toSeq
+
+  }
+       

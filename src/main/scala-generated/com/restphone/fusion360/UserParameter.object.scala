@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a User Parameter. 
  */
 @JSName("adsk.fusion.UserParameter")
-trait UserParameter extends Parameter {
+class UserParameter extends Parameter {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -56,4 +56,9 @@ object UserParameter extends js.Object {
   */
   val userParameters: UserParameters = js.native
 }
-// no utilities
+
+  object UserParameterUtilities {
+    // no toSeq
+
+  }
+       

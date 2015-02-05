@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Represents a group in the timeline. 
  */
 @JSName("adsk.fusion.TimelineGroup")
-trait TimelineGroup extends TimelineObject {
+class TimelineGroup extends TimelineObject {
   /**
   * Checks to see if this object can be reordered to the specified position. The default value of -1 indicates the end of the timeline. This method will fail if this is a timelineGroup object and the group is expanded.
   */
@@ -85,9 +85,12 @@ object TimelineGroup extends js.Object {
 }
 
   object TimelineGroupUtilities {
+    
     def toSeq(xs: TimelineGroup): IndexedSeq[TimelineObject] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

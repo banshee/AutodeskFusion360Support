@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collinear constraint in a sketch. 
  */
 @JSName("adsk.fusion.CollinearConstraint")
-trait CollinearConstraint extends GeometricConstraint {
+class CollinearConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object CollinearConstraint extends js.Object {
   */
   val nativeObject: CollinearConstraint = js.native
 }
-// no utilities
+
+  object CollinearConstraintUtilities {
+    // no toSeq
+
+  }
+       

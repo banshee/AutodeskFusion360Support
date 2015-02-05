@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the Snapshots within a design and provides methods to create new Snapshots. 
  */
 @JSName("adsk.fusion.Snapshots")
-trait Snapshots extends Base {
+class Snapshots extends Base {
   /**
   * Creates a new snapshot. Creating a snapshot is only valid when the HasPendingTransforms property returns true.
   */
@@ -85,9 +85,12 @@ object Snapshots extends js.Object {
 }
 
   object SnapshotsUtilities {
+    
     def toSeq(xs: Snapshots): IndexedSeq[Snapshot] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

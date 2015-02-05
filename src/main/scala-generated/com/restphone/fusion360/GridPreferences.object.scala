@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The GridPreferences object provides access to grid related preferences. 
  */
 @JSName("adsk.core.GridPreferences")
-trait GridPreferences extends Base {
+class GridPreferences extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -51,4 +51,9 @@ object GridPreferences extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object GridPreferencesUtilities {
+    // no toSeq
+
+  }
+       

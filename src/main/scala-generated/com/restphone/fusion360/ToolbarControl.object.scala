@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for all toolbar controls. 
  */
 @JSName("adsk.core.ToolbarControl")
-trait ToolbarControl extends Base {
+class ToolbarControl extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -83,4 +83,9 @@ object ToolbarControl extends js.Object {
   */
   val parent: Base = js.native
 }
-// no utilities
+
+  object ToolbarControlUtilities {
+    // no toSeq
+
+  }
+       

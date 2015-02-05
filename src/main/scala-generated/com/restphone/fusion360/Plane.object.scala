@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Transient plane. A transient plane is not displayed or saved in a document. Transient plaes are used as a wrapper to work with raw plane information. A transient plane has no boundaries or size, but is infinite and is represented by a position, a normal, and an orientation in space. 
  */
 @JSName("adsk.core.Plane")
-trait Plane extends Surface {
+class Plane extends Surface {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -167,4 +167,9 @@ object Plane extends js.Object {
   */
   val vDirection: Vector3D = js.native
 }
-// no utilities
+
+  object PlaneUtilities {
+    // no toSeq
+
+  }
+       

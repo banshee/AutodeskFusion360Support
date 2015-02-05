@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The DocumentEventArgs provides information associated with a document event. Note that some properties are not available on every event - for example, the Document is not available on the DocumentOpening event because the Document is not yet available. 
  */
 @JSName("adsk.core.DocumentEventArgs")
-trait DocumentEventArgs extends EventArgs {
+class DocumentEventArgs extends EventArgs {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -42,4 +42,9 @@ object DocumentEventArgs extends js.Object {
   */
   val fullPath: String = js.native
 }
-// no utilities
+
+  object DocumentEventArgsUtilities {
+    // no toSeq
+
+  }
+       

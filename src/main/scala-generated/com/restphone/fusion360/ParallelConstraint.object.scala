@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A parallel constraint in a sketch. 
  */
 @JSName("adsk.fusion.ParallelConstraint")
-trait ParallelConstraint extends GeometricConstraint {
+class ParallelConstraint extends GeometricConstraint {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -64,4 +64,9 @@ object ParallelConstraint extends js.Object {
   */
   val nativeObject: ParallelConstraint = js.native
 }
-// no utilities
+
+  object ParallelConstraintUtilities {
+    // no toSeq
+
+  }
+       

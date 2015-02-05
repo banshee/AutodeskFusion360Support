@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * An event endpoint that supports the connection to client implemented InputChangedEventHandlers. 
  */
 @JSName("adsk.core.InputChangedEvent")
-trait InputChangedEvent extends Event {
+class InputChangedEvent extends Event {
   /**
   * Adds an event handler to this event endpoint.
   */
@@ -43,4 +43,9 @@ object InputChangedEvent extends js.Object {
   */
   def remove(handler: InputChangedEventHandler): Boolean = js.native
 }
-// no utilities
+
+  object InputChangedEventUtilities {
+    // no toSeq
+
+  }
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for the various product specific containers. For Fusion this is the Design object. For CAM this is Toolpath object. 
  */
 @JSName("adsk.core.Product")
-trait Product extends Base {
+class Product extends Base {
   /**
   * Returns the appearances contained in this document.
   */
@@ -83,4 +83,9 @@ object Product extends js.Object {
   */
   val workspaces: WorkspaceList = js.native
 }
-// no utilities
+
+  object ProductUtilities {
+    // no toSeq
+
+  }
+       

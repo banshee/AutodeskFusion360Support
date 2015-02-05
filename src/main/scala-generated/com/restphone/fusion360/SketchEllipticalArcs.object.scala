@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The collection of elliptical arcs in a sketch. This provides access to the existing elliptical arcs and supports the methods to create new elliptical arcs. 
  */
 @JSName("adsk.fusion.SketchEllipticalArcs")
-trait SketchEllipticalArcs extends Base {
+class SketchEllipticalArcs extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object SketchEllipticalArcs extends js.Object {
 }
 
   object SketchEllipticalArcsUtilities {
+    
     def toSeq(xs: SketchEllipticalArcs): IndexedSeq[SketchEllipticalArc] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

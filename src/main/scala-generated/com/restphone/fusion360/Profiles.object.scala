@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection of all of the profiles currently calculated for this sketch. Profiles are automatically computed by Fusion and represent closed areas within the sketch. 
  */
 @JSName("adsk.fusion.Profiles")
-trait Profiles extends Base {
+class Profiles extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object Profiles extends js.Object {
 }
 
   object ProfilesUtilities {
+    
     def toSeq(xs: Profiles): IndexedSeq[Profile] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

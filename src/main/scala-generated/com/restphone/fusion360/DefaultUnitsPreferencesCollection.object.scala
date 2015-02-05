@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A collection that provides access to product specific unit preference objects. 
  */
 @JSName("adsk.core.DefaultUnitsPreferencesCollection")
-trait DefaultUnitsPreferencesCollection extends Base {
+class DefaultUnitsPreferencesCollection extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -69,9 +69,12 @@ object DefaultUnitsPreferencesCollection extends js.Object {
 }
 
   object DefaultUnitsPreferencesCollectionUtilities {
+    
     def toSeq(xs: DefaultUnitsPreferencesCollection): IndexedSeq[DefaultUnitsPreferences] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing draft features in a component and supports the ability to create new draft features. 
  */
 @JSName("adsk.fusion.DraftFeatures")
-trait DraftFeatures extends Base {
+class DraftFeatures extends Base {
   /**
   * Creates a new draft feature.
   */
@@ -85,9 +85,12 @@ object DraftFeatures extends js.Object {
 }
 
   object DraftFeaturesUtilities {
+    
     def toSeq(xs: DraftFeatures): IndexedSeq[DraftFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

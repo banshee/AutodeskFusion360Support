@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to pattern elements of mirror, pattern features. 
  */
 @JSName("adsk.fusion.PatternElements")
-trait PatternElements extends Base {
+class PatternElements extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object PatternElements extends js.Object {
 }
 
   object PatternElementsUtilities {
+    
     def toSeq(xs: PatternElements): IndexedSeq[PatternElement] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

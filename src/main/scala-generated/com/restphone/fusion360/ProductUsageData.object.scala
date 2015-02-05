@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Provides access to the product usage data settings. 
  */
 @JSName("adsk.core.ProductUsageData")
-trait ProductUsageData extends Base {
+class ProductUsageData extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -59,4 +59,9 @@ object ProductUsageData extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object ProductUsageDataUtilities {
+    // no toSeq
+
+  }
+       

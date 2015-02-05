@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * A list of sketch dimensions. 
  */
 @JSName("adsk.fusion.SketchDimensionList")
-trait SketchDimensionList extends Base {
+class SketchDimensionList extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -61,9 +61,12 @@ object SketchDimensionList extends js.Object {
 }
 
   object SketchDimensionListUtilities {
+    
     def toSeq(xs: SketchDimensionList): IndexedSeq[SketchDimension] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

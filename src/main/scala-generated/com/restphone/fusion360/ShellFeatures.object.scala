@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Collection that provides access to all of the existing shell features in a component and supports the ability to create new shell features. 
  */
 @JSName("adsk.fusion.ShellFeatures")
-trait ShellFeatures extends Base {
+class ShellFeatures extends Base {
   /**
   * Creates a new shell feature.
   */
@@ -85,9 +85,12 @@ object ShellFeatures extends js.Object {
 }
 
   object ShellFeaturesUtilities {
+    
     def toSeq(xs: ShellFeatures): IndexedSeq[ShellFeature] = {
       val n = xs.count - 1
       (0 to n) map {xs.item(_)}
     }
+             
+
   }
-           
+       

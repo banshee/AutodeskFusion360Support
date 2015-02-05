@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * Object that represents an existing shell feature in a design. 
  */
 @JSName("adsk.fusion.ShellFeature")
-trait ShellFeature extends Feature {
+class ShellFeature extends Feature {
 
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
@@ -113,4 +113,9 @@ object ShellFeature extends js.Object {
   */
   def setThicknesses(insideThickness: ValueInput, outsideThickness: ValueInput): Boolean = js.native
 }
-// no utilities
+
+  object ShellFeatureUtilities {
+    // no toSeq
+
+  }
+       

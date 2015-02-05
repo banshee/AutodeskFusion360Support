@@ -11,7 +11,7 @@ import com.restphone.fusion360.Fusion360TypeAliases._
   * The base class for the classes that define the different types of fillet edge sets. 
  */
 @JSName("adsk.fusion.FilletEdgeSet")
-trait FilletEdgeSet extends Base {
+class FilletEdgeSet extends Base {
   /**
   * Returns a string indicating the type of the object. All classes implement this static function. The returned string matches the string returned by ObjectType.
   */
@@ -43,4 +43,9 @@ object FilletEdgeSet extends js.Object {
   */
   val objectType: String = js.native
 }
-// no utilities
+
+  object FilletEdgeSetUtilities {
+    // no toSeq
+
+  }
+       
